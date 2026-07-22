@@ -1,0 +1,61 @@
+/* FONTES DOS COMPONENTES */
+
+
+.site-header h1{
+
+font-family:Rye;
+
+}
+
+
+
+.navbar a{
+
+font-family:Bowlby;
+
+}
+
+
+
+.topic h2,
+.box h3{
+
+font-family:Bowlby;
+
+}
+
+
+
+.footer-secret{
+
+font-family:SpecialElite;
+
+color:#00ff00;
+
+background:black;
+
+padding:5px;
+
+font-size:12px;
+
+}
+
+
+
+.hiring{
+
+border-color:#ffd700;
+
+}
+
+
+
+.hiring strong{
+
+color:#ffd700;
+
+font-family:PressStart;
+
+font-size:11px;
+
+}

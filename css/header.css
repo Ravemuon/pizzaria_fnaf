@@ -1,0 +1,206 @@
+/* =====================================
+   HEADER - FREDDY FAZBEAR PIZZA
+===================================== */
+
+
+.site-header{
+
+    width:960px;
+
+    height:180px;
+
+    margin:auto;
+
+    position:relative;
+
+    overflow:hidden;
+
+
+    background:
+
+    linear-gradient(
+        180deg,
+        #850000,
+        #450000,
+        #220000
+    );
+
+
+    border-bottom:
+
+    5px ridge #d6a537;
+
+
+    box-shadow:
+
+    inset 0 -20px 30px #000;
+
+}
+
+
+
+/* textura */
+
+.site-header::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+
+    background:
+
+    url("../assets/imagens/backgrounds/fundo.png");
+
+
+    opacity:.15;
+
+}
+
+
+
+
+/* LOGO */
+
+
+.logo{
+
+    position:absolute;
+
+
+    left:15px;
+
+    bottom:15px;
+
+
+    width:170px;
+
+
+    height:140px;
+
+
+    object-fit:contain;
+
+
+    z-index:2;
+
+
+    filter:
+
+    drop-shadow(4px 5px 3px black);
+
+}
+
+
+
+
+/* TITULO */
+
+
+.title{
+
+
+    position:absolute;
+
+
+    left:220px;
+
+    top:35px;
+
+
+    z-index:3;
+
+
+}
+
+
+
+
+.title h1{
+
+
+    margin:0;
+
+
+    font-family:Rye;
+
+
+    font-size:42px;
+
+
+    color:#ffd700;
+
+
+    text-transform:uppercase;
+
+
+    text-shadow:
+
+    3px 3px #000,
+
+    6px 6px #300;
+
+
+
+}
+
+
+
+.title span{
+
+
+    display:block;
+
+
+    margin-top:10px;
+
+
+    font-family:SpecialElite;
+
+
+    font-size:18px;
+
+
+    color:white;
+
+
+    text-shadow:2px 2px black;
+
+
+}
+
+
+
+
+/* SELO */
+
+
+.header-badge{
+
+
+    position:absolute;
+
+
+    right:25px;
+
+    top:20px;
+
+
+}
+
+
+
+.header-badge img{
+
+
+    width:90px;
+
+
+    filter:
+
+    drop-shadow(3px 3px black);
+
+
+}

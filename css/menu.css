@@ -1,0 +1,89 @@
+/* =======================================
+   NAVBAR
+======================================= */
+
+
+.navbar{
+
+    width:960px;
+
+    margin:auto;
+
+    padding:0;
+
+    display:flex;
+
+    list-style:none;
+
+    justify-content:center;
+
+    background:
+
+    linear-gradient(
+        #a00000,
+        #450000
+    );
+
+    border-top:
+
+    3px ridge gold;
+
+    border-bottom:
+
+    3px ridge gold;
+
+}
+
+
+
+.navbar li{
+
+    margin:0;
+
+}
+
+
+
+.navbar a{
+
+    display:block;
+
+    padding:
+
+    12px 14px;
+
+
+    color:white;
+
+
+    font-weight:bold;
+
+
+    border-right:
+
+    2px ridge #d6a537;
+
+
+    text-shadow:
+
+    2px 2px black;
+
+}
+
+
+
+.navbar a:hover{
+
+
+    background:
+
+    linear-gradient(
+        white,
+        #999
+    );
+
+
+    color:#700000;
+
+
+}

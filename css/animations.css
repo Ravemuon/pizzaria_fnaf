@@ -1,0 +1,106 @@
+/* =======================================
+   OLD WEB ANIMATIONS
+======================================= */
+
+
+
+@keyframes blink{
+
+
+    50%{
+
+        opacity:0;
+
+    }
+
+}
+
+
+.blink{
+
+    animation:
+
+    blink 1s infinite;
+
+}
+
+
+
+/* CRT STATIC */
+
+body::after{
+
+
+    content:"";
+
+
+    position:fixed;
+
+
+    inset:0;
+
+
+    pointer-events:none;
+
+
+    background:
+
+    repeating-linear-gradient(
+
+        0deg,
+
+        rgba(255,255,255,.03),
+
+        rgba(255,255,255,.03) 1px,
+
+        transparent 2px,
+
+        transparent 4px
+
+    );
+
+
+}
+
+
+
+/* GLITCH */
+
+
+.glitch:hover{
+
+
+    animation:
+
+    glitch .15s infinite;
+
+
+}
+
+
+
+@keyframes glitch{
+
+
+0%{
+
+transform:translate(0);
+
+}
+
+
+50%{
+
+transform:translate(3px,-2px);
+
+}
+
+
+100%{
+
+transform:translate(-3px,2px);
+
+}
+
+
+}

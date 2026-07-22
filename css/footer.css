@@ -1,0 +1,109 @@
+/* =====================================
+   FOOTER
+===================================== */
+
+
+.site-footer{
+
+
+    width:960px;
+
+
+    margin:auto;
+
+
+    display:flex;
+
+
+    justify-content:space-between;
+
+
+    align-items:center;
+
+
+    padding:15px;
+
+
+    background:
+
+
+    linear-gradient(
+        #500000,
+        #200000
+    );
+
+
+    border-top:
+
+    5px ridge #d6a537;
+
+
+    color:white;
+
+
+}
+
+
+
+
+.footer-logo img{
+
+
+    width:100px;
+
+
+}
+
+
+
+.footer-text{
+
+
+    text-align:center;
+
+
+}
+
+
+
+.footer-text h3{
+
+
+    margin:0;
+
+
+    font-family:Rye;
+
+
+    color:#ffd700;
+
+
+}
+
+
+
+
+.footer-secret{
+
+
+    background:black;
+
+
+    padding:8px;
+
+
+    border:
+
+    2px solid #333;
+
+
+    font-family:SpecialElite;
+
+
+    color:#00ff00;
+
+
+    font-size:12px;
+
+
+}
