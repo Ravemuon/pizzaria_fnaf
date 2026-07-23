@@ -2,66 +2,75 @@
 
 ![Freddy Fazbear's Pizza](assets/imagens/logos/logo.jpg)
 
-> Um projeto fictício inspirado no universo de **Five Nights at Freddy's (FNaF)**, recriando a experiência de um antigo portal corporativo da Freddy Fazbear's Pizza Entertainment.
+> Um projeto fictício inspirado no universo de **Five Nights at Freddy's (FNaF)**, recriando um antigo portal corporativo da Freddy Fazbear's Pizza Entertainment.
 
 ---
 
 # 📌 Sobre o projeto
 
-**Freddy Fazbear's Pizza — Fan Website Project** é um projeto de desenvolvimento front-end inspirado na franquia **Five Nights at Freddy's**.
+**Freddy Fazbear's Pizza — Fan Website Project** é um projeto front-end inspirado na franquia **Five Nights at Freddy's**.
 
-O objetivo é criar uma experiência web temática simulando um antigo site empresarial dos anos 90/2000, misturando:
+O objetivo é simular um antigo site empresarial de uma rede de pizzarias dos anos 90/2000, combinando:
 
-- 🍕 sites corporativos retrô;
+- 🍕 identidade visual de restaurantes antigos;
 - 📺 estética vintage;
-- 🏢 identidade visual de empresas fictícias;
-- 📁 arquivos internos e documentos;
-- 🤖 tecnologia animatrônica;
-- 🔒 elementos de mistério inspirados na atmosfera de FNaF.
+- 📁 arquivos corporativos fictícios;
+- 🤖 personagens animatrônicos;
+- 🔒 sistemas internos;
+- 📷 galerias e registros históricos;
+- 🖥️ experiência de portal empresarial retrô.
 
-O projeto foi desenvolvido como um **fan project sem fins comerciais**, criado para estudo, prática de programação e demonstração de desenvolvimento web.
+O projeto foi desenvolvido como:
 
-Este site **não é oficial e não possui nenhuma ligação com a franquia original**.
+- estudo de desenvolvimento web;
+- prática de organização de projetos;
+- criação de interfaces temáticas;
+- experimentação com HTML, CSS e JavaScript.
 
 ---
 
-# 🚀 Como executar o projeto
+# ⚠️ Aviso
 
-## 📌 Requisitos
+Este projeto é um **fan project sem fins comerciais**.
 
-Para abrir o projeto corretamente, você precisa de:
+Ele:
+
+✅ não é oficial;  
+✅ não possui ligação com a franquia original;  
+✅ não representa a empresa real;  
+✅ foi criado apenas para estudo e entretenimento.
+
+Todos os direitos relacionados a **Five Nights at Freddy's**, personagens e marcas pertencem aos seus respectivos proprietários.
+
+---
+
+# 🚀 Como executar
+
+## Requisitos
+
+Necessário:
 
 - Visual Studio Code;
-- Extensão Live Server ou Live Preview;
-- Um navegador moderno.
+- Live Server ou outro servidor local;
+- Navegador moderno.
 
 ---
 
-# ▶️ Abrindo pelo Visual Studio Code
+## Instalação
 
-## 1. Baixe ou clone o repositório
-
-Faça download do projeto ou utilize:
+Clone o projeto:
 
 ```bash
 git clone URL_DO_REPOSITORIO
-````
-
----
-
-## 2. Abra a pasta no Visual Studio Code
-
-No VS Code:
-
-```
-Arquivo
-↓
-Abrir Pasta
-↓
-Selecione a pasta do projeto
 ```
 
-A pasta deve conter:
+Abra a pasta:
+
+```
+Freddy-Fazbears-Pizza/
+```
+
+Ela deve conter:
 
 ```
 index.html
@@ -74,29 +83,7 @@ paginas/
 
 ---
 
-## 3. Instale o Live Server
-
-No VS Code:
-
-```
-Extensões
-↓
-Pesquisar:
-Live Server
-↓
-Instalar
-```
-
-Extensão recomendada:
-
-```
-Live Server
-por Ritwick Dey
-```
-
----
-
-## 4. Inicie o site
+## Executando
 
 Abra:
 
@@ -104,138 +91,229 @@ Abra:
 index.html
 ```
 
-Clique com botão direito:
+No VS Code:
 
 ```
-Open with Live Server
+Botão direito
+→ Open with Live Server
 ```
 
-ou:
+ou utilize:
 
 ```
 Go Live
 ```
 
-no canto inferior direito do VS Code.
-
 ---
 
 ## ⚠️ Importante
 
-Não abra o arquivo diretamente pelo navegador:
-
-❌
+Não abra diretamente:
 
 ```
 file:///C:/projeto/index.html
 ```
 
-O projeto utiliza carregamento dinâmico de componentes através de JavaScript:
+O projeto utiliza carregamento dinâmico de componentes:
 
-* header.html;
-* navbar.html;
-* sidebar.html;
-* footer.html.
+- header;
+- navbar;
+- sidebar;
+- footer.
 
-Por isso é necessário utilizar um servidor local.
-
----
-
-# 🎮 Conteúdo do site
-
-O projeto possui diversas páginas temáticas:
-
-## 🏠 Página inicial
-
-Apresentação da Freddy Fazbear's Pizza e sua identidade visual.
+Eles são carregados através de JavaScript, portanto precisam de um servidor local.
 
 ---
 
-## 🍕 Restaurante
+# 🌐 Páginas disponíveis
+
+## 🏠 Index
+
+Página principal da Freddy Fazbear's Pizza.
 
 Inclui:
 
-* Cardápio;
-* Pizzas;
-* Sistema de pedidos;
-* Eventos especiais.
+- Banner principal;
+- Apresentação da empresa;
+- Serviços;
+- Promoções;
+- Cards de experiência;
+- Pizzas;
+- Animatrônicos;
+- Posters;
+- História.
 
 ---
 
-## 🤖 Animatronics
+# 🍕 Restaurante
 
-Catálogo dos personagens e atrações da pizzaria.
+## Menu
 
-Incluindo:
-
-* Freddy Fazbear;
-* Bonnie;
-* Chica;
-* Foxy;
-* outros modelos.
-
----
-
-## 📜 História
-
-Linha do tempo fictícia mostrando:
-
-* Fundação da empresa;
-* Expansão das franquias;
-* Evolução tecnológica;
-* Arquivos históricos.
-
----
-
-## 📰 Notícias
-
-Comunicados e atualizações fictícias da empresa.
-
----
-
-## 📁 Arquivos
-
-Documentos internos, relatórios e registros antigos.
-
----
-
-## 👥 Funcionários
-
-Área dedicada aos colaboradores e setores administrativos.
-
----
-
-## 🔒 Segurança
-
-Protocolos internos, regras da pizzaria e avisos corporativos.
-
----
-
-## 📷 Galeria
+Sistema de cardápio da pizzaria.
 
 Inclui:
 
-* Fotos da pizzaria;
-* Posters promocionais;
-* Artes infantis;
-* Registros de câmeras;
-* Imagens históricas.
+- pizzas;
+- bebidas;
+- produtos especiais.
+
+Dados carregados utilizando JSON.
 
 ---
 
-## 📞 Contato
+## Pizzas
 
-Central de atendimento fictícia.
+Catálogo de sabores:
+
+- tradicionais;
+- especiais;
+- aniversariantes;
+- sabores exclusivos.
 
 ---
 
-# 🗂️ Estrutura do projeto
+## Pedidos
+
+Página de pedidos fictícios.
+
+Possui estrutura preparada para:
+
+- envio de informações;
+- armazenamento local;
+- gerenciamento futuro.
+
+---
+
+# 🤖 Animatrônicos
+
+Catálogo dos personagens da pizzaria:
+
+Inclui:
+
+- Freddy Fazbear;
+- Bonnie;
+- Chica;
+- Foxy;
+- Golden Freddy.
+
+Com:
+
+- imagens;
+- informações;
+- apresentações.
+
+---
+
+# 📜 História
+
+Área dedicada aos registros históricos da empresa.
+
+Inclui:
+
+- fundação;
+- expansão;
+- eventos antigos;
+- arquivos corporativos.
+
+---
+
+# 📰 Notícias
+
+Sistema de comunicados fictícios:
+
+- anúncios;
+- atualizações;
+- informações internas.
+
+---
+
+# 📁 Arquivos
+
+Área de documentos internos.
+
+Inclui:
+
+- relatórios;
+- registros;
+- arquivos confidenciais;
+- documentos históricos.
+
+---
+
+# 🔒 Segurança
+
+Página baseada em protocolos internos.
+
+Inclui:
+
+- regras da pizzaria;
+- segurança dos funcionários;
+- monitoramento;
+- procedimentos de emergência.
+
+---
+
+# 👥 Funcionários
+
+Área administrativa fictícia da empresa.
+
+Inclui:
+
+- informações internas;
+- setores;
+- registros de funcionários.
+
+---
+
+# 📷 Galeria
+
+Sistema de galeria visual.
+
+Inclui:
+
+- fotos dos animatrônicos;
+- posters promocionais;
+- imagens da pizzaria;
+- arquivos históricos;
+- registros de câmeras.
+
+Recursos:
+
+- filtros por categoria;
+- visualizador de imagens;
+- layout responsivo.
+
+Categorias:
+
+```
+Animatronics
+Posters
+Pizzaria
+Extras
+```
+
+---
+
+# 📞 Contato
+
+Página de comunicação fictícia.
+
+Inclui:
+
+- formulário;
+- informações da empresa;
+- integração com JavaScript.
+
+---
+
+# 🏗️ Estrutura do projeto
 
 ```
 .
 ├── assets/
 │   ├── audio/
 │   ├── documentos/
+│   │   └── relatorios/
 │   ├── fonts/
 │   └── imagens/
 │
@@ -250,11 +328,31 @@ Central de atendimento fictícia.
 │
 ├── css/
 │   ├── animations.css
+│   ├── arquivos.css
 │   ├── components.css
 │   ├── fonts.css
+│   ├── footer.css
+│   ├── header.css
+│   ├── navbar.css
 │   ├── pages.css
+│   ├── sidebar.css
 │   ├── style.css
-│   └── vintage.css
+│   ├── vintage.css
+│   │
+│   └── pages/
+│       ├── animatronics.css
+│       ├── arquivos.css
+│       ├── contato.css
+│       ├── contratando.css
+│       ├── eventos.css
+│       ├── galeria.css
+│       ├── historia.css
+│       ├── index.css
+│       ├── menu.css
+│       ├── noticias.css
+│       ├── pedidos.css
+│       ├── pizzas.css
+│       └── seguranca.css
 │
 ├── data/
 │   ├── menu.json
@@ -263,21 +361,38 @@ Central de atendimento fictícia.
 ├── js/
 │   ├── core/
 │   │   ├── main.js
+│   │   ├── effects.js
 │   │   ├── audio.js
-│   │   └── effects.js
+│   │   └── sidebar.js
 │   │
 │   └── pages/
+│       ├── arquivos.js
+│       ├── contato.js
+│       ├── contratando.js
+│       ├── eventos.js
+│       ├── galeria.js
+│       ├── menu.js
+│       ├── pedidos.js
+│       └── seguranca.js
 │
 ├── paginas/
 │   ├── animatronics.html
 │   ├── arquivos.html
+│   ├── contato.html
+│   ├── contratando.html
 │   ├── eventos.html
+│   ├── funcionarios.html
 │   ├── galeria.html
 │   ├── historia.html
 │   ├── menu.html
-│   └── outras páginas
+│   ├── noticias.html
+│   ├── pedidos.html
+│   ├── pizzas.html
+│   └── seguranca.html
 │
-└── index.html
+├── index.html
+├── LICENSE
+└── README.md
 ```
 
 ---
@@ -286,99 +401,101 @@ Central de atendimento fictícia.
 
 ## Front-end
 
-* HTML5
-* CSS3
-* JavaScript
-
-## Recursos
-
-* Componentização de páginas;
-* Carregamento dinâmico via JavaScript;
-* Arquivos JSON;
-* Fontes personalizadas;
-* Animações CSS;
-* Layout responsivo;
-* Organização modular.
+- HTML5
+- CSS3
+- JavaScript
 
 ---
 
-# 🎨 Conceito visual
+## Recursos utilizados
 
-A identidade visual foi inspirada em:
-
-* páginas empresariais antigas;
-* websites de restaurantes dos anos 90;
-* publicidade retrô;
-* documentos corporativos;
-* arquivos internos fictícios.
-
-O objetivo é criar uma sensação de acessar um antigo sistema corporativo da Fazbear Entertainment.
+- Componentização HTML;
+- CSS modular;
+- JavaScript separado por página;
+- JSON externo;
+- Fontes personalizadas;
+- Animações CSS;
+- Layout responsivo;
+- Sistema de filtros;
+- Visualizadores de imagem;
+- Carregamento dinâmico.
 
 ---
 
-# 🖼️ Créditos das imagens e artes
+# 🎨 Identidade visual
 
-Este projeto utiliza imagens e artes provenientes de diferentes fontes, incluindo:
+O projeto utiliza inspiração em:
 
-* artes criadas por fãs;
-* ilustrações compartilhadas por comunidades;
-* imagens de referência;
-* materiais encontrados publicamente na internet.
+- sites antigos de empresas;
+- páginas promocionais dos anos 90;
+- sistemas corporativos;
+- documentos internos;
+- publicidade vintage.
 
-As imagens utilizadas **não foram criadas pelo desenvolvedor deste projeto**.
+A intenção é criar a sensação de acessar um antigo sistema perdido da Fazbear Entertainment.
 
-Todos os direitos das imagens, personagens e artes pertencem aos seus respectivos autores e proprietários.
+---
 
-Caso algum criador identifique uma arte utilizada e queira:
+# 🖼️ Créditos
 
-* receber crédito;
-* corrigir informações;
-* solicitar remoção;
+As imagens utilizadas podem incluir:
+
+- materiais de referência;
+- artes de fãs;
+- imagens públicas;
+- elementos inspirados na franquia.
+
+Os direitos pertencem aos seus respectivos criadores.
+
+Caso algum autor deseje:
+
+- receber créditos;
+- corrigir informações;
+- solicitar remoção;
 
 entre em contato.
 
 ---
 
-# ⚠️ Direitos autorais
-
-**Five Nights at Freddy's**, Freddy Fazbear, personagens, nomes e elementos relacionados pertencem aos seus respectivos proprietários.
-
-Este projeto:
-
-✅ não é oficial;
-✅ não possui associação com a franquia original;
-✅ não possui finalidade comercial;
-✅ foi criado apenas para estudo e entretenimento.
-
----
-
 # 🎯 Objetivos do projeto
 
-Este projeto foi desenvolvido para praticar:
+Este projeto pratica:
 
-* Desenvolvimento Front-End;
-* Organização de projetos web;
-* Criação de interfaces temáticas;
-* Componentização;
-* Manipulação de arquivos externos;
-* Design de experiências imersivas.
+- Desenvolvimento Front-End;
+- Organização profissional de arquivos;
+- Criação de interfaces temáticas;
+- Responsividade;
+- Componentização;
+- Manipulação de DOM;
+- Sistemas interativos;
+- Estruturação de grandes projetos web.
 
 ---
 
 # 📜 Licença
 
-O código desenvolvido neste projeto segue a licença deste repositório.
+O código desenvolvido segue a licença presente neste repositório.
 
-Imagens, personagens, marcas e artes de terceiros continuam protegidos pelos direitos de seus respectivos proprietários.
+Personagens, marcas e imagens de terceiros permanecem protegidos por seus respectivos direitos autorais.
 
 ---
 
 # ⭐ Considerações finais
 
-Este é um projeto feito por fã, para fãs.
+A Freddy Fazbear's Pizza foi recriada como uma experiência web fictícia, simulando um antigo portal corporativo encontrado no tempo.
 
-A proposta é transformar a Freddy Fazbear's Pizza em uma experiência web completa, simulando um antigo portal corporativo perdido no tempo.
+O objetivo é transformar uma simples página em uma experiência completa envolvendo:
 
-Obrigado aos artistas, comunidades e criadores que inspiraram este projeto. 🍕🤖
+🍕 restaurante;
 
-```
+🤖 animatrônicos;
+
+📁 arquivos;
+
+📷 memórias;
+
+🔒 mistérios;
+
+🖥️ tecnologia retrô.
+
+Obrigado a todos que inspiraram este projeto. 🍕🤖
