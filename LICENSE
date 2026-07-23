@@ -6,30 +6,67 @@ Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
 in the Software without restriction, including without limitation the rights
 to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies
-of the Software, and to permit persons to whom the Software is furnished to do
-so, subject to the following conditions:
+copies of the Software, and to permit persons to whom the Software is furnished
+to do so, subject to the following conditions:
 
 The above copyright notice and this permission notice shall be included in all
 copies or substantial portions of the Software.
 
----
 
-NOTICE REGARDING THIRD-PARTY CONTENT:
+==================================================
+THIRD-PARTY CONTENT NOTICE
+==================================================
 
-The MIT License applies only to the original source code, structure,
-scripts, stylesheets, and other original materials created by Ravemuon.
+This MIT License applies only to the original work created by Ravemuon,
+including but not limited to:
 
-Images, fanarts, illustrations, characters, logos, trademarks, and other
-third-party assets included in this project are NOT covered by this license.
+- Source code;
+- HTML files;
+- CSS files;
+- JavaScript files;
+- Project structure;
+- Original documentation;
+- Original project components.
 
-Those assets remain the property of their respective creators and copyright
-holders. They are used only for fan, educational, and non-commercial purposes.
+This license does NOT apply to third-party materials included in this
+repository, including but not limited to:
 
-Permission to use, redistribute, or modify third-party artwork must be
-obtained from the respective owners.
+- Images;
+- Fan artworks;
+- Illustrations;
+- Characters;
+- Logos;
+- Trademarks;
+- Promotional materials;
+- Other copyrighted assets.
 
----
+All third-party content remains the property of its respective creators,
+copyright holders, and owners.
+
+Such materials are included only for fan, educational, and non-commercial
+purposes. No ownership rights, commercial rights, or redistribution rights
+for third-party assets are granted through this license.
+
+Permission to use, reproduce, modify, or redistribute third-party content
+must be obtained from the respective copyright holders.
+
+
+==================================================
+DISCLAIMER
+==================================================
+
+This project is an unofficial fan-made project created for educational and
+entertainment purposes.
+
+It is not affiliated with, endorsed by, or connected to the official owners
+of the Five Nights at Freddy's franchise or any related intellectual property.
+
+All trademarks and copyrighted properties belong to their respective owners.
+
+
+==================================================
+MIT LICENSE WARRANTY DISCLAIMER
+==================================================
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
