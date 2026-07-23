@@ -1,0 +1,139 @@
+/* =======================================
+   PÁGINA: PIZZAS
+   Estilos específicos para a página de pizzas
+   ======================================= */
+
+/* =======================================
+   GRADE DE PIZZAS
+   (Reutiliza a estrutura do menu.css, mas com ajustes)
+======================================= */
+
+.pizza-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+    margin-top: 15px;
+}
+
+.pizza-card {
+    background: linear-gradient(#fff5d1, #d8b36a);
+    border: 5px ridge var(--gold);
+    padding: 15px;
+    text-align: center;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pizza-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.pizza-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain; /* Mostra a imagem inteira sem cortar */
+    border: 3px solid #720000;
+    background: white;
+    margin-bottom: 10px;
+}
+
+.pizza-card h3 {
+    font-family: "Bowlby One SC", cursive;
+    color: #850000;
+    font-size: 20px;
+    margin: 8px 0 4px;
+}
+
+.pizza-card p {
+    font-family: "Special Elite", cursive;
+    font-size: 15px;
+    color: #2b1a10;
+    margin: 4px 0;
+}
+
+.pizza-card .price {
+    font-family: "Press Start 2P", monospace;
+    font-size: 12px;
+    color: #850000;
+    background: #f0e0c0;
+    display: inline-block;
+    padding: 4px 14px;
+    border-radius: 20px;
+    border: 1px solid #850000;
+    margin: 8px 0 10px;
+}
+
+.pizza-card .btn-small {
+    display: inline-block;
+    margin-top: 6px;
+    padding: 6px 20px;
+    background: linear-gradient(#a00000, #500000);
+    color: white;
+    border: 3px ridge var(--gold);
+    font-family: "Bowlby One SC", cursive;
+    font-size: 14px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.pizza-card .btn-small:hover {
+    filter: brightness(1.2);
+    transform: scale(1.05);
+}
+
+/* =======================================
+   SEÇÃO DE PROMOÇÕES
+======================================= */
+
+.topic-grid .promo-text {
+    font-family: "Special Elite", cursive;
+    font-size: 18px;
+    color: #2b1a10;
+}
+
+.topic-grid .promo-text strong {
+    color: #850000;
+    font-family: "Bowlby One SC", cursive;
+}
+
+/* =======================================
+   RESPONSIVIDADE
+======================================= */
+
+@media (max-width: 700px) {
+    .pizza-grid {
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 18px;
+    }
+    .pizza-card img {
+        height: 160px;
+    }
+    .pizza-card h3 {
+        font-size: 17px;
+    }
+    .pizza-card p {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 450px) {
+    .pizza-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+    .pizza-card {
+        padding: 10px;
+    }
+    .pizza-card img {
+        height: 130px;
+    }
+    .pizza-card h3 {
+        font-size: 15px;
+    }
+    .pizza-card p {
+        font-size: 12px;
+    }
+}

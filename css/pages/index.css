@@ -1,0 +1,487 @@
+/* =======================================
+   FREDDY FAZBEAR'S PIZZA
+   INDEX PAGE STYLE
+   CORREÇÕES RESPONSIVAS
+======================================= */
+
+
+/* =======================================
+   CONTROLE GERAL INDEX
+======================================= */
+
+
+.content{
+
+    width:100%;
+    overflow:hidden;
+
+}
+
+
+
+.content > section,
+.content > .hero,
+.content > .restaurant-strip{
+
+    max-width:100%;
+
+}
+
+
+
+/* =======================================
+   HERO INDEX
+======================================= */
+
+
+.hero{
+
+    width:100%;
+
+}
+
+
+
+.hero img{
+
+    width:100%;
+
+    max-width:100%;
+
+    object-fit:cover;
+
+}
+
+
+
+.hero-overlay{
+
+    box-sizing:border-box;
+
+}
+
+
+
+.hero-overlay h1{
+
+    word-break:break-word;
+
+}
+
+
+
+
+
+/* =======================================
+   FAIXA DE SERVIÇOS
+======================================= */
+
+
+.restaurant-strip span{
+
+    text-align:center;
+
+    flex:1;
+
+    min-width:180px;
+
+}
+
+
+
+
+
+/* =======================================
+   BLOCOS INDEX
+======================================= */
+
+
+.topic{
+
+    width:100%;
+
+    overflow:hidden;
+
+}
+
+
+
+.topic p{
+
+    max-width:800px;
+
+}
+
+
+
+/* =======================================
+   GRID PRINCIPAL
+======================================= */
+
+
+.topic-grid{
+
+    width:100%;
+
+}
+
+
+
+.topic-grid > *{
+
+    min-width:0;
+
+}
+
+
+
+
+
+.topic-grid img{
+
+    max-width:100%;
+
+}
+
+
+
+
+
+/* =======================================
+   CARDS DE EXPERIÊNCIA
+======================================= */
+
+
+.featured-grid{
+
+    width:100%;
+
+}
+
+
+
+.promo-card{
+
+    min-width:0;
+
+}
+
+
+
+.promo-card img{
+
+    max-width:100%;
+
+}
+
+
+
+
+
+/* =======================================
+   BANNER ANIMATRONICS
+======================================= */
+
+
+.banner-box{
+
+    width:100%;
+
+    overflow:hidden;
+
+}
+
+
+
+.banner-box img{
+
+    width:100%;
+
+    max-width:100%;
+
+    object-fit:cover;
+
+}
+
+
+
+
+
+/* =======================================
+   POSTERS
+======================================= */
+
+
+.poster-carousel{
+
+    max-width:100%;
+
+    overflow:hidden;
+
+}
+
+
+
+.poster-track{
+
+    max-width:none;
+
+}
+
+
+
+.poster-track img{
+
+    flex-shrink:0;
+
+}
+
+
+
+
+
+/* =======================================
+   AJUSTES TABLET
+======================================= */
+
+
+@media(max-width:999px){
+
+
+    .topic-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+
+    .topic-grid img{
+
+        max-height:280px;
+
+    }
+
+
+}
+
+
+
+
+
+
+
+/* =======================================
+   MOBILE
+======================================= */
+
+
+@media(max-width:767px){
+
+
+
+    .content{
+
+        width:100%;
+
+    }
+
+
+
+    .hero{
+
+        border-width:3px;
+
+    }
+
+
+
+    .hero img{
+
+
+        height:200px;
+
+    }
+
+
+
+    .hero-overlay h1{
+
+
+        font-size:22px;
+
+
+    }
+
+
+
+    .hero-overlay p{
+
+
+        font-size:13px;
+
+
+    }
+
+
+
+    .restaurant-strip{
+
+
+        padding:12px;
+
+    }
+
+
+
+    .restaurant-strip span{
+
+
+        min-width:auto;
+
+        width:100%;
+
+
+    }
+
+
+
+    .topic{
+
+
+        padding:15px 12px;
+
+        border-width:3px;
+
+
+    }
+
+
+
+    .topic h2{
+
+
+        font-size:20px;
+
+
+        display:flex;
+
+        align-items:center;
+
+        justify-content:center;
+
+        flex-wrap:wrap;
+
+
+    }
+
+
+
+    .featured-grid{
+
+
+        grid-template-columns:1fr;
+
+    }
+
+
+
+    .promo-card img{
+
+
+        aspect-ratio:auto;
+
+
+        max-height:220px;
+
+
+    }
+
+
+
+    .banner-box img{
+
+
+        max-height:220px;
+
+
+    }
+
+
+
+}
+
+
+
+
+
+/* =======================================
+   CELULARES PEQUENOS
+======================================= */
+
+
+@media(max-width:480px){
+
+
+
+    .hero img{
+
+        height:150px;
+
+    }
+
+
+
+    .hero-overlay{
+
+        padding:10px;
+
+    }
+
+
+
+    .hero-overlay h1{
+
+
+        font-size:18px;
+
+
+    }
+
+
+
+    .topic h2{
+
+
+        font-size:17px;
+
+
+    }
+
+
+
+    .section-icon{
+
+
+        width:18px;
+
+        height:18px;
+
+
+    }
+
+
+
+    .poster-track img{
+
+
+        height:140px;
+
+        width:90px;
+
+
+    }
+
+
+
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    <title>Freddy Fazbear's Pizza | Pedidos Salvos</title>
+
+    <meta name="description"
+    content="Visualize os pedidos e mensagens enviados através do site da Freddy Fazbear's Pizza.">
+
+    <link rel="stylesheet" href="../css/fonts.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/sidebar.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/pages.css">
+    <link rel="stylesheet" href="../css/vintage.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/pages/pedidos-salvos.css">
+
+</head>
+
+<body>
+
+    <div id="header"></div>
+    <div id="navbar"></div>
+
+    <div class="site-layout">
+
+        <aside id="sidebar"></aside>
+
+        <main class="content">
+
+            <!-- =========================================================
+                 HERO
+                 ========================================================= -->
+            <section class="hero">
+                <img src="../assets/imagens/background/security.jpg" alt="Arquivo de pedidos">
+                <div class="hero-overlay">
+                    <h1>📦 Pedidos Salvos</h1>
+                    <p>Arquivo local de mensagens enviadas pelo site</p>
+                </div>
+            </section>
+
+            <!-- =========================================================
+                 LISTA DE PEDIDOS
+                 ========================================================= -->
+            <section class="topic vintage-paper">
+                <h2>★ Mensagens Recebidas ★</h2>
+
+                <div id="listaPedidos" class="pedidos-container">
+                    <p style="text-align:center; font-family:'Special Elite', cursive; color:#6b4a3a;">
+                        Carregando mensagens...
+                    </p>
+                </div>
+
+                <div style="text-align:center; margin-top:20px; display:flex; flex-wrap:wrap; justify-content:center; gap:15px;">
+                    <button id="btnExportar" class="btn" style="font-size:14px;">
+                        📥 Exportar como JSON
+                    </button>
+                    <button id="btnLimpar" class="btn" style="font-size:14px; background:#500000;">
+                        🗑️ Limpar Todos
+                    </button>
+                    <a href="contato.html" class="btn" style="font-size:14px;">
+                        ✉️ Voltar ao Contato
+                    </a>
+                </div>
+            </section>
+
+        </main>
+
+    </div>
+
+    <div id="footer"></div>
+
+    <script src="../js/core/main.js"></script>
+    <script src="../js/core/effects.js"></script>
+    <script src="../js/pages/pedidos-salvos.js"></script>
+
+</body>
+
+</html>

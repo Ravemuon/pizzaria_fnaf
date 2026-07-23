@@ -1,0 +1,133 @@
+/* =======================================
+   PÁGINA: PEDIDOS
+   Estilos específicos para a página de pedidos e delivery
+   ======================================= */
+
+/* Introdução do pedido */
+.order-intro {
+    text-align: center;
+    font-family: "Special Elite", cursive;
+    font-size: 18px;
+    color: #3d2517;
+    max-width: 700px;
+    margin: -10px auto 25px auto;
+    padding: 10px 20px;
+    background: rgba(255, 245, 210, 0.6);
+    border-left: 6px solid #850000;
+    border-right: 6px solid #850000;
+}
+
+.order-intro p {
+    margin: 8px 0;
+}
+
+/* Formulário de pedido */
+.order-form {
+    max-width: 750px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    background: linear-gradient(#fff8dd, #e8c980);
+    padding: 35px;
+    border: 5px ridge var(--gold);
+    box-shadow: 5px 8px 20px rgba(0,0,0,0.4);
+}
+
+.order-form .form-group {
+    margin-bottom: 0;
+}
+
+.order-form label {
+    font-family: "Bowlby One SC", cursive;
+    color: #850000;
+    font-size: 18px;
+    margin-bottom: 4px;
+    display: block;
+}
+
+.order-form input,
+.order-form select,
+.order-form textarea {
+    width: 100%;
+    padding: 14px;
+    background: white;
+    border: 4px solid #720000;
+    font-family: "Special Elite", cursive;
+    font-size: 16px;
+    outline: none;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+.order-form input:focus,
+.order-form select:focus,
+.order-form textarea:focus {
+    border-color: var(--gold);
+    box-shadow: 0 0 10px var(--gold);
+}
+
+.order-form textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.order-form .order-button {
+    align-self: center;
+    width: 280px;
+    font-size: 20px;
+    cursor: pointer;
+    border: 4px ridge var(--gold);
+    padding: 14px 30px;
+    background: linear-gradient(#a00000, #500000);
+    color: white;
+    font-family: "Bowlby One SC", cursive;
+    transition: filter 0.3s;
+}
+
+.order-form .order-button:hover {
+    filter: brightness(1.2);
+}
+
+/* Confirmação do pedido */
+.order-confirmation {
+    display: none;
+    margin-top: 25px;
+    padding: 25px;
+    text-align: center;
+    background: linear-gradient(#400000, #150000);
+    color: #ffd45c;
+    border: 5px ridge var(--gold);
+    font-family: "Special Elite", cursive;
+}
+
+.order-confirmation h3 {
+    color: white;
+    font-family: "Bowlby One SC", cursive;
+}
+
+.order-confirmation .small-note {
+    font-family: "Press Start 2P", monospace;
+    font-size: 9px;
+    color: #6b4a3a;
+    margin-top: 10px;
+}
+
+/* Responsividade */
+@media(max-width:600px) {
+    .order-intro {
+        font-size: 15px;
+        padding: 8px 12px;
+    }
+    .order-form {
+        padding: 20px;
+    }
+    .order-form label {
+        font-size: 16px;
+    }
+    .order-form .order-button {
+        width: 100%;
+        font-size: 17px;
+        padding: 12px 20px;
+    }
+}

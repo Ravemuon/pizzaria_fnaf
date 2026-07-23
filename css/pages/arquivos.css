@@ -1,0 +1,138 @@
+/* =======================================
+   PÁGINA: ARQUIVOS
+   Estilos específicos para a página de arquivos internos
+   ======================================= */
+
+/* Terminal - estilo retro */
+.terminal-text {
+    font-family: "Press Start 2P", monospace;
+    font-size: 13px;
+    color: #33ff33;
+    background: #0a0a0a;
+    padding: 20px;
+    border: 3px solid #33ff33;
+    box-shadow: 0 0 20px rgba(51, 255, 51, 0.2);
+    line-height: 1.8;
+}
+
+.terminal-text p {
+    margin: 6px 0;
+}
+
+.terminal-text .warning-text {
+    color: #ff3333;
+}
+
+/* Selo confidencial */
+.official-stamp {
+    font-family: "Rye", cursive;
+    font-size: 42px;
+    color: #8b0000;
+    transform: rotate(-8deg);
+    text-align: center;
+    margin-top: 15px;
+    text-shadow: 2px 2px 0 #ffd45c;
+}
+
+/* Arquivos de incidente */
+.incident-file {
+    background: rgba(0, 0, 0, 0.7);
+    border: 3px ridge #8b0000;
+    padding: 18px;
+    margin-bottom: 20px;
+    color: #f0e0d0;
+    font-family: "Special Elite", cursive;
+}
+
+.incident-file h3 {
+    font-family: "Bowlby One SC", cursive;
+    color: #ffd45c;
+    margin-top: 0;
+    font-size: 20px;
+}
+
+.incident-file p {
+    margin: 8px 0;
+    font-size: 15px;
+}
+
+.incident-file .warning-text {
+    color: #ff6666;
+    font-weight: bold;
+}
+
+/* Perfis de animatrônicos */
+.character-profile img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border: 4px solid #720000;
+}
+
+.character-profile {
+    background: linear-gradient(#fff8dd, #d4ae65);
+    border: 6px ridge var(--gold);
+    padding: 20px;
+    box-shadow: 5px 8px 18px rgba(0,0,0,0.45);
+    transition: 0.3s;
+    text-align: center;
+}
+
+.character-profile:hover {
+    transform: translateY(-8px);
+}
+
+.character-profile h3 {
+    font-family: "Bowlby One SC", cursive;
+    color: #850000;
+    font-size: 22px;
+    margin: 15px 0 8px 0;
+}
+
+.character-profile p {
+    font-family: "Special Elite", cursive;
+    font-size: 16px;
+    color: #2b1a10;
+}
+
+.character-profile .warning-text {
+    font-weight: bold;
+    color: #b00000;
+    margin-top: 10px;
+}
+
+/* Nota corporativa */
+.corporate-note {
+    background: #1a1410;
+    border: 4px ridge var(--gold);
+    padding: 20px;
+    margin-top: 20px;
+    color: #f0e0d0;
+    font-family: "Special Elite", cursive;
+    text-align: center;
+}
+
+.corporate-note h3 {
+    font-family: "Bowlby One SC", cursive;
+    color: #ffd45c;
+    margin-top: 0;
+}
+
+.corporate-note .highlight {
+    color: #ffd45c;
+    font-weight: bold;
+}
+
+/* Responsividade */
+@media(max-width:600px) {
+    .terminal-text {
+        font-size: 11px;
+        padding: 15px;
+    }
+    .official-stamp {
+        font-size: 28px;
+    }
+    .character-profile img {
+        height: 180px;
+    }
+}

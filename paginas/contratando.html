@@ -24,160 +24,10 @@
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/components.css">
     <link rel="stylesheet" href="../css/pages.css">
+    <link rel="stylesheet" href="../css/pages/contratando.css">
     <link rel="stylesheet" href="../css/vintage.css">
     <link rel="stylesheet" href="../css/animations.css">
 
-    <style>
-        /* Estilos extras para a página de carreiras */
-        .job-card {
-            background: linear-gradient(#fff5d1, #d8b36a);
-            border: 4px ridge var(--gold);
-            padding: 22px;
-            margin-bottom: 20px;
-            box-shadow: 3px 3px 12px rgba(0,0,0,0.2);
-            transition: 0.3s;
-        }
-        .job-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 18px rgba(0,0,0,0.3);
-        }
-        .job-card h3 {
-            font-family: "Bowlby One SC", cursive;
-            color: #850000;
-            font-size: 24px;
-            margin: 0 0 6px 0;
-        }
-        .job-card .job-meta {
-            font-family: "Press Start 2P", monospace;
-            font-size: 10px;
-            color: #6b3f2b;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            margin-bottom: 10px;
-        }
-        .job-card .job-meta span {
-            background: #f0e0c0;
-            padding: 4px 12px;
-            border-radius: 20px;
-            border: 1px solid #850000;
-        }
-        .job-card p {
-            font-family: "Special Elite", cursive;
-            font-size: 16px;
-            color: #2b1a10;
-            line-height: 1.6;
-        }
-        .job-card .btn {
-            margin-top: 10px;
-        }
-
-        .testimonial-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
-            margin-top: 15px;
-        }
-        .testimonial-card {
-            background: #1a1410;
-            border: 3px ridge var(--gold);
-            padding: 18px;
-            color: #f0e0d0;
-            text-align: center;
-        }
-        .testimonial-card h4 {
-            font-family: "Bowlby One SC", cursive;
-            color: #ffd45c;
-            font-size: 18px;
-            margin: 0 0 4px 0;
-        }
-        .testimonial-card .role {
-            font-family: "Press Start 2P", monospace;
-            font-size: 9px;
-            color: #b8a69b;
-        }
-        .testimonial-card p {
-            font-family: "Special Elite", cursive;
-            font-size: 14px;
-            color: #d0c0b0;
-            font-style: italic;
-            margin: 10px 0 0 0;
-        }
-
-        .benefits-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-            gap: 15px;
-            margin: 15px 0;
-        }
-        .benefits-list li {
-            list-style: none;
-            background: #f0e0c0;
-            padding: 10px 14px;
-            border-radius: 8px;
-            border-left: 6px solid #850000;
-            font-family: "Special Elite", cursive;
-            font-size: 15px;
-            color: #2b1a10;
-        }
-
-        .form-group {
-            margin-bottom: 18px;
-        }
-        .form-group label {
-            display: block;
-            font-family: "Bowlby One SC", cursive;
-            color: #850000;
-            font-size: 18px;
-            margin-bottom: 4px;
-        }
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
-            width: 100%;
-            padding: 12px;
-            background: white;
-            border: 4px solid #720000;
-            font-family: "Special Elite", cursive;
-            font-size: 16px;
-            outline: none;
-            box-sizing: border-box;
-        }
-        .form-group input:focus,
-        .form-group select:focus,
-        .form-group textarea:focus {
-            border-color: var(--gold);
-            box-shadow: 0 0 10px var(--gold);
-        }
-        .form-group textarea {
-            min-height: 100px;
-            resize: vertical;
-        }
-
-        .rules-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 12px;
-            margin: 15px 0;
-        }
-        .rules-grid li {
-            list-style: none;
-            background: #2b1a10;
-            color: #ffd45c;
-            padding: 10px 14px;
-            border-left: 6px solid #ffd45c;
-            font-family: "Special Elite", cursive;
-            font-size: 14px;
-        }
-        .rules-grid li::before {
-            content: "⚠️ ";
-        }
-
-        @media(max-width:600px) {
-            .rules-grid { grid-template-columns: 1fr; }
-            .job-card .job-meta { flex-direction: column; gap: 6px; }
-        }
-    </style>
 </head>
 
 <body>
@@ -410,7 +260,7 @@
             <section class="topic vintage-paper" id="candidatura">
                 <h2>★ Envie sua Candidatura ★</h2>
 
-                <form id="jobApplication" onsubmit="return submitApplication(event)">
+                <form id="jobApplication">
                     <div class="form-group">
                         <label for="nome">Nome Completo</label>
                         <input type="text" id="nome" name="nome" required placeholder="Ex: Michael Afton">
@@ -454,11 +304,25 @@
                     </div>
                 </form>
 
-                <!-- Mensagem de confirmação (inicialmente oculta) -->
-                <div id="confirmacao" style="display:none; margin-top:25px; padding:25px; background:linear-gradient(#400000,#150000); border:5px ridge var(--gold); color:#ffd45c; text-align:center; font-family:'Special Elite', cursive;">
-                    <h3 style="color:white; font-family:'Bowlby One SC', cursive;">✅ Candidatura Enviada!</h3>
+                <!-- Mensagem de confirmação -->
+                <div id="confirmacao" class="confirmation-message">
+                    <h3>✅ Candidatura Enviada!</h3>
                     <p>Agradecemos seu interesse em fazer parte da nossa equipe. Entraremos em contato em breve (se você sobreviver à noite).</p>
+                    <p class="small-note">© 1983-2026 Fazbear Entertainment – Todos os direitos reservados</p>
                 </div>
+
+                <!-- =========================================
+                     BOTÃO PARA ACESSAR A ÁREA ADMINISTRATIVA
+                ========================================= -->
+                <div style="text-align:center; margin-top:30px; padding-top:20px; border-top:2px dashed #b8a69b;">
+                    <a href="../admin-candidaturas.html" class="btn" style="background:linear-gradient(#2b1a10, #1a1410); border-color:#b8a69b;">
+                        📋 Ver Candidaturas (Admin)
+                    </a>
+                    <p style="font-family:'Press Start 2P', monospace; font-size:9px; color:#6b4a3a; margin-top:10px;">
+                        * Área restrita – apenas para funcionários autorizados.
+                    </p>
+                </div>
+
             </section>
 
         </main>
@@ -467,30 +331,12 @@
 
     <div id="footer"></div>
 
+    <!-- ============================================================
+         SCRIPTS – Efeitos visuais e validação do formulário
+         ============================================================ -->
     <script src="../js/core/main.js"></script>
     <script src="../js/core/effects.js"></script>
-
-    <script>
-        // Função simples para processar o formulário (sem envio real, apenas demonstração)
-        function submitApplication(e) {
-            e.preventDefault();
-
-            const nome = document.getElementById('nome').value.trim();
-            if (!nome) {
-                alert('Por favor, preencha o nome completo.');
-                return false;
-            }
-
-            // Simula o envio da candidatura
-            document.getElementById('jobApplication').style.display = 'none';
-            document.getElementById('confirmacao').style.display = 'block';
-
-            // Rola a página para a confirmação
-            document.getElementById('confirmacao').scrollIntoView({ behavior: 'smooth', block: 'center' });
-
-            return false;
-        }
-    </script>
+    <script src="../js/pages/contratando.js"></script>
 
 </body>
 

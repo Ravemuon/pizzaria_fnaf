@@ -26,41 +26,10 @@
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/components.css">
     <link rel="stylesheet" href="../css/pages.css">
+    <link rel="stylesheet" href="../css/pages/historia.css"> <!-- CSS específico -->
     <link rel="stylesheet" href="../css/vintage.css">
     <link rel="stylesheet" href="../css/animations.css">
 
-    <!-- Estilos extras para a linha do tempo, pois o CSS fornecido não a define -->
-    <style>
-        .timeline {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            margin-top: 10px;
-        }
-        .timeline-item {
-            background: rgba(255, 245, 210, 0.6);
-            border-left: 6px solid #8b0000;
-            padding: 15px 20px;
-            border-radius: 0 8px 8px 0;
-        }
-        .timeline-item h3 {
-            font-family: "Bowlby One SC", cursive;
-            color: #8b0000;
-            margin: 0 0 5px 0;
-            font-size: 22px;
-        }
-        .timeline-item p {
-            margin: 0;
-            font-family: "Special Elite", cursive;
-            font-size: 16px;
-            color: #2b1a10;
-        }
-        .timeline-item small {
-            display: block;
-            margin-top: 6px;
-            color: #6b4a3a;
-        }
-    </style>
 </head>
 
 <body>
@@ -316,7 +285,7 @@
             </section>
 
             <!-- =========================================================
-                 ARQUIVO SECRETO – A "isca" para curiosos
+                 ARQUIVO SECRETO – Link direto para arquivos
                  Usa .btn conforme o CSS
                  ========================================================= -->
             <section class="topic vintage-paper">
@@ -333,9 +302,60 @@
                 <a href="arquivos.html" class="btn">
                     Acessar Arquivos Internos
                 </a>
+            </section>
 
-                <!-- Interno: O link leva a um portal com avisos de "manutenção"
-                     para a maioria dos usuários. -->
+            <!-- =========================================================
+                 SEÇÃO DE NAVEGAÇÃO RÁPIDA – Explore Mais
+                 Redireciona para Galeria, Equipe, Eventos e Contato
+                 ========================================================= -->
+            <section class="topic">
+                <h2>★ Explore Nossos Departamentos ★</h2>
+
+                <p style="font-family:'Special Elite', cursive; text-align:center; font-size:18px; color:#3d2517; max-width:750px; margin:0 auto 15px auto;">
+                    Conheça outros arquivos e equipes que fazem parte da história da Freddy Fazbear Entertainment.
+                </p>
+
+                <div class="explore-grid">
+
+                    <!-- Galeria -->
+                    <a href="galeria.html" class="explore-card">
+                        <img src="../assets/imagens/banners/welcome.jpg" alt="Galeria Oficial">
+                        <h3>🖼️ Galeria</h3>
+                        <p>Registros visuais, posters e arquivos de imagem da empresa.</p>
+                        <span class="btn-small">Ver Galeria</span>
+                    </a>
+
+                    <!-- Equipe de Funcionários -->
+                    <a href="funcionarios.html" class="explore-card">
+                        <img src="../assets/imagens/anuncios/contratando.jpg" alt="Nossa Equipe">
+                        <h3>👥 Equipe</h3>
+                        <p>Conheça os profissionais e colaboradores que mantêm a magia acontecendo.</p>
+                        <span class="btn-small">Conheça a Equipe</span>
+                    </a>
+
+                    <!-- Eventos -->
+                    <a href="eventos.html" class="explore-card">
+                        <img src="../assets/imagens/banners/celebrate.jpg" alt="Eventos Especiais">
+                        <h3>🎉 Eventos</h3>
+                        <p>Festas, aniversários e apresentações especiais realizadas em nossas unidades.</p>
+                        <span class="btn-small">Ver Eventos</span>
+                    </a>
+
+                    <!-- Contato / Trabalhe Conosco -->
+                    <a href="contratando.html" class="explore-card">
+                        <img src="../assets/imagens/anuncios/anunciofreddy.jpg" alt="Trabalhe Conosco">
+                        <h3>📋 Carreiras</h3>
+                        <p>Vagas abertas e oportunidades para fazer parte da nossa família.</p>
+                        <span class="btn-small">Ver Vagas</span>
+                    </a>
+
+                </div>
+
+                <div style="text-align:center; margin-top:20px;">
+                    <a href="arquivos.html" class="btn" style="font-size:16px;">
+                        📂 Acessar Arquivos Internos
+                    </a>
+                </div>
             </section>
 
         </main>

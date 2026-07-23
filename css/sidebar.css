@@ -1,23 +1,27 @@
 /* =======================================
    SIDEBAR
-   FREDDY FAZBEAR'S PIZZA
 ======================================= */
 
 
 .sidebar{
 
-    width:280px;
+    width:320px;
 
-    display:flex;
-
-    flex-direction:column;
-
-    gap:20px;
+    flex-shrink:0;
 
 }
 
 
 
+.sidebar-track{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:25px;
+
+}
 
 
 
@@ -30,8 +34,8 @@
     background:
 
     linear-gradient(
-        #fff3c7,
-        #d2aa61
+        #fff5d1,
+        #d8b36a
     );
 
 
@@ -40,15 +44,9 @@
     5px ridge var(--gold);
 
 
-
-    padding:18px;
-
-
-
     box-shadow:
 
-    5px 6px 15px rgba(0,0,0,.45);
-
+    5px 5px 15px rgba(0,0,0,.4);
 
 
     overflow:hidden;
@@ -61,41 +59,36 @@
 
 
 
+.sidebar-title{
 
-/* TITULO */
+
+    background:
+
+    linear-gradient(
+        #850000,
+        #400000
+    );
 
 
-.sidebar-box h3{
+    color:white;
 
 
     text-align:center;
 
 
+    padding:15px;
+
+
     font-family:
-
     "Bowlby One SC";
-
 
 
     font-size:18px;
 
 
-
-    color:#850000;
-
-
-
-    margin-top:0;
-
-
-
-    padding-bottom:10px;
-
-
-
     border-bottom:
 
-    3px double #850000;
+    3px solid var(--gold);
 
 
 }
@@ -106,160 +99,104 @@
 
 
 
+.sidebar-content{
 
-/* ICONES DOS TITULOS */
 
-.title-icon{
-
-
-    width:22px !important;
-
-
-    height:22px !important;
-
-
-    object-fit:contain;
-
-
-
-    vertical-align:middle;
-
-
-    margin-right:8px;
-
-
-
-    border:none !important;
-
-
-    box-shadow:none !important;
-
-
-}
-
-
-
-
-
-
-
-
-/* TEXTOS */
-
-
-.sidebar-box p{
-
-
-    line-height:1.5;
-
-
-}
-
-
-
-.sidebar-box ul{
-
-
-    padding-left:20px;
-
-
-}
-
-
-
-.sidebar-box li{
-
-
-    margin-bottom:12px;
-
-
-}
-
-
-
-
-
-
-
-
-
-/* IMAGENS NORMAIS */
-
-.side-image{
-
-
-    width:100%;
-
-
-    height:150px;
-
-
-    object-fit:cover;
-
-
-
-    display:block;
-
-
-
-    border:
-
-    4px solid #720000;
-
-
-
-    box-shadow:
-
-    2px 3px 8px rgba(0,0,0,.5);
-
-
-}
-
-
-
-
-
-
-
-
-
-/* LINKS */
-
-
-.sidebar-box a{
-
-
-    display:block;
-
-
-
-    margin-top:15px;
-
-
-
-    padding:10px;
-
+    padding:18px;
 
 
     text-align:center;
 
 
+}
 
-    color:white;
 
+
+
+
+.sidebar-image{
+
+
+    width:100%;
+
+
+    height:170px;
+
+
+    object-fit:cover;
+
+
+    border-bottom:
+
+    4px ridge var(--gold);
+
+
+}
+
+
+
+
+
+
+.news-list{
+
+
+    text-align:left;
+
+
+    margin-bottom:20px;
+
+
+}
+
+
+
+.news-list li{
+
+
+    padding:8px 0;
+
+
+    border-bottom:
+
+    1px dashed #850000;
+
+
+    font-family:
+
+    "Special Elite";
+
+
+}
+
+
+
+
+
+
+
+.sidebar-btn{
+
+
+    display:block;
+
+
+    margin-top:15px;
+
+
+    padding:12px;
 
 
     background:
 
 
     linear-gradient(
-
         #a00000,
-
         #500000
-
     );
 
+
+    color:white;
 
 
     border:
@@ -267,14 +204,22 @@
     3px ridge var(--gold);
 
 
-
     font-family:
 
-    "Bowlby One SC";
+    "Press Start 2P";
+
+
+    font-size:10px;
+
+
+}
 
 
 
-    transition:.3s;
+.sidebar-btn:hover{
+
+
+    filter:brightness(1.3);
 
 
 }
@@ -283,178 +228,29 @@
 
 
 
-.sidebar-box a:hover{
 
+/* ALERTA */
 
-    transform:scale(1.05);
-
-
-    filter:brightness(1.2);
-
-
-}
-
-
-
-
-
-
-
-
-
-/* PIZZA */
-
-
-.sidebar-box.promo{
+.warning-box{
 
 
     background:
 
     linear-gradient(
-        #fff0ad,
-        #c9943e
+        #300000,
+        #080000
     );
 
 
 }
 
 
-
-.sidebar-box h4{
-
-
-    text-align:center;
-
-
-    color:#850000;
-
-
-    font-family:
-
-    "Bowlby One SC";
-
-
-}
-
-
-
-
-
-
-
-
-
-/* CRIANÇAS */
-
-
-.sidebar-box.kids{
-
-
-    background:
-
-
-    linear-gradient(
-
-        #ffe8a8,
-
-        #e9bd55
-
-    );
-
-
-}
-
-
-
-
-
-
-
-
-
-/* CONTRATAÇÃO */
-
-
-.sidebar-box.hiring-side{
-
-
-    background:
-
-
-    linear-gradient(
-
-        #e8d09b,
-
-        #9e753c
-
-    );
-
-
-}
-
-
-
-
-
-
-
-
-
-/* AVISO */
-
-
-.sidebar-box.warning{
-
-
-    background:
-
-
-    linear-gradient(
-
-        #450000,
-
-        #120000
-
-    );
-
-
-
-    color:white;
-
-
-}
-
-
-
-.sidebar-box.warning h3{
+.warning-box p{
 
 
     color:#ffd45c;
 
 
-    border-color:#ffd45c;
-
-
-}
-
-
-
-
-.sidebar-box.warning a{
-
-
-    background:
-
-
-    linear-gradient(
-
-        #700000,
-
-        #250000
-
-    );
-
-
 }
 
 
@@ -463,19 +259,53 @@
 
 
 
+/* =========================
+   MOBILE CAROUSEL
+========================= */
 
 
-/* MOBILE */
+@media(max-width:1000px){
 
 
-@media(max-width:950px){
+.sidebar{
 
 
-    .sidebar{
+    width:100%;
 
-        width:100%;
 
-    }
+}
+
+
+
+.sidebar-track{
+
+
+    flex-direction:row;
+
+
+    overflow-x:auto;
+
+
+    scroll-snap-type:x mandatory;
+
+
+    gap:15px;
+
+
+}
+
+
+
+.sidebar-box{
+
+
+    min-width:280px;
+
+
+    scroll-snap-align:center;
+
+
+}
 
 
 }

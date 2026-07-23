@@ -5,7 +5,6 @@
 =======================================
 */
 
-
 document.addEventListener(
 "DOMContentLoaded",
 ()=>{
@@ -16,65 +15,50 @@ document.addEventListener(
 
 
 
-
-
-
-
+/*
+=======================================
+ CARREGA COMPONENTES
+=======================================
+*/
 
 async function loadComponents(){
 
 
-
     const isInsidePages =
-    window.location.pathname.includes("/paginas/");
-
+    window.location.pathname.includes(
+        "/paginas/"
+    );
 
 
     const basePath =
     isInsidePages ? "../" : "";
 
 
-
-
-
-
     const components = {
-
 
         header:
         "components/header.html",
 
-
         navbar:
         "components/navbar.html",
-
 
         sidebar:
         "components/sidebar.html",
 
-
         footer:
         "components/footer.html"
-
 
     };
 
 
 
-
-
-
-
-
-    for(
-        const component in components
-    ){
-
+    for(const component in components){
 
 
         const container =
-        document.getElementById(component);
-
+        document.getElementById(
+            component
+        );
 
 
         if(!container)
@@ -82,49 +66,44 @@ async function loadComponents(){
 
 
 
-
-
-
-
         try{
-
 
 
             const response =
             await fetch(
-                basePath + components[component]
+                basePath +
+                components[component]
             );
-
-
 
 
             if(!response.ok){
 
                 throw new Error(
-                    "HTTP " + response.status
+                    "HTTP " +
+                    response.status
                 );
 
             }
-
-
-
 
 
             container.innerHTML =
             await response.text();
 
 
-
-
-
         }
+
+
         catch(error){
 
 
             console.error(
-                "Erro carregando:",
+
+                "Erro carregando componente:",
+
                 component,
+
                 error
+
             );
 
 
@@ -135,9 +114,11 @@ async function loadComponents(){
 
 
 
-
-
-
+    /*
+    =======================================
+    Corrige caminhos
+    =======================================
+    */
 
     fixImages(
         isInsidePages
@@ -145,12 +126,28 @@ async function loadComponents(){
 
 
 
+    /*
+    =======================================
+    Navbar Responsiva
+    =======================================
+    */
 
+    initNavbar();
+
+
+
+    /*
+    =======================================
+    Libera scripts dependentes
+    =======================================
+    */
 
     document.dispatchEvent(
+
         new Event(
             "componentsLoaded"
         )
+
     );
 
 
@@ -159,23 +156,84 @@ async function loadComponents(){
 
 
 
+/*
+=======================================
+ NAVBAR RESPONSIVA
+=======================================
+*/
+
+function initNavbar(){
+
+
+    const toggle =
+    document.getElementById(
+        "navToggle"
+    );
+
+
+    const menu =
+    document.getElementById(
+        "navMenu"
+    );
+
+
+    if(
+        !toggle ||
+        !menu
+    ) return;
 
 
 
+    toggle.addEventListener(
+
+        "click",
+
+        ()=>{
+
+            menu.classList.toggle(
+                "open"
+            );
+
+        }
+
+    );
+
+
+
+    menu
+    .querySelectorAll("a")
+    .forEach(link=>{
+
+        link.addEventListener(
+
+            "click",
+
+            ()=>{
+
+                menu.classList.remove(
+                    "open"
+                );
+
+            }
+
+        );
+
+    });
+
+
+}
 
 
 
 /*
 =======================================
- CORRIGE IMAGENS DOS COMPONENTES
+ CORRIGE IMAGENS
 =======================================
 */
-
 
 function fixImages(
 insidePages
 ){
-
 
 
     if(!insidePages)
@@ -183,24 +241,29 @@ insidePages
 
 
 
-
-
-
     document
+
     .querySelectorAll("img")
+
     .forEach(img=>{
 
 
-        let src =
-        img.getAttribute("src");
-
+        const src =
+        img.getAttribute(
+            "src"
+        );
 
 
         if(
+
             src &&
+
             !src.startsWith("../") &&
+
             !src.startsWith("/") &&
+
             !src.startsWith("http")
+
         ){
 
 
@@ -211,18 +274,10 @@ insidePages
         }
 
 
-
     });
 
 
-
 }
-
-
-
-
-
-
 
 
 
@@ -232,35 +287,28 @@ insidePages
 =======================================
 */
 
-
 function goTo(page){
 
 
-
     const insidePages =
-    window.location.pathname.includes("/paginas/");
-
+    window.location.pathname.includes(
+        "/paginas/"
+    );
 
 
     if(insidePages){
 
-
         window.location.href =
         page;
 
-
-
     }
-    else{
 
+    else{
 
         window.location.href =
         "paginas/" + page;
 
-
-
     }
-
 
 
 }

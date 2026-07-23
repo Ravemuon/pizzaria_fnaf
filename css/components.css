@@ -32,3 +32,89 @@
     var(--shadow);
 
 }
+/* =======================================
+MENU MOBILE
+======================================= */
+
+.nav-toggle{
+
+    display:none;
+
+    width:100%;
+
+    padding:15px;
+
+    background:#650000;
+
+    border:none;
+
+    border-bottom:4px ridge var(--gold);
+
+    color:#ffd45c;
+
+    font-size:34px;
+
+    font-family:"Bowlby One SC";
+
+    cursor:pointer;
+
+}
+
+
+
+@media(max-width:900px){
+
+
+    .nav-toggle{
+
+        display:block;
+
+    }
+
+
+
+    .navbar ul{
+
+        display:none;
+
+        flex-direction:column;
+
+        width:100%;
+
+    }
+
+
+
+    .navbar ul.open{
+
+        display:flex;
+
+    }
+
+
+
+    .navbar li{
+
+        width:100%;
+
+    }
+
+
+
+    .navbar li::after{
+
+        display:none!important;
+
+    }
+
+
+
+    .navbar a{
+
+        padding:18px;
+
+        border-bottom:1px solid rgba(255,255,255,.15);
+
+    }
+
+}

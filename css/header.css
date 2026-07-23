@@ -3,388 +3,132 @@
    FREDDY FAZBEAR'S PIZZA
 ======================================= */
 
-
-.site-header{
-
-
-    position:relative;
-
-
-
-    background:
-
-
-    linear-gradient(
-
-        180deg,
-
-        #9b0000,
-
-        #520000
-
-    );
-
-
-
-    border-bottom:
-
-
-    6px ridge var(--gold);
-
-
-
-    overflow:hidden;
-
-
-
+.site-header {
+    position: relative;
+    background: linear-gradient(180deg, #9b0000, #520000);
+    border-bottom: 6px ridge var(--gold);
+    overflow: hidden;
 }
 
+/* =======================================
+   TEXTURA
+======================================= */
 
-
-
-
-
-
-/*
-TEXTURA DE PLACA
-*/
-
-
-.site-header::before{
-
-
-    content:"";
-
-
-    position:absolute;
-
-
-
-    inset:0;
-
-
-
-    background:
-
-
-    repeating-linear-gradient(
-
+.site-header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
         90deg,
-
         rgba(255,255,255,.04) 0,
-
         rgba(255,255,255,.04) 2px,
-
         transparent 2px,
-
         transparent 8px
-
     );
-
-
-
-    pointer-events:none;
-
-
-
+    pointer-events: none;
 }
 
+/* =======================================
+   CONTAINER
+======================================= */
 
-
-
-
-
-
-
-.header-container{
-
-
-    width:min(
-        1200px,
-        95%
-    );
-
-
-
-    margin:auto;
-
-
-
-    display:flex;
-
-
-
-    align-items:center;
-
-
-
-    gap:35px;
-
-
-
-    padding:20px 0;
-
-
-
-    position:relative;
-
-
-
+.header-container {
+    width: min(1200px, 95%);
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+    position: relative;
 }
 
+/* =======================================
+   LOGO
+======================================= */
 
-
-
-
-
-
-
-
-/* LOGO */
-
-
-.header-logo-box{
-
-
-    background:
-
-
-    linear-gradient(
-
-        #fff2b0,
-
-        #c58b30
-
-    );
-
-
-
-    padding:8px;
-
-
-
-    border:
-
-
-    5px ridge var(--gold);
-
-
-
-    box-shadow:
-
-
-    0 0 20px black;
-
-
-
+.logo {
+    width: clamp(120px, 18vw, 190px);
+    aspect-ratio: 1;
+    object-fit: cover;
+    border: 5px ridge var(--gold);
+    box-shadow: 0 0 20px rgba(0,0,0,.45);
+    flex-shrink: 0;
+    transition: .3s;
 }
 
-
-
-
-
-
-.logo{
-
-
-    width:180px;
-
-
-
-    display:block;
-
-
-
+.logo:hover {
+    box-shadow: 0 0 25px #ffd45c;
 }
 
+/* =======================================
+   TEXTO
+======================================= */
 
-
-
-
-
-
-
-
-/* TEXTO */
-
-
-.header-text h1{
-
-
-    margin:0;
-
-
-
-    color:white;
-
-
-
-    font-family:
-
-
-    "Bowlby One SC";
-
-
-
-    font-size:
-
-    clamp(
-        28px,
-        4vw,
-        42px
-    );
-
-
-
-    text-shadow:
-
-
-    3px 3px 0 #300000;
-
-
-
+.header-text {
+    min-width: 0;
 }
 
-
-
-
-
-
-
-
-.header-text p{
-
-
-    margin-top:10px;
-
-
-
-    color:#ffd86b;
-
-
-
-    font-size:20px;
-
-
-
-    font-family:
-
-
-    "Special Elite";
-
-
-
+.header-text h1 {
+    margin: 0;
+    color: white;
+    font-family: "Bowlby One SC", cursive;
+    font-size: clamp(26px, 4vw, 46px);
+    line-height: 1.1;
+    text-shadow: 3px 3px #300000;
 }
 
-
-
-
-
-
-
-
-.header-text span{
-
-
-    display:inline-block;
-
-
-
-    margin-top:10px;
-
-
-
-    color:white;
-
-
-
-    font-family:
-
-
-    "Press Start 2P";
-
-
-
-    font-size:10px;
-
-
-
-    background:#300000;
-
-
-
-    padding:8px;
-
-
-
-    border:
-
-
-    2px solid var(--gold);
-
-
-
+.header-text p {
+    margin-top: 12px;
+    color: #ffd86b;
+    font-family: "Special Elite", cursive;
+    font-size: clamp(16px, 2vw, 22px);
 }
 
+/* =======================================
+   TABLET
+======================================= */
 
-
-
-
-
-
-
-
-/* BRILHO */
-
-.site-header:hover .header-logo-box{
-
-
-    box-shadow:
-
-
-    0 0 30px #ffd45c;
-
-
+@media (max-width: 900px) {
+    .header-container {
+        gap: 20px;
+    }
 }
 
+/* =======================================
+   MOBILE
+======================================= */
 
-
-
-
-
-
-
-
-/* MOBILE */
-
-
-@media(max-width:750px){
-
-
-
-.header-container{
-
-
-    flex-direction:column;
-
-
-
-    text-align:center;
-
-
-
+@media (max-width: 700px) {
+    .header-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+        padding: 20px 15px;
+    }
+    .logo {
+        width: 140px;
+    }
+    .header-text h1 {
+        font-size: 32px;
+    }
+    .header-text p {
+        font-size: 17px;
+    }
 }
 
+/* =======================================
+   CELULARES PEQUENOS
+======================================= */
 
-
-.logo{
-
-
-    width:140px;
-
-
-}
-
-
-
+@media (max-width: 420px) {
+    .logo {
+        width: 110px;
+    }
+    .header-text h1 {
+        font-size: 26px;
+    }
+    .header-text p {
+        font-size: 15px;
+    }
 }
