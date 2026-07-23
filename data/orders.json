@@ -1,0 +1,61 @@
+{
+  "orders": [
+    {
+      "id": 1,
+      "customer": "Carlos Mendes",
+      "items": [
+        { "itemId": 2, "quantity": 1, "name": "Pizza de Calabresa", "price": 44.90 },
+        { "itemId": 9, "quantity": 2, "name": "Refrigerante Lata (Coca-Cola)", "price": 7.00 }
+      ],
+      "total": 58.90,
+      "status": "delivered",
+      "date": "2026-07-20T19:30:00Z"
+    },
+    {
+      "id": 2,
+      "customer": "Ana Oliveira",
+      "items": [
+        { "itemId": 4, "quantity": 1, "name": "Pizza de Frango com Catupiry", "price": 47.90 },
+        { "itemId": 12, "quantity": 1, "name": "Milkshake de Chocolate", "price": 14.90 },
+        { "itemId": 14, "quantity": 1, "name": "Torta de Limão", "price": 10.90 }
+      ],
+      "total": 73.70,
+      "status": "preparing",
+      "date": "2026-07-22T18:15:00Z"
+    },
+    {
+      "id": 3,
+      "customer": "Rodrigo Silva",
+      "items": [
+        { "itemId": 1, "quantity": 2, "name": "Pizza de Pepperoni", "price": 49.90 },
+        { "itemId": 10, "quantity": 3, "name": "Suco de Laranja Natural", "price": 9.00 }
+      ],
+      "total": 126.80,
+      "status": "pending",
+      "date": "2026-07-22T20:00:00Z"
+    },
+    {
+      "id": 4,
+      "customer": "Mariana Costa",
+      "items": [
+        { "itemId": 5, "quantity": 1, "name": "Pizza Portuguesa", "price": 46.90 },
+        { "itemId": 11, "quantity": 2, "name": "Água Mineral", "price": 4.00 },
+        { "itemId": 13, "quantity": 2, "name": "Pudim de Leite", "price": 8.90 }
+      ],
+      "total": 72.70,
+      "status": "delivered",
+      "date": "2026-07-21T12:45:00Z"
+    },
+    {
+      "id": 5,
+      "customer": "Lucas Ferreira",
+      "items": [
+        { "itemId": 6, "quantity": 1, "name": "Pizza de Chocolate com Morango", "price": 39.90 },
+        { "itemId": 7, "quantity": 1, "name": "Pizza de Banana com Canela", "price": 34.90 }
+      ],
+      "total": 74.80,
+      "status": "preparing",
+      "date": "2026-07-22T19:50:00Z"
+    }
+  ]
+}

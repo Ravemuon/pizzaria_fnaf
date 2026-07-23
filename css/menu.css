@@ -1,192 +1,69 @@
-.menu-section{
+/* =======================================
+   MENU SECTION
+======================================= */
 
-padding:30px;
-
+.menu-section {
+  padding: 30px;
 }
 
-
-
-.menu-intro{
-
-text-align:center;
-
-font-family:"Special Elite";
-
-font-size:18px;
-
-margin-bottom:30px;
-
+.menu-intro {
+  text-align: center;
+  font-family: "Special Elite";
+  font-size: 18px;
+  margin-bottom: 30px;
 }
 
-
-
-.pizza-grid{
-
-
-display:grid;
-
-
-grid-template-columns:
-
-repeat(
-auto-fit,
-minmax(240px,1fr)
-);
-
-
-gap:25px;
-
-
+.pizza-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
 }
 
-
-
-
-.pizza-card{
-
-
-background:
-
-linear-gradient(
-#fff5ce,
-#d6b56b
-);
-
-
-border:
-
-5px ridge var(--gold);
-
-
-padding:15px;
-
-
-text-align:center;
-
-
-box-shadow:
-
-5px 6px 15px rgba(0,0,0,.5);
-
-
-transition:.3s;
-
-
+.pizza-card {
+  background: linear-gradient(#fff5ce, #d6b56b);
+  border: 5px ridge var(--gold);
+  padding: 15px;
+  text-align: center;
+  box-shadow: 5px 6px 15px rgba(0, 0, 0, 0.5);
+  transition: 0.3s;
 }
 
-
-
-
-.pizza-card:hover{
-
-
-transform:
-
-translateY(-8px);
-
-
+.pizza-card:hover {
+  transform: translateY(-8px);
 }
 
-
-
-
-.pizza-card img{
-
-
-width:100%;
-
-
-height:180px;
-
-
-object-fit:cover;
-
-
-border:
-
-3px solid #700000;
-
-
+.pizza-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border: 3px solid #700000;
 }
 
-
-
-.pizza-card h3{
-
-
-font-family:
-"Bowlby One SC";
-
-
-color:#8b0000;
-
-
-font-size:20px;
-
-
+.pizza-card h3 {
+  font-family: "Bowlby One SC";
+  color: #8b0000;
+  font-size: 20px;
 }
 
-
-
-.pizza-card p{
-
-
-min-height:50px;
-
-
+.pizza-card p {
+  min-height: 50px;
 }
 
-
-
-
-.pizza-card strong{
-
-
-display:block;
-
-
-font-size:22px;
-
-
-color:#700000;
-
-
-margin:15px;
-
-
+.pizza-card strong {
+  display: block;
+  font-size: 22px;
+  color: #700000;
+  margin: 15px;
 }
 
-
-
-
-.pizza-card a{
-
-
-display:block;
-
-
-background:#8b0000;
-
-
-color:white;
-
-
-padding:10px;
-
-
-border:
-
-3px ridge var(--gold);
-
-
+.pizza-card a {
+  display: block;
+  background: #8b0000;
+  color: white;
+  padding: 10px;
+  border: 3px ridge var(--gold);
 }
 
-
-
-.pizza-card a:hover{
-
-
-background:#d00000;
-
-
+.pizza-card a:hover {
+  background: #d00000;
 }

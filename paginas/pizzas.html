@@ -2,183 +2,201 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <!-- ============================================================
+       METADADOS
+       ============================================================ -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Freddy Fazbear's Pizza | Pizzas</title>
+  <title>Freddy Fazbear's Pizza | Pizzas</title>
 
-    <meta name="description"
-    content="Cardápio de pizzas da Freddy Fazbear's Pizza. Sabores clássicos e especiais para toda a família.">
+  <meta name="description" content="Cardápio de pizzas da Freddy Fazbear's Pizza. Sabores clássicos e especiais para toda a família.">
 
-    <!-- ============================================================
-         NOTA INTERNA (DEPARTAMENTO DE ALIMENTOS):
-         Esta página exibe os sabores de pizza disponíveis. Os
-         preços podem variar conforme a unidade e a promoção do dia.
-         ============================================================ -->
+  <!-- ============================================================
+       NOTA INTERNA (DEPARTAMENTO DE ALIMENTOS):
+       Esta página exibe os sabores de pizza disponíveis. Os
+       preços podem variar conforme a unidade e a promoção do dia.
+       ============================================================ -->
 
-    <link rel="stylesheet" href="../css/fonts.css">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/header.css">
-    <link rel="stylesheet" href="../css/navbar.css">
-    <link rel="stylesheet" href="../css/sidebar.css">
-    <link rel="stylesheet" href="../css/footer.css">
-    <link rel="stylesheet" href="../css/components.css">
-    <link rel="stylesheet" href="../css/pages.css">
-    <link rel="stylesheet" href="../css/pages/pizzas.css"> <!-- CSS específico -->
-    <link rel="stylesheet" href="../css/vintage.css">
-    <link rel="stylesheet" href="../css/animations.css">
+  <!-- ============================================================
+       FOLHAS DE ESTILO
+       ============================================================ -->
+  <link rel="stylesheet" href="../css/fonts.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/navbar.css">
+  <link rel="stylesheet" href="../css/sidebar.css">
+  <link rel="stylesheet" href="../css/footer.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/pages.css">
+  <link rel="stylesheet" href="../css/pages/pizzas.css"> <!-- CSS específico -->
+  <link rel="stylesheet" href="../css/vintage.css">
+  <link rel="stylesheet" href="../css/animations.css">
 
 </head>
 
 <body>
 
-    <div id="header"></div>
-    <div id="navbar"></div>
+  <!-- ============================================================
+       CABEÇALHO E NAVEGAÇÃO (CARREGADOS VIA JS)
+       ============================================================ -->
+  <div id="header"></div>
+  <div id="navbar"></div>
 
-    <div class="site-layout">
+  <!-- ============================================================
+       LAYOUT PRINCIPAL COM SIDEBAR
+       ============================================================ -->
+  <div class="site-layout">
 
-        <aside id="sidebar"></aside>
+    <aside id="sidebar"></aside>
 
-        <main class="content">
+    <main class="content">
 
-            <!-- =========================================================
-                 HERO – Pizzas
-                 ========================================================= -->
-            <section class="hero">
-                <img src="../assets/imagens/pizzas/pizzas.jpg" alt="Pizzas Freddy's">
-                <div class="hero-overlay">
-                    <h1>Pizzas Freddy's</h1>
-                    <p>Sabores preparados especialmente para você</p>
-                </div>
-            </section>
+      <!-- =========================================================
+           HERO – Pizzas
+           ========================================================= -->
+      <section class="hero">
+        <img src="../assets/imagens/pizzas/pizzas.jpg" alt="Pizzas Freddy's">
+        <div class="hero-overlay">
+          <h1>Pizzas Freddy's</h1>
+          <p>Sabores preparados especialmente para você</p>
+        </div>
+      </section>
 
-            <!-- =========================================================
-                 CARDÁPIO DE PIZZAS
-                 ========================================================= -->
-            <section class="topic vintage-paper">
-                <h2>★ Cardápio de Pizzas ★</h2>
+      <!-- =========================================================
+           CARDÁPIO DE PIZZAS
+           ========================================================= -->
+      <section class="topic vintage-paper">
+        <h2>★ Cardápio de Pizzas ★</h2>
 
-                <div class="pizza-grid">
+        <div class="pizza-grid">
 
-                    <article class="pizza-card">
-                        <img src="../assets/imagens/pizzas/calabresa_sem_cebola.jpg" alt="Calabresa Especial">
-                        <h3>Calabresa Especial</h3>
-                        <p>Molho da casa, queijo e calabresa.</p>
-                        <span class="price">R$ 38,90</span>
-                        <a href="pedidos.html" class="btn-small">🍕 Pedir</a>
-                    </article>
+          <article class="pizza-card">
+            <img src="../assets/imagens/pizzas/calabresa_sem_cebola.jpg" alt="Calabresa Especial">
+            <h3>Calabresa Especial</h3>
+            <p>Molho da casa, queijo e calabresa.</p>
+            <span class="price">R$ 38,90</span>
+            <a href="pedidos.html" class="btn-small">🍕 Pedir</a>
+          </article>
 
-                    <article class="pizza-card">
-                        <img src="../assets/imagens/pizzas/4queijos.jpg" alt="4 Queijos">
-                        <h3>4 Queijos</h3>
-                        <p>Uma combinação clássica de queijos.</p>
-                        <span class="price">R$ 42,90</span>
-                        <a href="pedidos.html" class="btn-small">🍕 Pedir</a>
-                    </article>
+          <article class="pizza-card">
+            <img src="../assets/imagens/pizzas/4queijos.jpg" alt="4 Queijos">
+            <h3>4 Queijos</h3>
+            <p>Uma combinação clássica de queijos.</p>
+            <span class="price">R$ 42,90</span>
+            <a href="pedidos.html" class="btn-small">🍕 Pedir</a>
+          </article>
 
-                    <article class="pizza-card">
-                        <img src="../assets/imagens/pizzas/frango_com_catupiry.jpg" alt="Frango com Catupiry">
-                        <h3>Frango com Catupiry</h3>
-                        <p>Especialidade Freddy's.</p>
-                        <span class="price">R$ 41,90</span>
-                        <a href="pedidos.html" class="btn-small">🍕 Pedir</a>
-                    </article>
+          <article class="pizza-card">
+            <img src="../assets/imagens/pizzas/frango_com_catupiry.jpg" alt="Frango com Catupiry">
+            <h3>Frango com Catupiry</h3>
+            <p>Especialidade Freddy's.</p>
+            <span class="price">R$ 41,90</span>
+            <a href="pedidos.html" class="btn-small">🍕 Pedir</a>
+          </article>
 
-                    <article class="pizza-card">
-                        <img src="../assets/imagens/pizzas/marguerita.jpg" alt="Marguerita">
-                        <h3>Marguerita</h3>
-                        <p>Sabor tradicional italiano.</p>
-                        <span class="price">R$ 36,90</span>
-                        <a href="pedidos.html" class="btn-small">🍕 Pedir</a>
-                    </article>
+          <article class="pizza-card">
+            <img src="../assets/imagens/pizzas/marguerita.jpg" alt="Marguerita">
+            <h3>Marguerita</h3>
+            <p>Sabor tradicional italiano.</p>
+            <span class="price">R$ 36,90</span>
+            <a href="pedidos.html" class="btn-small">🍕 Pedir</a>
+          </article>
 
-                    <article class="pizza-card">
-                        <img src="../assets/imagens/pizzas/sensacao.jpg" alt="Sensação">
-                        <h3>Sensação</h3>
-                        <p>Pizza doce especial com chocolate e morangos.</p>
-                        <span class="price">R$ 44,90</span>
-                        <a href="pedidos.html" class="btn-small">🍕 Pedir</a>
-                    </article>
+          <article class="pizza-card">
+            <img src="../assets/imagens/pizzas/sensacao.jpg" alt="Sensação">
+            <h3>Sensação</h3>
+            <p>Pizza doce especial com chocolate e morangos.</p>
+            <span class="price">R$ 44,90</span>
+            <a href="pedidos.html" class="btn-small">🍕 Pedir</a>
+          </article>
 
-                    <article class="pizza-card">
-                        <img src="../assets/imagens/pizzas/especial_dacasa.jpg" alt="Especial da Casa">
-                        <h3>Especial da Casa</h3>
-                        <p>Receita exclusiva Freddy Fazbear.</p>
-                        <span class="price">R$ 49,90</span>
-                        <a href="pedidos.html" class="btn-small">🍕 Pedir</a>
-                    </article>
+          <article class="pizza-card">
+            <img src="../assets/imagens/pizzas/especial_dacasa.jpg" alt="Especial da Casa">
+            <h3>Especial da Casa</h3>
+            <p>Receita exclusiva Freddy Fazbear.</p>
+            <span class="price">R$ 49,90</span>
+            <a href="pedidos.html" class="btn-small">🍕 Pedir</a>
+          </article>
 
-                    <article class="pizza-card">
-                        <img src="../assets/imagens/pizzas/brocolis.jpg" alt="Brócolis">
-                        <h3>Brócolis Especial</h3>
-                        <p>Opção vegetariana com brócolis e queijo.</p>
-                        <span class="price">R$ 37,90</span>
-                        <a href="pedidos.html" class="btn-small">🍕 Pedir</a>
-                    </article>
+          <article class="pizza-card">
+            <img src="../assets/imagens/pizzas/brocolis.jpg" alt="Brócolis">
+            <h3>Brócolis Especial</h3>
+            <p>Opção vegetariana com brócolis e queijo.</p>
+            <span class="price">R$ 37,90</span>
+            <a href="pedidos.html" class="btn-small">🍕 Pedir</a>
+          </article>
 
-                    <article class="pizza-card">
-                        <img src="../assets/imagens/pizzas/meiacalarebsa_meia4queijos.jpg" alt="Meia Calabresa Meia 4 Queijos">
-                        <h3>Meia Calabresa / Meia 4 Queijos</h3>
-                        <p>O melhor dos dois mundos.</p>
-                        <span class="price">R$ 44,90</span>
-                        <a href="pedidos.html" class="btn-small">🍕 Pedir</a>
-                    </article>
+          <article class="pizza-card">
+            <img src="../assets/imagens/pizzas/meiacalarebsa_meia4queijos.jpg" alt="Meia Calabresa Meia 4 Queijos">
+            <h3>Meia Calabresa / Meia 4 Queijos</h3>
+            <p>O melhor dos dois mundos.</p>
+            <span class="price">R$ 44,90</span>
+            <a href="pedidos.html" class="btn-small">🍕 Pedir</a>
+          </article>
 
-                </div>
+        </div>
 
-                <p style="text-align:center; font-family:'Press Start 2P', monospace; font-size:10px; color:#6b4a3a; margin-top:15px;">
-                    * Consulte a disponibilidade dos sabores na unidade mais próxima.
-                </p>
-            </section>
+        <p style="text-align:center; font-family:'Press Start 2P', monospace; font-size:10px; color:#6b4a3a; margin-top:15px;">
+          * Consulte a disponibilidade dos sabores na unidade mais próxima.
+        </p>
+      </section>
 
-            <!-- =========================================================
-                 PROMOÇÕES
-                 ========================================================= -->
-            <section class="topic">
-                <h2>★ Promoções ★</h2>
+      <!-- =========================================================
+           PROMOÇÕES
+           ========================================================= -->
+      <section class="topic">
+        <h2>★ Promoções ★</h2>
 
-                <div class="topic-grid">
-                    <img src="../assets/imagens/pizzas/especial_aniversariante.jpg" alt="Promoção Aniversariante">
+        <div class="topic-grid">
+          <img src="../assets/imagens/pizzas/especial_aniversariante.jpg" alt="Promoção Aniversariante">
 
-                    <div>
-                        <p class="promo-text">
-                            <strong>🎂 Aniversariantes</strong> possuem condições especiais para festas
-                            com pizza, bebidas e apresentação animatrônica.
-                        </p>
-                        <p class="promo-text">
-                            Consulte nossos pacotes e surpreenda seus convidados!
-                        </p>
-                        <a href="eventos.html" class="btn">Ver Eventos</a>
-                    </div>
-                </div>
-            </section>
+          <div>
+            <p class="promo-text">
+              <strong>🎂 Aniversariantes</strong> possuem condições especiais para festas
+              com pizza, bebidas e apresentação animatrônica.
+            </p>
+            <p class="promo-text">
+              Consulte nossos pacotes e surpreenda seus convidados!
+            </p>
+            <a href="eventos.html" class="btn">Ver Eventos</a>
+          </div>
+        </div>
+      </section>
 
-            <!-- =========================================================
-                 NAVEGAÇÃO RÁPIDA
-                 ========================================================= -->
-            <section class="topic vintage-paper">
-                <h2>★ Explore Mais ★</h2>
+      <!-- =========================================================
+           NAVEGAÇÃO RÁPIDA
+           ========================================================= -->
+      <section class="topic vintage-paper">
+        <h2>★ Explore Mais ★</h2>
 
-                <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:20px; padding:10px 0;">
-                    <a href="menu.html" class="btn" style="font-size:14px;">📋 Cardápio Completo</a>
-                    <a href="pedidos.html" class="btn" style="font-size:14px;">🍕 Faça seu Pedido</a>
-                    <a href="eventos.html" class="btn" style="font-size:14px;">🎉 Eventos</a>
-                    <a href="contato.html" class="btn" style="font-size:14px;">☎ Contato</a>
-                </div>
+        <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:20px; padding:10px 0;">
+          <a href="menu.html" class="btn" style="font-size:14px;">📋 Cardápio Completo</a>
+          <a href="pedidos.html" class="btn" style="font-size:14px;">🍕 Faça seu Pedido</a>
+          <a href="eventos.html" class="btn" style="font-size:14px;">🎉 Eventos</a>
+          <a href="contato.html" class="btn" style="font-size:14px;">☎ Contato</a>
+          <!-- Link para Meus Pedidos (visível apenas se logado, mas o controle será feito via navbar) -->
+        </div>
 
-                <p style="text-align:center; font-family:'Press Start 2P', monospace; font-size:10px; color:#6b4a3a; margin-top:15px;">
-                    * Os preços podem sofrer alterações sem aviso prévio.
-                </p>
-            </section>
+        <p style="text-align:center; font-family:'Press Start 2P', monospace; font-size:10px; color:#6b4a3a; margin-top:15px;">
+          * Os preços podem sofrer alterações sem aviso prévio.
+        </p>
+      </section>
 
-        </main>
+    </main>
 
-    </div>
+  </div>
 
-    <div id="footer"></div>
+  <!-- ============================================================
+       RODAPÉ (CARREGADO VIA JS)
+       ============================================================ -->
+  <div id="footer"></div>
 
-    <script src="../js/core/main.js"></script>
-    <script src="../js/core/effects.js"></script>
+  <!-- ============================================================
+       SCRIPTS – Efeitos visuais e navegação
+       ============================================================ -->
+  <script src="../js/core/main.js"></script>
+  <script src="../js/core/effects.js"></script>
 
 </body>
 

@@ -5,84 +5,84 @@
 
 /* Grid de pizzas */
 .pizza-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 25px;
-    margin-top: 15px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  margin-top: 15px;
 }
 
 /* Card individual de pizza */
 .pizza-card {
-    background: linear-gradient(#fff5d1, #d8b36a);
-    border: 5px ridge var(--gold);
-    padding: 15px;
-    text-align: center;
-    transition: .3s;
+  background: linear-gradient(#fff5d1, #d8b36a);
+  border: 5px ridge var(--gold);
+  padding: 15px;
+  text-align: center;
+  transition: 0.3s;
 }
 
 .pizza-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, .5);
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
 }
 
 .pizza-card img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    border: 3px solid #720000;
-    margin-bottom: 10px;
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border: 3px solid #720000;
+  margin-bottom: 10px;
 }
 
 .pizza-card h4 {
-    font-family: "Bowlby One SC", cursive;
-    color: #850000;
-    font-size: 18px;
-    margin: 8px 0 4px;
+  font-family: "Bowlby One SC", cursive;
+  color: #850000;
+  font-size: 18px;
+  margin: 8px 0 4px;
 }
 
 .pizza-card p {
-    font-family: "Special Elite", cursive;
-    font-size: 14px;
-    color: #2b1a10;
-    margin: 4px 0;
+  font-family: "Special Elite", cursive;
+  font-size: 14px;
+  color: #2b1a10;
+  margin: 4px 0;
 }
 
 .pizza-card .price {
-    font-family: "Press Start 2P", monospace;
-    font-size: 12px;
-    color: #850000;
-    background: #f0e0c0;
-    display: inline-block;
-    padding: 4px 14px;
-    border-radius: 20px;
-    border: 1px solid #850000;
-    margin: 6px 0 8px;
+  font-family: "Press Start 2P", monospace;
+  font-size: 12px;
+  color: #850000;
+  background: #f0e0c0;
+  display: inline-block;
+  padding: 4px 14px;
+  border-radius: 20px;
+  border: 1px solid #850000;
+  margin: 6px 0 8px;
 }
 
 .pizza-card .btn-small {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 6px 18px;
-    background: linear-gradient(#a00000, #500000);
-    color: white;
-    border: 3px ridge var(--gold);
-    font-family: "Bowlby One SC", cursive;
-    font-size: 14px;
-    text-decoration: none;
-    transition: .3s;
+  display: inline-block;
+  margin-top: 10px;
+  padding: 6px 18px;
+  background: linear-gradient(#a00000, #500000);
+  color: white;
+  border: 3px ridge var(--gold);
+  font-family: "Bowlby One SC", cursive;
+  font-size: 14px;
+  text-decoration: none;
+  transition: 0.3s;
 }
 
 .pizza-card .btn-small:hover {
-    filter: brightness(1.2);
+  filter: brightness(1.2);
 }
 
 /* Responsividade */
-@media(max-width:600px) {
-    .pizza-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-    .pizza-card img {
-        height: 160px;
-    }
+@media (max-width: 600px) {
+  .pizza-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .pizza-card img {
+    height: 160px;
+  }
 }

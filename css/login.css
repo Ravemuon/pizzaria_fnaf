@@ -1,0 +1,420 @@
+/* ========================================
+   LOGIN.CSS – PÁGINAS DE AUTENTICAÇÃO
+   Estilos unificados para login e registro
+   Versão responsiva – Freddy Fazbear's Pizza
+======================================== */
+
+/* ========================================
+   RESET BASE PARA PÁGINAS DE AUTENTICAÇÃO
+======================================== */
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(ellipse at center, #2b1a10 0%, #0d0503 100%);
+  font-family: "Special Elite", cursive, Arial, sans-serif;
+}
+
+/* ========================================
+   CONTAINER PRINCIPAL – OCUPA A TELA TODA
+======================================== */
+
+.login-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* ocupa 100% da altura da viewport */
+  padding: 20px;
+  box-sizing: border-box;
+  background: radial-gradient(ellipse at center, #2b1a10 0%, #0d0503 100%);
+}
+
+/* ========================================
+   CARTÃO DE AUTENTICAÇÃO
+======================================== */
+
+.auth-card {
+  width: 100%;
+  max-width: 440px;
+  background: rgba(255, 245, 210, 0.95);
+  border: 6px ridge var(--gold, #d4a017);
+  border-radius: 12px;
+  padding: 40px 35px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.auth-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.9);
+}
+
+/* ========================================
+   MARCA / LOGO
+======================================== */
+
+.auth-brand {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.auth-brand img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px ridge var(--gold, #d4a017);
+  margin-bottom: 12px;
+  transition: transform 0.3s;
+}
+
+.auth-brand img:hover {
+  transform: scale(1.05);
+}
+
+.auth-brand h2 {
+  font-family: "Bowlby One SC", cursive;
+  color: #8b0000;
+  font-size: 28px;
+  margin: 0;
+  text-shadow: 1px 1px #d4a017;
+  letter-spacing: 0.5px;
+}
+
+.auth-brand p {
+  font-family: "Special Elite", cursive;
+  color: #6b4a3a;
+  font-size: 16px;
+  margin-top: 4px;
+}
+
+/* ========================================
+   FORMULÁRIO
+======================================== */
+
+.auth-form .form-group {
+  margin-bottom: 20px;
+}
+
+.auth-form .form-group label {
+  display: block;
+  font-family: "Bowlby One SC", cursive;
+  color: #850000;
+  font-size: 15px;
+  margin-bottom: 6px;
+  letter-spacing: 0.3px;
+}
+
+.auth-form .form-group input {
+  width: 100%;
+  padding: 12px 16px;
+  background: #fffdf5;
+  border: 3px solid #720000;
+  border-radius: 8px;
+  font-family: "Special Elite", cursive;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  box-sizing: border-box;
+  color: #1a0a05;
+}
+
+.auth-form .form-group input::placeholder {
+  color: #b8a69b;
+  opacity: 0.7;
+}
+
+.auth-form .form-group input:focus {
+  border-color: var(--gold, #d4a017);
+  box-shadow: 0 0 0 4px rgba(212, 160, 23, 0.25);
+}
+
+/* ========================================
+   OPÇÕES EXTRAS (lembrar + esqueci)
+======================================== */
+
+.auth-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 16px 0 24px;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.auth-options label {
+  font-family: "Special Elite", cursive;
+  color: #3d2517;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.auth-options label input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #850000;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.auth-options a {
+  color: #850000;
+  font-family: "Special Elite", cursive;
+  font-size: 14px;
+  text-decoration: none;
+  border-bottom: 1px dashed #850000;
+  transition: color 0.3s, border-color 0.3s;
+}
+
+.auth-options a:hover {
+  color: #d4a017;
+  border-color: #d4a017;
+}
+
+/* ========================================
+   BOTÃO DE AÇÃO
+======================================== */
+
+.btn-auth {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, #a00000, #500000);
+  color: #fff;
+  border: 3px ridge var(--gold, #d4a017);
+  border-radius: 50px;
+  font-family: "Bowlby One SC", cursive;
+  font-size: 18px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-transform: uppercase;
+  box-sizing: border-box;
+}
+
+.btn-auth:hover {
+  filter: brightness(1.15);
+  transform: scale(1.01);
+  box-shadow: 0 0 20px rgba(212, 160, 23, 0.3);
+}
+
+.btn-auth:active {
+  transform: scale(0.98);
+}
+
+/* ========================================
+   MENSAGENS DE ALERTA
+======================================== */
+
+.auth-alert {
+  background: #400000;
+  color: #ffbaba;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border-left: 6px solid #ff3333;
+  font-family: "Special Elite", cursive;
+  font-size: 14px;
+  margin-bottom: 20px;
+  display: none;
+  transition: opacity 0.3s ease;
+}
+
+.auth-alert.show {
+  display: block;
+  animation: alertFadeIn 0.4s ease;
+}
+
+.auth-alert.success {
+  background: #1a4a1a;
+  border-left-color: #4caf50;
+  color: #c8e6c9;
+}
+
+@keyframes alertFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ========================================
+   RODAPÉ DO CARTÃO
+======================================== */
+
+.auth-footer {
+  text-align: center;
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 2px dashed #b8a69b;
+  font-family: "Special Elite", cursive;
+  font-size: 14px;
+  color: #6b4a3a;
+}
+
+.auth-footer a {
+  color: #850000;
+  text-decoration: none;
+  font-weight: bold;
+  border-bottom: 1px dotted #850000;
+  transition: color 0.3s, border-color 0.3s;
+}
+
+.auth-footer a:hover {
+  color: #d4a017;
+  border-color: #d4a017;
+}
+
+/* ========================================
+   RESPONSIVIDADE
+======================================== */
+
+/* Tablets e telas médias (até 768px) */
+@media (max-width: 768px) {
+  .auth-card {
+    max-width: 90%;
+    padding: 35px 28px;
+  }
+
+  .auth-brand h2 {
+    font-size: 26px;
+  }
+
+  .auth-brand p {
+    font-size: 15px;
+  }
+
+  .auth-form .form-group input {
+    padding: 11px 14px;
+    font-size: 15px;
+  }
+
+  .btn-auth {
+    font-size: 17px;
+    padding: 13px;
+  }
+}
+
+/* Celulares grandes (até 600px) */
+@media (max-width: 600px) {
+  .auth-card {
+    padding: 30px 20px;
+  }
+
+  .auth-brand img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .auth-brand h2 {
+    font-size: 24px;
+  }
+
+  .auth-brand p {
+    font-size: 14px;
+  }
+
+  .auth-options {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .btn-auth {
+    font-size: 16px;
+    padding: 12px;
+  }
+
+  .auth-footer {
+    font-size: 13px;
+  }
+}
+
+/* Celulares pequenos (até 400px) */
+@media (max-width: 400px) {
+  .login-wrapper {
+    padding: 10px;
+  }
+
+  .auth-card {
+    padding: 20px 15px;
+    border-width: 4px;
+  }
+
+  .auth-brand h2 {
+    font-size: 20px;
+  }
+
+  .auth-brand p {
+    font-size: 13px;
+  }
+
+  .auth-brand img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .auth-form .form-group {
+    margin-bottom: 14px;
+  }
+
+  .auth-form .form-group label {
+    font-size: 13px;
+  }
+
+  .auth-form .form-group input {
+    padding: 10px 12px;
+    font-size: 14px;
+    border-width: 2px;
+  }
+
+  .btn-auth {
+    font-size: 14px;
+    padding: 10px;
+    border-width: 2px;
+  }
+
+  .auth-alert {
+    font-size: 12px;
+    padding: 10px 12px;
+  }
+
+  .auth-footer {
+    font-size: 12px;
+    margin-top: 18px;
+    padding-top: 12px;
+  }
+}
+
+/* Telas muito pequenas (até 320px) */
+@media (max-width: 320px) {
+  .auth-card {
+    padding: 16px 12px;
+  }
+
+  .auth-brand h2 {
+    font-size: 18px;
+  }
+
+  .auth-brand p {
+    font-size: 12px;
+  }
+
+  .auth-brand img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .btn-auth {
+    font-size: 13px;
+    padding: 8px;
+  }
+}

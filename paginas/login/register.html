@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Criar Conta | Freddy Fazbear's Pizza</title>
+
+  <link rel="stylesheet" href="../../css/fonts.css">
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="../../css/header.css">
+  <link rel="stylesheet" href="../../css/navbar.css">
+  <link rel="stylesheet" href="../../css/footer.css">
+  <link rel="stylesheet" href="../../css/components.css">
+  <link rel="stylesheet" href="../../css/vintage.css">
+  <link rel="stylesheet" href="../../css/login.css">
+</head>
+
+<body>
+
+  <div id="header"></div>
+
+  <main class="login-wrapper">
+    <div class="auth-card">
+
+      <div class="auth-brand">
+        <img src="../../assets/imagens/logos/selo.jpg" alt="Freddy Fazbear's Pizza">
+        <h2>🔐 Criar Conta</h2>
+        <p>Preencha os dados para se registrar</p>
+      </div>
+
+      <div id="registerAlert" class="auth-alert"></div>
+
+      <form id="registerForm" class="auth-form" novalidate>
+
+        <div class="form-group">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" placeholder="exemplo@fazbear.com" required autofocus>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Senha</label>
+          <input type="password" id="password" placeholder="Mínimo 6 caracteres" required minlength="6">
+        </div>
+
+        <div class="form-group">
+          <label for="password_confirmation">Confirmar Senha</label>
+          <input type="password" id="password_confirmation" placeholder="Digite novamente" required>
+        </div>
+
+        <button type="submit" class="btn-auth">Criar Conta</button>
+
+      </form>
+
+      <div class="auth-footer">
+        <p>Já tem uma conta? <a href="login.html">Faça login</a></p>
+        <p style="font-size:12px; color:#6b4a3a; margin-top:6px;">
+          <a href="../../index.html">← Voltar ao site</a>
+        </p>
+      </div>
+
+    </div>
+  </main>
+
+  <div id="footer"></div>
+
+  <script src="../../js/core/main.js"></script>
+  <script src="../../js/core/login.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const form = document.getElementById('registerForm');
+      const alertBox = document.getElementById('registerAlert');
+
+      // ========================================
+      // REDIRECIONAMENTO INTELIGENTE
+      // ========================================
+      const urlParams = new URLSearchParams(window.location.search);
+      let redirectUrl = urlParams.get('redirect');
+
+      if (!redirectUrl) {
+        redirectUrl = sessionStorage.getItem('redirectAfterLogin');
+      }
+
+      if (!redirectUrl || redirectUrl === window.location.href) {
+        redirectUrl = document.referrer || '../../index.html';
+      }
+
+      // Salva para uso após o registro
+      sessionStorage.setItem('redirectAfterLogin', redirectUrl);
+
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        alertBox.classList.remove('show', 'success');
+        alertBox.innerHTML = '';
+
+        const email = document.getElementById('email').value.trim();
+        const password = document.getElementById('password').value.trim();
+        const passwordConf = document.getElementById('password_confirmation').value.trim();
+
+        if (!email || !password || !passwordConf) {
+          alertBox.textContent = 'Preencha todos os campos.';
+          alertBox.classList.add('show');
+          return;
+        }
+        if (password.length < 6) {
+          alertBox.textContent = 'A senha deve ter pelo menos 6 caracteres.';
+          alertBox.classList.add('show');
+          return;
+        }
+        if (password !== passwordConf) {
+          alertBox.textContent = 'As senhas não coincidem.';
+          alertBox.classList.add('show');
+          return;
+        }
+
+        if (Auth.register(email, password)) {
+          alertBox.textContent = '✅ Conta criada com sucesso! Redirecionando...';
+          alertBox.classList.add('show', 'success');
+
+          // Recupera o redirecionamento salvo
+          const finalRedirect = sessionStorage.getItem('redirectAfterLogin') || '../../index.html';
+          sessionStorage.removeItem('redirectAfterLogin');
+
+          setTimeout(() => {
+            window.location.href = finalRedirect;
+          }, 1500);
+        } else {
+          alertBox.textContent = 'Este e-mail já está cadastrado. Faça login.';
+          alertBox.classList.add('show');
+        }
+      });
+
+      document.querySelectorAll('#registerForm input').forEach(input => {
+        input.addEventListener('input', function() {
+          alertBox.classList.remove('show');
+        });
+      });
+    });
+  </script>
+
+</body>
+
+</html>

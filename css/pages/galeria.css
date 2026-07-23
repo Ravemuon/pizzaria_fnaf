@@ -1,245 +1,214 @@
-/* =======================================
-   PÁGINA: GALERIA OFICIAL
-   Estilos específicos para a página de galeria
-   SEM BORDAS BRANCAS NAS IMAGENS
-======================================= */
-
-/* =======================================
-   CABEÇALHO DA GALERIA
-======================================= */
-
 .galeria-header {
-    text-align: center;
+  text-align: center;
 }
 
 .galeria-header h1 {
-    color: #8b0000;
-    font-family: "Bowlby One SC", cursive;
-    font-size: clamp(25px, 4vw, 40px);
+  color: #8b0000;
+  font-family: "Bowlby One SC", cursive;
+  font-size: clamp(25px, 4vw, 40px);
 }
 
 .galeria-header p {
-    font-family: "Special Elite", cursive;
-    font-size: clamp(16px, 2vw, 20px);
-    margin-top: 10px;
-    color: #3d2517;
+  font-family: "Special Elite", cursive;
+  font-size: clamp(16px, 2vw, 20px);
+  margin-top: 10px;
+  color: #3d2517;
 }
-
-/* =======================================
-   BADGES
-======================================= */
 
 .archive-badge {
-    display: inline-block;
-    background: #850000;
-    color: #ffd45c;
-    font-family: "Press Start 2P", monospace;
-    font-size: clamp(7px, 1vw, 10px);
-    padding: 4px 14px;
-    border-radius: 12px;
-    letter-spacing: 1px;
+  display: inline-block;
+  background: #850000;
+  color: #ffd45c;
+  font-family: "Press Start 2P", monospace;
+  font-size: clamp(7px, 1vw, 10px);
+  padding: 4px 14px;
+  border-radius: 12px;
+  letter-spacing: 1px;
 }
 
-/* =======================================
-   FILTROS
-======================================= */
-
 .gallery-filter {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 12px;
-    margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 30px;
 }
 
 .gallery-filter button {
-    background: linear-gradient(#9b0000, #450000);
-    color: white;
-    border: 4px ridge var(--gold);
-    padding: 10px 18px;
-    cursor: pointer;
-    font-family: "Press Start 2P", monospace;
-    font-size: clamp(9px, 1.2vw, 12px);
-    transition: all 0.3s;
-    text-transform: uppercase;
+  background: linear-gradient(#9b0000, #450000);
+  color: white;
+  border: 4px ridge var(--gold);
+  padding: 10px 18px;
+  cursor: pointer;
+  font-family: "Press Start 2P", monospace;
+  font-size: clamp(9px, 1.2vw, 12px);
+  transition: all 0.3s;
+  text-transform: uppercase;
 }
 
 .gallery-filter button:hover {
-    filter: brightness(1.3);
-    transform: scale(1.04);
+  filter: brightness(1.3);
+  transform: scale(1.04);
 }
 
 .gallery-filter button.active {
-    background: linear-gradient(#c00000, #700000);
-    box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
-    border-color: #ffd45c;
+  background: linear-gradient(#c00000, #700000);
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+  border-color: #ffd45c;
 }
 
-/* =======================================
-   GRADE DE IMAGENS
-======================================= */
-
 .gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
-    gap: clamp(15px, 2.5vw, 25px);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
+  gap: clamp(15px, 2.5vw, 25px);
 }
 
 .gallery-item {
-    background: linear-gradient(#fff4cf, #d5af62);
-    border: 5px ridge var(--gold);
-    padding: clamp(10px, 1.5vw, 15px);
-    cursor: pointer;
-    transition: 0.3s;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  background: linear-gradient(#fff4cf, #d5af62);
+  border: 5px ridge var(--gold);
+  padding: clamp(10px, 1.5vw, 15px);
+  cursor: pointer;
+  transition: 0.3s;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .gallery-item:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 }
 
-/* --- CORREÇÃO: SEM BORDAS BRANCAS --- */
 .gallery-item img {
-    width: 100%;
-    aspect-ratio: 1 / 1;
-    object-fit: cover;          /* ALTERADO: cover em vez de contain */
-    border: 3px solid #700000;
-    background: #2b1a10;        /* Fundo escuro para harmonizar */
-    max-height: 220px;
-    display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border: 3px solid #700000;
+  background: #2b1a10;
+  max-height: 220px;
+  display: block;
 }
 
 .gallery-item h3 {
-    margin-top: 12px;
-    color: #700000;
-    font-family: "Bowlby One SC", cursive;
-    font-size: clamp(16px, 2vw, 20px);
+  margin-top: 12px;
+  color: #700000;
+  font-family: "Bowlby One SC", cursive;
+  font-size: clamp(16px, 2vw, 20px);
 }
 
 .gallery-item .item-tag {
-    display: inline-block;
-    font-family: "Press Start 2P", monospace;
-    font-size: clamp(7px, 0.9vw, 9px);
-    background: #2b1a10;
-    color: #ffd45c;
-    padding: 2px 10px;
-    border-radius: 10px;
-    margin-top: 6px;
-    letter-spacing: 0.5px;
+  display: inline-block;
+  font-family: "Press Start 2P", monospace;
+  font-size: clamp(7px, 0.9vw, 9px);
+  background: #2b1a10;
+  color: #ffd45c;
+  padding: 2px 10px;
+  border-radius: 10px;
+  margin-top: 6px;
+  letter-spacing: 0.5px;
 }
 
-/* =======================================
-   MODAL / VISUALIZADOR
-======================================= */
-
 .image-viewer {
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.92);
-    display: none;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    z-index: 999;
-    padding: 30px;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.92);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 999;
+  padding: 30px;
 }
 
 .image-viewer.active {
-    display: flex;
+  display: flex;
 }
 
 .image-viewer img {
-    max-width: 90%;
-    max-height: 75vh;
-    border: 6px ridge var(--gold);
-    object-fit: contain;        /* No modal, usa contain para ver a imagem inteira */
-    background: #0a0a0a;
-    padding: 6px;
+  max-width: 90%;
+  max-height: 75vh;
+  border: 6px ridge var(--gold);
+  object-fit: contain;
+  background: #0a0a0a;
+  padding: 6px;
 }
 
 .image-viewer h2 {
-    color: white;
-    margin-top: 20px;
-    font-family: "Bowlby One SC", cursive;
-    font-size: clamp(20px, 3vw, 30px);
-    text-shadow: 2px 2px black;
+  color: white;
+  margin-top: 20px;
+  font-family: "Bowlby One SC", cursive;
+  font-size: clamp(20px, 3vw, 30px);
+  text-shadow: 2px 2px black;
 }
 
 .image-viewer .viewer-tag {
-    font-family: "Press Start 2P", monospace;
-    font-size: clamp(10px, 1.2vw, 14px);
-    color: #ffd45c;
-    background: #2b1a10;
-    padding: 4px 16px;
-    border-radius: 20px;
-    margin-top: 8px;
+  font-family: "Press Start 2P", monospace;
+  font-size: clamp(10px, 1.2vw, 14px);
+  color: #ffd45c;
+  background: #2b1a10;
+  padding: 4px 16px;
+  border-radius: 20px;
+  margin-top: 8px;
 }
 
 .close-viewer {
-    position: absolute;
-    top: 30px;
-    right: 40px;
-    font-size: clamp(36px, 5vw, 50px);
-    background: none;
-    color: white;
-    border: none;
-    cursor: pointer;
-    transition: 0.3s;
-    font-family: "Special Elite", cursive;
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  font-size: clamp(36px, 5vw, 50px);
+  background: none;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+  font-family: "Special Elite", cursive;
 }
 
 .close-viewer:hover {
-    transform: rotate(90deg);
-    color: #ffd45c;
+  transform: rotate(90deg);
+  color: #ffd45c;
 }
 
-/* =======================================
-   RESPONSIVIDADE
-======================================= */
-
 @media (max-width: 768px) {
-    .gallery-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 12px;
-    }
-    .gallery-item img {
-        max-height: 160px;
-    }
-    .gallery-filter button {
-        padding: 8px 12px;
-        font-size: 9px;
-    }
+  .gallery-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  .gallery-item img {
+    max-height: 160px;
+  }
+  .gallery-filter button {
+    padding: 8px 12px;
+    font-size: 9px;
+  }
 }
 
 @media (max-width: 480px) {
-    .gallery-grid {
-        grid-template-columns: 1fr;
-        gap: 15px;
-    }
-    .gallery-item img {
-        max-height: 200px;
-        object-fit: cover;      /* Garantido */
-    }
-    .gallery-filter {
-        gap: 8px;
-    }
-    .gallery-filter button {
-        padding: 6px 10px;
-        font-size: 8px;
-    }
-    .image-viewer {
-        padding: 15px;
-    }
-    .image-viewer img {
-        max-height: 60vh;
-    }
-    .close-viewer {
-        top: 15px;
-        right: 20px;
-        font-size: 30px;
-    }
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  .gallery-item img {
+    max-height: 200px;
+    object-fit: cover;
+  }
+  .gallery-filter {
+    gap: 8px;
+  }
+  .gallery-filter button {
+    padding: 6px 10px;
+    font-size: 8px;
+  }
+  .image-viewer {
+    padding: 15px;
+  }
+  .image-viewer img {
+    max-height: 60vh;
+  }
+  .close-viewer {
+    top: 15px;
+    right: 20px;
+    font-size: 30px;
+  }
 }

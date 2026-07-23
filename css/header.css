@@ -4,10 +4,10 @@
 ======================================= */
 
 .site-header {
-    position: relative;
-    background: linear-gradient(180deg, #9b0000, #520000);
-    border-bottom: 6px ridge var(--gold);
-    overflow: hidden;
+  position: relative;
+  background: linear-gradient(180deg, #9b0000, #520000);
+  border-bottom: 6px ridge var(--gold);
+  overflow: hidden;
 }
 
 /* =======================================
@@ -15,17 +15,11 @@
 ======================================= */
 
 .site-header::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: repeating-linear-gradient(
-        90deg,
-        rgba(255,255,255,.04) 0,
-        rgba(255,255,255,.04) 2px,
-        transparent 2px,
-        transparent 8px
-    );
-    pointer-events: none;
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.04) 0, rgba(255, 255, 255, 0.04) 2px, transparent 2px, transparent 8px);
+  pointer-events: none;
 }
 
 /* =======================================
@@ -33,14 +27,14 @@
 ======================================= */
 
 .header-container {
-    width: min(1200px, 95%);
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 30px;
-    padding: 20px;
-    position: relative;
+  width: min(1200px, 95%);
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px;
+  position: relative;
 }
 
 /* =======================================
@@ -48,17 +42,17 @@
 ======================================= */
 
 .logo {
-    width: clamp(120px, 18vw, 190px);
-    aspect-ratio: 1;
-    object-fit: cover;
-    border: 5px ridge var(--gold);
-    box-shadow: 0 0 20px rgba(0,0,0,.45);
-    flex-shrink: 0;
-    transition: .3s;
+  width: clamp(120px, 18vw, 190px);
+  aspect-ratio: 1;
+  object-fit: cover;
+  border: 5px ridge var(--gold);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.45);
+  flex-shrink: 0;
+  transition: 0.3s;
 }
 
 .logo:hover {
-    box-shadow: 0 0 25px #ffd45c;
+  box-shadow: 0 0 25px #ffd45c;
 }
 
 /* =======================================
@@ -66,23 +60,23 @@
 ======================================= */
 
 .header-text {
-    min-width: 0;
+  min-width: 0;
 }
 
 .header-text h1 {
-    margin: 0;
-    color: white;
-    font-family: "Bowlby One SC", cursive;
-    font-size: clamp(26px, 4vw, 46px);
-    line-height: 1.1;
-    text-shadow: 3px 3px #300000;
+  margin: 0;
+  color: white;
+  font-family: "Bowlby One SC", cursive;
+  font-size: clamp(26px, 4vw, 46px);
+  line-height: 1.1;
+  text-shadow: 3px 3px #300000;
 }
 
 .header-text p {
-    margin-top: 12px;
-    color: #ffd86b;
-    font-family: "Special Elite", cursive;
-    font-size: clamp(16px, 2vw, 22px);
+  margin-top: 12px;
+  color: #ffd86b;
+  font-family: "Special Elite", cursive;
+  font-size: clamp(16px, 2vw, 22px);
 }
 
 /* =======================================
@@ -90,9 +84,9 @@
 ======================================= */
 
 @media (max-width: 900px) {
-    .header-container {
-        gap: 20px;
-    }
+  .header-container {
+    gap: 20px;
+  }
 }
 
 /* =======================================
@@ -100,21 +94,21 @@
 ======================================= */
 
 @media (max-width: 700px) {
-    .header-container {
-        flex-direction: column;
-        text-align: center;
-        gap: 15px;
-        padding: 20px 15px;
-    }
-    .logo {
-        width: 140px;
-    }
-    .header-text h1 {
-        font-size: 32px;
-    }
-    .header-text p {
-        font-size: 17px;
-    }
+  .header-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+    padding: 20px 15px;
+  }
+  .logo {
+    width: 140px;
+  }
+  .header-text h1 {
+    font-size: 32px;
+  }
+  .header-text p {
+    font-size: 17px;
+  }
 }
 
 /* =======================================
@@ -122,13 +116,13 @@
 ======================================= */
 
 @media (max-width: 420px) {
-    .logo {
-        width: 110px;
-    }
-    .header-text h1 {
-        font-size: 26px;
-    }
-    .header-text p {
-        font-size: 15px;
-    }
+  .logo {
+    width: 110px;
+  }
+  .header-text h1 {
+    font-size: 26px;
+  }
+  .header-text p {
+    font-size: 15px;
+  }
 }

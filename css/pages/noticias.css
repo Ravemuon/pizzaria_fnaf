@@ -5,159 +5,165 @@
 
 /* Lista de notícias */
 .news-list {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 15px;
 }
 
 .news-item {
-    background: rgba(255, 245, 210, 0.8);
-    border-left: 6px solid #850000;
-    padding: 18px 22px;
-    border-radius: 0 8px 8px 0;
-    box-shadow: 3px 3px 10px rgba(0,0,0,0.1);
-    transition: 0.2s;
+  background: rgba(255, 245, 210, 0.8);
+  border-left: 6px solid #850000;
+  padding: 18px 22px;
+  border-radius: 0 8px 8px 0;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.2s;
 }
 
 .news-item:hover {
-    transform: translateX(4px);
-    box-shadow: 5px 5px 15px rgba(0,0,0,0.15);
+  transform: translateX(4px);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.15);
 }
 
 .news-item h3 {
-    font-family: "Bowlby One SC", cursive;
-    color: #850000;
-    margin: 0 0 6px 0;
-    font-size: 20px;
+  font-family: "Bowlby One SC", cursive;
+  color: #850000;
+  margin: 0 0 6px 0;
+  font-size: 20px;
 }
 
 .news-item p {
-    font-family: "Special Elite", cursive;
-    font-size: 16px;
-    color: #2b1a10;
-    margin: 0 0 8px 0;
+  font-family: "Special Elite", cursive;
+  font-size: 16px;
+  color: #2b1a10;
+  margin: 0 0 8px 0;
 }
 
 .news-item .meta {
-    font-family: "Press Start 2P", monospace;
-    font-size: 10px;
-    color: #6b4a3a;
-    display: inline-block;
-    background: #f0e0c0;
-    padding: 4px 12px;
-    border-radius: 20px;
-    border: 1px solid #850000;
+  font-family: "Press Start 2P", monospace;
+  font-size: 10px;
+  color: #6b4a3a;
+  display: inline-block;
+  background: #f0e0c0;
+  padding: 4px 12px;
+  border-radius: 20px;
+  border: 1px solid #850000;
 }
 
 .news-item .meta a {
-    color: #850000;
-    text-decoration: none;
+  color: #850000;
+  text-decoration: none;
 }
 
 .news-item .meta a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .news-item.warning {
-    border-left-color: #b00000;
-    background: rgba(255, 220, 200, 0.7);
+  border-left-color: #b00000;
+  background: rgba(255, 220, 200, 0.7);
 }
 
 .news-item.warning h3 {
-    color: #b00000;
+  color: #b00000;
 }
 
 /* Comunicado especial */
 .comunicado-especial {
-    background: #1a1410;
-    border: 4px ridge var(--gold);
-    padding: 20px;
-    margin-top: 20px;
-    color: #f0e0d0;
-    text-align: center;
-    font-family: "Special Elite", cursive;
+  background: #1a1410;
+  border: 4px ridge var(--gold);
+  padding: 20px;
+  margin-top: 20px;
+  color: #f0e0d0;
+  text-align: center;
+  font-family: "Special Elite", cursive;
 }
 
 .comunicado-especial h3 {
-    font-family: "Bowlby One SC", cursive;
-    color: #ffd45c;
-    margin-top: 0;
+  font-family: "Bowlby One SC", cursive;
+  color: #ffd45c;
+  margin-top: 0;
 }
 
 .comunicado-especial .destaque {
-    color: #ffd45c;
-    font-weight: bold;
+  color: #ffd45c;
+  font-weight: bold;
 }
 
 .comunicado-especial .small-note {
-    font-family: "Press Start 2P", monospace;
-    font-size: 9px;
-    color: #6b4a3a;
-    margin-top: 12px;
+  font-family: "Press Start 2P", monospace;
+  font-size: 9px;
+  color: #6b4a3a;
+  margin-top: 12px;
 }
 
 /* Grid de cards de notícias */
 .news-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 25px;
-    margin-top: 15px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+  margin-top: 15px;
 }
 
 .news-card {
-    background: linear-gradient(#fff5d1, #d8b36a);
-    border: 5px ridge var(--gold);
-    padding: 18px;
-    text-align: center;
-    transition: 0.3s;
+  background: linear-gradient(#fff5d1, #d8b36a);
+  border: 5px ridge var(--gold);
+  padding: 18px;
+  text-align: center;
+  transition: 0.3s;
 }
 
 .news-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
 .news-card img {
-    width: 100%;
-    height: 160px;
-    object-fit: cover;
-    border: 4px solid #720000;
-    margin-bottom: 12px;
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border: 4px solid #720000;
+  margin-bottom: 12px;
 }
 
 .news-card h3 {
-    font-family: "Bowlby One SC", cursive;
-    color: #850000;
-    font-size: 20px;
-    margin: 8px 0 4px 0;
+  font-family: "Bowlby One SC", cursive;
+  color: #850000;
+  font-size: 20px;
+  margin: 8px 0 4px 0;
 }
 
 .news-card p {
-    font-family: "Special Elite", cursive;
-    font-size: 15px;
-    color: #2b1a10;
+  font-family: "Special Elite", cursive;
+  font-size: 15px;
+  color: #2b1a10;
 }
 
 .news-card .btn-small {
-    display: inline-block;
-    margin-top: 12px;
-    padding: 8px 18px;
-    background: linear-gradient(#a00000, #500000);
-    color: white;
-    border: 3px ridge var(--gold);
-    font-family: "Bowlby One SC", cursive;
-    font-size: 14px;
-    text-decoration: none;
+  display: inline-block;
+  margin-top: 12px;
+  padding: 8px 18px;
+  background: linear-gradient(#a00000, #500000);
+  color: white;
+  border: 3px ridge var(--gold);
+  font-family: "Bowlby One SC", cursive;
+  font-size: 14px;
+  text-decoration: none;
 }
 
 .news-card .btn-small:hover {
-    filter: brightness(1.2);
+  filter: brightness(1.2);
 }
 
 /* Responsividade */
-@media(max-width:600px) {
-    .news-item { padding: 14px 16px; }
-    .news-item h3 { font-size: 18px; }
-    .news-item p { font-size: 14px; }
+@media (max-width: 600px) {
+  .news-item {
+    padding: 14px 16px;
+  }
+  .news-item h3 {
+    font-size: 18px;
+  }
+  .news-item p {
+    font-size: 14px;
+  }
 }

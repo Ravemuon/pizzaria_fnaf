@@ -1,43 +1,24 @@
-@font-face{
-
-    font-family:Bowlby;
-
-    src:url("../assets/fonts/BowlbyOneSC-Regular.ttf");
-
+@font-face {
+  font-family: Bowlby;
+  src: url("../assets/fonts/BowlbyOneSC-Regular.ttf");
 }
 
-
-@font-face{
-
-    font-family:Creepster;
-
-    src:url("../assets/fonts/Creepster-Regular.ttf");
-
+@font-face {
+  font-family: Creepster;
+  src: url("../assets/fonts/Creepster-Regular.ttf");
 }
 
-
-@font-face{
-
-    font-family:PressStart;
-
-    src:url("../assets/fonts/PressStart2P-Regular.ttf");
-
+@font-face {
+  font-family: PressStart;
+  src: url("../assets/fonts/PressStart2P-Regular.ttf");
 }
 
-
-@font-face{
-
-    font-family:Rye;
-
-    src:url("../assets/fonts/Rye-Regular.ttf");
-
+@font-face {
+  font-family: Rye;
+  src: url("../assets/fonts/Rye-Regular.ttf");
 }
 
-
-@font-face{
-
-    font-family:SpecialElite;
-
-    src:url("../assets/fonts/SpecialElite-Regular.ttf");
-
+@font-face {
+  font-family: SpecialElite;
+  src: url("../assets/fonts/SpecialElite-Regular.ttf");
 }

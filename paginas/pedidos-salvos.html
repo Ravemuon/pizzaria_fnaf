@@ -1,86 +1,111 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-
-    <title>Freddy Fazbear's Pizza | Pedidos Salvos</title>
-
-    <meta name="description"
-    content="Visualize os pedidos e mensagens enviados através do site da Freddy Fazbear's Pizza.">
-
-    <link rel="stylesheet" href="../css/fonts.css">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/header.css">
-    <link rel="stylesheet" href="../css/navbar.css">
-    <link rel="stylesheet" href="../css/sidebar.css">
-    <link rel="stylesheet" href="../css/footer.css">
-    <link rel="stylesheet" href="../css/components.css">
-    <link rel="stylesheet" href="../css/pages.css">
-    <link rel="stylesheet" href="../css/vintage.css">
-    <link rel="stylesheet" href="../css/animations.css">
-    <link rel="stylesheet" href="../css/pages/pedidos-salvos.css">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meus Pedidos | Freddy Fazbear's Pizza</title>
+  <link rel="stylesheet" href="../css/fonts.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/navbar.css">
+  <link rel="stylesheet" href="../css/sidebar.css">
+  <link rel="stylesheet" href="../css/footer.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/pages.css">
+  <link rel="stylesheet" href="../css/vintage.css">
+  <link rel="stylesheet" href="../css/animations.css">
 </head>
-
 <body>
 
-    <div id="header"></div>
-    <div id="navbar"></div>
+  <div id="header"></div>
+  <div id="navbar"></div>
 
-    <div class="site-layout">
+  <div class="site-layout">
+    <aside id="sidebar"></aside>
+    <main class="content">
 
-        <aside id="sidebar"></aside>
+      <section class="hero">
+        <img src="../assets/imagens/background/security.jpg" alt="Arquivo de pedidos">
+        <div class="hero-overlay">
+          <h1>📦 Meus Pedidos</h1>
+          <p>Pedidos associados à sua conta</p>
+        </div>
+      </section>
 
-        <main class="content">
+      <section class="topic vintage-paper">
+        <h2>★ Seus Pedidos ★</h2>
 
-            <!-- =========================================================
-                 HERO
-                 ========================================================= -->
-            <section class="hero">
-                <img src="../assets/imagens/background/security.jpg" alt="Arquivo de pedidos">
-                <div class="hero-overlay">
-                    <h1>📦 Pedidos Salvos</h1>
-                    <p>Arquivo local de mensagens enviadas pelo site</p>
-                </div>
-            </section>
+        <div id="listaPedidos" class="pedidos-container">
+          <p style="text-align:center; font-family:'Special Elite', cursive; color:#6b4a3a;">
+            Carregando pedidos...
+          </p>
+        </div>
 
-            <!-- =========================================================
-                 LISTA DE PEDIDOS
-                 ========================================================= -->
-            <section class="topic vintage-paper">
-                <h2>★ Mensagens Recebidas ★</h2>
+        <div style="text-align:center; margin-top:20px; display:flex; flex-wrap:wrap; justify-content:center; gap:15px;">
+          <a href="pedidos.html" class="btn" style="font-size:14px;">🍕 Fazer Novo Pedido</a>
+          <a href="menu.html" class="btn" style="font-size:14px; background:#2b1a10;">📋 Ver Cardápio</a>
+        </div>
+      </section>
 
-                <div id="listaPedidos" class="pedidos-container">
-                    <p style="text-align:center; font-family:'Special Elite', cursive; color:#6b4a3a;">
-                        Carregando mensagens...
-                    </p>
-                </div>
+    </main>
+  </div>
 
-                <div style="text-align:center; margin-top:20px; display:flex; flex-wrap:wrap; justify-content:center; gap:15px;">
-                    <button id="btnExportar" class="btn" style="font-size:14px;">
-                        📥 Exportar como JSON
-                    </button>
-                    <button id="btnLimpar" class="btn" style="font-size:14px; background:#500000;">
-                        🗑️ Limpar Todos
-                    </button>
-                    <a href="contato.html" class="btn" style="font-size:14px;">
-                        ✉️ Voltar ao Contato
-                    </a>
-                </div>
-            </section>
+  <div id="footer"></div>
 
-        </main>
+  <script src="../js/core/main.js"></script>
+  <script>
+    (function() {
+      const currentUser = localStorage.getItem('currentUser');
+      const container = document.getElementById('listaPedidos');
 
-    </div>
+      if (!currentUser) {
+        container.innerHTML = `
+          <p style="text-align:center; color:#b8a69b; padding:30px;">
+            🔐 Você não está logado. 
+            <a href="login/login.html" style="color:#ffd45c;">Faça login</a> 
+            ou 
+            <a href="login/register.html" style="color:#ffd45c;">crie uma conta</a> 
+            para ver seus pedidos.
+          </p>
+        `;
+        return;
+      }
 
-    <div id="footer"></div>
+      // Recupera pedidos do usuário
+      const todosPedidos = JSON.parse(localStorage.getItem('pedidosFazbear')) || [];
+      const meusPedidos = todosPedidos.filter(p => p.userId === currentUser);
 
-    <script src="../js/core/main.js"></script>
-    <script src="../js/core/effects.js"></script>
-    <script src="../js/pages/pedidos-salvos.js"></script>
+      if (meusPedidos.length === 0) {
+        container.innerHTML = `<p style="text-align:center; color:#b8a69b; padding:30px;">📭 Você ainda não fez nenhum pedido.</p>`;
+        return;
+      }
 
+      let html = `<div style="overflow-x:auto;">
+        <table style="width:100%; border-collapse:collapse; background:#0d0a08; border:3px ridge #b8a69b; font-size:13px;">
+          <thead>
+            <tr style="background:#850000; color:#ffd45c;">
+              <th style="padding:10px; text-align:left;">#</th>
+              <th style="padding:10px; text-align:left;">Data</th>
+              <th style="padding:10px; text-align:left;">Pizza</th>
+              <th style="padding:10px; text-align:left;">Tamanho</th>
+              <th style="padding:10px; text-align:left;">Endereço</th>
+            </tr>
+          </thead>
+          <tbody>`;
+
+      meusPedidos.forEach((p, i) => {
+        html += `<tr>
+          <td style="padding:8px; border-bottom:1px solid #3d2517; color:#f0e0d0;">${i+1}</td>
+          <td style="padding:8px; border-bottom:1px solid #3d2517; color:#f0e0d0;">${p.data}</td>
+          <td style="padding:8px; border-bottom:1px solid #3d2517; color:#f0e0d0;">${p.pizza}</td>
+          <td style="padding:8px; border-bottom:1px solid #3d2517; color:#f0e0d0;">${p.tamanho}</td>
+          <td style="padding:8px; border-bottom:1px solid #3d2517; color:#f0e0d0;">${p.endereco}</td>
+        </tr>`;
+      });
+
+      html += `</tbody></table></div>`;
+      container.innerHTML = html;
+    })();
+  </script>
 </body>
-
 </html>

@@ -1,92 +1,83 @@
-/* =======================================
-   PÁGINA: EVENTOS
-   Estilos específicos para a página de eventos e festas
-   ======================================= */
-
-/* Seção de festas - grid interna */
 .event-features {
-    list-style: none;
-    padding: 0;
-    margin: 10px 0;
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
 }
 
 .event-features li {
-    padding: 8px 0;
-    font-family: "Special Elite", cursive;
-    font-size: 17px;
-    color: #2b1a10;
-    border-bottom: 1px dashed #b8a69b;
+  padding: 8px 0;
+  font-family: "Special Elite", cursive;
+  font-size: 17px;
+  color: #2b1a10;
+  border-bottom: 1px dashed #b8a69b;
 }
 
 .event-features li:last-child {
-    border-bottom: none;
+  border-bottom: none;
 }
 
-/* Cards de pacotes com imagens */
 .package-card img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    border: 4px solid #720000;
-    margin-bottom: 12px;
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border: 4px solid #720000;
+  margin-bottom: 12px;
 }
 
 .package-card h3 {
-    font-family: "Bowlby One SC", cursive;
-    color: #850000;
-    font-size: 22px;
-    margin: 8px 0 4px 0;
+  font-family: "Bowlby One SC", cursive;
+  color: #850000;
+  font-size: 22px;
+  margin: 8px 0 4px 0;
 }
 
 .package-card p {
-    font-family: "Special Elite", cursive;
-    font-size: 15px;
-    color: #2b1a10;
+  font-family: "Special Elite", cursive;
+  font-size: 15px;
+  color: #2b1a10;
 }
 
-/* Banner de destaque para eventos */
 .event-highlight {
-    background: linear-gradient(#2b1a10, #1a1410);
-    border: 4px ridge var(--gold);
-    padding: 25px;
-    text-align: center;
-    color: #f0e0d0;
-    margin-top: 20px;
+  background: linear-gradient(#2b1a10, #1a1410);
+  border: 4px ridge var(--gold);
+  padding: 25px;
+  text-align: center;
+  color: #f0e0d0;
+  margin-top: 20px;
 }
 
 .event-highlight h3 {
-    font-family: "Bowlby One SC", cursive;
-    color: #ffd45c;
-    font-size: 24px;
-    margin-top: 0;
+  font-family: "Bowlby One SC", cursive;
+  color: #ffd45c;
+  font-size: 24px;
+  margin-top: 0;
 }
 
 .event-highlight p {
-    font-family: "Special Elite", cursive;
-    font-size: 17px;
-    color: #d0c0b0;
+  font-family: "Special Elite", cursive;
+  font-size: 17px;
+  color: #d0c0b0;
 }
 
 .event-highlight .btn {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
-/* Responsividade */
-@media(max-width:600px) {
-    .event-features li {
-        font-size: 15px;
-        padding: 6px 0;
-    }
-    .package-card img {
-        height: 150px;
-    }
-    .event-highlight {
-        padding: 18px;
-    }
-    .event-highlight h3 {
-        font-size: 20px;
-    }
-    .event-highlight p {
-        font-size: 15px;
-    }
+@media (max-width: 600px) {
+  .event-features li {
+    font-size: 15px;
+    padding: 6px 0;
+  }
+  .package-card img {
+    height: 150px;
+  }
+  .event-highlight {
+    padding: 18px;
+  }
+  .event-highlight h3 {
+    font-size: 20px;
+  }
+  .event-highlight p {
+    font-size: 15px;
+  }
 }

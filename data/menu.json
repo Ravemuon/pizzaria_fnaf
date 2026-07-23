@@ -1,0 +1,129 @@
+{
+  "menu": [
+    {
+      "category": "Pizzas Salgadas",
+      "items": [
+        {
+          "id": 1,
+          "name": "Pizza de Pepperoni",
+          "description": "Molho de tomate, queijo mussarela, pepperoni e orégano.",
+          "price": 49.90,
+          "image": "/assets/imagens/pizzas/pepperoni.jpg"
+        },
+        {
+          "id": 2,
+          "name": "Pizza de Calabresa",
+          "description": "Molho de tomate, queijo mussarela, calabresa fatiada, cebola e azeitonas.",
+          "price": 44.90,
+          "image": "/assets/imagens/pizzas/calabresa.jpg"
+        },
+        {
+          "id": 3,
+          "name": "Pizza Margherita",
+          "description": "Molho de tomate, queijo mussarela, manjericão fresco e azeite.",
+          "price": 42.90,
+          "image": "/assets/imagens/pizzas/margherita.jpg"
+        },
+        {
+          "id": 4,
+          "name": "Pizza de Frango com Catupiry",
+          "description": "Molho de tomate, queijo mussarela, frango desfiado, catupiry e milho.",
+          "price": 47.90,
+          "image": "/assets/imagens/pizzas/frango-catupiry.jpg"
+        },
+        {
+          "id": 5,
+          "name": "Pizza Portuguesa",
+          "description": "Molho de tomate, queijo mussarela, presunto, ovos, cebola, azeitonas e pimentão.",
+          "price": 46.90,
+          "image": "/assets/imagens/pizzas/portuguesa.jpg"
+        }
+      ]
+    },
+    {
+      "category": "Pizzas Doces",
+      "items": [
+        {
+          "id": 6,
+          "name": "Pizza de Chocolate com Morango",
+          "description": "Creme de chocolate, morangos frescos e granulados.",
+          "price": 39.90,
+          "image": "/assets/imagens/pizzas/chocolate-morango.jpg"
+        },
+        {
+          "id": 7,
+          "name": "Pizza de Banana com Canela",
+          "description": "Banana caramelizada, canela em pó e açúcar mascavo.",
+          "price": 34.90,
+          "image": "/assets/imagens/pizzas/banana-canela.jpg"
+        },
+        {
+          "id": 8,
+          "name": "Pizza Romeu e Julieta",
+          "description": "Goiabada e queijo mussarela, finalizada com raspas de limão.",
+          "price": 36.90,
+          "image": "/assets/imagens/pizzas/romeu-julieta.jpg"
+        }
+      ]
+    },
+    {
+      "category": "Bebidas",
+      "items": [
+        {
+          "id": 9,
+          "name": "Refrigerante Lata (Coca-Cola)",
+          "description": "Lata 350ml.",
+          "price": 7.00,
+          "image": "/assets/imagens/bebidas/coca.jpg"
+        },
+        {
+          "id": 10,
+          "name": "Suco de Laranja Natural",
+          "description": "Suco de laranja fresco (500ml).",
+          "price": 9.00,
+          "image": "/assets/imagens/bebidas/suco-laranja.jpg"
+        },
+        {
+          "id": 11,
+          "name": "Água Mineral",
+          "description": "Garrafa 500ml.",
+          "price": 4.00,
+          "image": "/assets/imagens/bebidas/agua.jpg"
+        },
+        {
+          "id": 12,
+          "name": "Milkshake de Chocolate",
+          "description": "Milkshake cremoso de chocolate com chantilly.",
+          "price": 14.90,
+          "image": "/assets/imagens/bebidas/milkshake-chocolate.jpg"
+        }
+      ]
+    },
+    {
+      "category": "Sobremesas",
+      "items": [
+        {
+          "id": 13,
+          "name": "Pudim de Leite",
+          "description": "Pudim de leite condensado com calda de caramelo.",
+          "price": 8.90,
+          "image": "/assets/imagens/sobremesas/pudim.jpg"
+        },
+        {
+          "id": 14,
+          "name": "Torta de Limão",
+          "description": "Torta com base de biscoito, creme de limão e merengue.",
+          "price": 10.90,
+          "image": "/assets/imagens/sobremesas/torta-limao.jpg"
+        },
+        {
+          "id": 15,
+          "name": "Sorvete de Baunilha",
+          "description": "Bola de sorvete de baunilha com calda de chocolate.",
+          "price": 6.90,
+          "image": "/assets/imagens/sobremesas/sorvete-baunilha.jpg"
+        }
+      ]
+    }
+  ]
+}

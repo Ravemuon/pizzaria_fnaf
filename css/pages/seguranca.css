@@ -8,38 +8,38 @@
    ======================================= */
 
 .secret-file {
-    font-family: "Special Elite", cursive;
-    color: #2b1a10;
+  font-family: "Special Elite", cursive;
+  color: #2b1a10;
 }
 
 .secret-file h3 {
-    font-family: "Bowlby One SC", cursive;
-    color: #850000;
-    font-size: 22px;
-    margin-top: 0;
+  font-family: "Bowlby One SC", cursive;
+  color: #850000;
+  font-size: 22px;
+  margin-top: 0;
 }
 
 .secret-file h4 {
-    font-family: "Bowlby One SC", cursive;
-    color: #850000;
-    font-size: 18px;
-    margin: 15px 0 8px;
+  font-family: "Bowlby One SC", cursive;
+  color: #850000;
+  font-size: 18px;
+  margin: 15px 0 8px;
 }
 
 .secret-file ul {
-    list-style: none;
-    padding: 0;
-    margin: 10px 0;
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
 }
 
 .secret-file ul li {
-    padding: 8px 0;
-    border-bottom: 1px dashed #b8a69b;
-    font-size: 16px;
+  padding: 8px 0;
+  border-bottom: 1px dashed #b8a69b;
+  font-size: 16px;
 }
 
 .secret-file ul li:last-child {
-    border-bottom: none;
+  border-bottom: none;
 }
 
 /* =======================================
@@ -47,54 +47,54 @@
    ======================================= */
 
 .warning {
-    background: rgba(40, 20, 10, 0.9);
-    padding: 20px;
-    border-left: 6px solid #ffd45c;
-    color: #f0e0d0;
+  background: rgba(40, 20, 10, 0.9);
+  padding: 20px;
+  border-left: 6px solid #ffd45c;
+  color: #f0e0d0;
 }
 
 .warning h3 {
-    font-family: "Bowlby One SC", cursive;
-    color: #ffd45c;
-    margin-top: 0;
-    font-size: 22px;
+  font-family: "Bowlby One SC", cursive;
+  color: #ffd45c;
+  margin-top: 0;
+  font-size: 22px;
 }
 
 .warning h4 {
-    font-family: "Bowlby One SC", cursive;
-    color: #ffd45c;
-    margin: 12px 0 6px;
-    font-size: 18px;
+  font-family: "Bowlby One SC", cursive;
+  color: #ffd45c;
+  margin: 12px 0 6px;
+  font-size: 18px;
 }
 
 .warning p {
-    font-family: "Special Elite", cursive;
-    font-size: 16px;
-    color: #d0c0b0;
+  font-family: "Special Elite", cursive;
+  font-size: 16px;
+  color: #d0c0b0;
 }
 
 .warning ul {
-    list-style: none;
-    padding: 0;
-    margin: 10px 0;
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
 }
 
 .warning ul li {
-    padding: 6px 0;
-    font-family: "Special Elite", cursive;
-    font-size: 15px;
-    color: #d0c0b0;
-    border-bottom: 1px dashed #3d2517;
+  padding: 6px 0;
+  font-family: "Special Elite", cursive;
+  font-size: 15px;
+  color: #d0c0b0;
+  border-bottom: 1px dashed #3d2517;
 }
 
 .warning ul li:last-child {
-    border-bottom: none;
+  border-bottom: none;
 }
 
 .warning .warning-text {
-    color: #ff6666;
-    font-weight: bold;
-    margin-top: 12px;
+  color: #ff6666;
+  font-weight: bold;
+  margin-top: 12px;
 }
 
 /* =======================================
@@ -102,15 +102,15 @@
    ======================================= */
 
 .security-stamp {
-    font-family: "Rye", cursive;
-    font-size: 28px;
-    color: #8b0000;
-    transform: rotate(-6deg);
-    text-align: center;
-    margin: 10px 0;
-    opacity: 0.5;
-    pointer-events: none;
-    user-select: none;
+  font-family: "Rye", cursive;
+  font-size: 28px;
+  color: #8b0000;
+  transform: rotate(-6deg);
+  text-align: center;
+  margin: 10px 0;
+  opacity: 0.5;
+  pointer-events: none;
+  user-select: none;
 }
 
 /* =======================================
@@ -118,71 +118,70 @@
    ======================================= */
 
 .incident-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .incident-card {
-    background: #2b1a10;
-    border: 3px ridge var(--gold);
-    padding: 18px;
-    border-radius: 6px;
-    transition: 0.3s;
-    width: 100%;
-    box-sizing: border-box;
+  background: #2b1a10;
+  border: 3px ridge var(--gold);
+  padding: 18px;
+  border-radius: 6px;
+  transition: 0.3s;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-/* Remove qualquer tentativa de grid-column inline que possa conflitar */
 .incident-card[style*="grid-column"] {
-    grid-column: auto !important;
+  grid-column: auto !important;
 }
 
 .incident-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
-    border-color: #ffd45c;
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+  border-color: #ffd45c;
 }
 
 .incident-card h4 {
-    color: #ffd45c;
-    font-family: "Bowlby One SC", cursive;
-    margin-top: 0;
-    font-size: 18px;
+  color: #ffd45c;
+  font-family: "Bowlby One SC", cursive;
+  margin-top: 0;
+  font-size: 18px;
 }
 
 .incident-card p {
-    font-family: "Special Elite", cursive;
-    color: #d0c0b0;
-    font-size: 15px;
-    margin-bottom: 0;
+  font-family: "Special Elite", cursive;
+  color: #d0c0b0;
+  font-size: 15px;
+  margin-bottom: 0;
 }
 
 .incident-card .medida {
-    display: block;
-    margin-top: 8px;
-    padding: 8px 12px;
-    background: rgba(255, 212, 92, 0.1);
-    border-left: 3px solid #ffd45c;
-    color: #ffd45c;
-    font-family: "Special Elite", cursive;
-    font-size: 14px;
+  display: block;
+  margin-top: 8px;
+  padding: 8px 12px;
+  background: rgba(255, 212, 92, 0.1);
+  border-left: 3px solid #ffd45c;
+  color: #ffd45c;
+  font-family: "Special Elite", cursive;
+  font-size: 14px;
 }
 
 /* =======================================
-   TOPIC-GRID (imagem + texto) – Mais responsivo
+   TOPIC-GRID (imagem + texto)
    ======================================= */
 
 .topic-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    align-items: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: flex-start;
 }
 
 .topic-grid > * {
-    flex: 1 1 300px;
-    min-width: 0;
+  flex: 1 1 300px;
+  min-width: 0;
 }
 
 /* =======================================
@@ -190,37 +189,37 @@
    ======================================= */
 
 .emergency-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
-    margin-top: 15px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-top: 15px;
 }
 
 .emergency-step {
-    background: #0a0a0a;
-    padding: 15px;
-    border-left: 4px solid #ffd45c;
-    border-radius: 4px;
-    transition: 0.3s;
+  background: #0a0a0a;
+  padding: 15px;
+  border-left: 4px solid #ffd45c;
+  border-radius: 4px;
+  transition: 0.3s;
 }
 
 .emergency-step:hover {
-    background: #1a0a05;
-    border-left-color: #ff3333;
+  background: #1a0a05;
+  border-left-color: #ff3333;
 }
 
 .emergency-step h4 {
-    color: #ffd45c;
-    font-family: "Bowlby One SC", cursive;
-    margin-top: 0;
-    font-size: 16px;
+  color: #ffd45c;
+  font-family: "Bowlby One SC", cursive;
+  margin-top: 0;
+  font-size: 16px;
 }
 
 .emergency-step p {
-    color: #b8a69b;
-    font-size: 14px;
-    font-family: "Special Elite", cursive;
-    margin-bottom: 0;
+  color: #b8a69b;
+  font-size: 14px;
+  font-family: "Special Elite", cursive;
+  margin-bottom: 0;
 }
 
 /* =======================================
@@ -229,13 +228,13 @@
 
 .protocol-image,
 .topic-grid img {
-    width: 100%;
-    max-height: 320px;
-    object-fit: contain;
-    border: 4px ridge var(--gold);
-    background: #fff;
-    padding: 6px;
-    box-sizing: border-box;
+  width: 100%;
+  max-height: 320px;
+  object-fit: contain;
+  border: 4px ridge var(--gold);
+  background: #fff;
+  padding: 6px;
+  box-sizing: border-box;
 }
 
 /* =======================================
@@ -243,112 +242,106 @@
    ======================================= */
 
 @media (max-width: 900px) {
-    /* Incidentes já estão em coluna única, ajustamos apenas espaçamento */
-    .incident-grid {
-        gap: 15px;
-    }
+  .incident-grid {
+    gap: 15px;
+  }
 
-    .emergency-grid {
-        grid-template-columns: 1fr;
-        gap: 12px;
-    }
+  .emergency-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
 
-    .incident-card h4 {
-        font-size: 16px;
-    }
+  .incident-card h4 {
+    font-size: 16px;
+  }
 
-    .incident-card p {
-        font-size: 14px;
-    }
+  .incident-card p {
+    font-size: 14px;
+  }
 
-    .emergency-step h4 {
-        font-size: 15px;
-    }
+  .emergency-step h4 {
+    font-size: 15px;
+  }
 
-    /* Força os itens do topic-grid a empilhar em telas médias */
-    .topic-grid > * {
-        flex: 1 1 100%;
-    }
+  .topic-grid > * {
+    flex: 1 1 100%;
+  }
 }
 
 @media (max-width: 600px) {
-    .secret-file h3 {
-        font-size: 18px;
-    }
+  .secret-file h3 {
+    font-size: 18px;
+  }
 
-    .secret-file ul li {
-        font-size: 14px;
-        padding: 6px 0;
-    }
+  .secret-file ul li {
+    font-size: 14px;
+    padding: 6px 0;
+  }
 
-    .warning h3 {
-        font-size: 18px;
-    }
+  .warning h3 {
+    font-size: 18px;
+  }
 
-    .warning ul li {
-        font-size: 13px;
-    }
+  .warning ul li {
+    font-size: 13px;
+  }
 
-    .security-stamp {
-        font-size: 20px;
-    }
+  .security-stamp {
+    font-size: 20px;
+  }
 
-    .incident-card {
-        padding: 14px;
-    }
+  .incident-card {
+    padding: 14px;
+  }
 
-    .incident-card h4 {
-        font-size: 15px;
-    }
+  .incident-card h4 {
+    font-size: 15px;
+  }
 
-    .incident-card p {
-        font-size: 13px;
-    }
+  .incident-card p {
+    font-size: 13px;
+  }
 
-    .emergency-step {
-        padding: 12px;
-    }
+  .emergency-step {
+    padding: 12px;
+  }
 
-    .emergency-step h4 {
-        font-size: 14px;
-    }
+  .emergency-step h4 {
+    font-size: 14px;
+  }
 
-    .emergency-step p {
-        font-size: 13px;
-    }
+  .emergency-step p {
+    font-size: 13px;
+  }
 
-    .protocol-image,
-    .topic-grid img {
-        max-height: 220px;
-        padding: 4px;
-    }
+  .protocol-image,
+  .topic-grid img {
+    max-height: 220px;
+    padding: 4px;
+  }
 }
 
 @media (max-width: 400px) {
-    .protocol-image,
-    .topic-grid img {
-        max-height: 180px;
-        padding: 3px;
-    }
+  .protocol-image,
+  .topic-grid img {
+    max-height: 180px;
+    padding: 3px;
+  }
 
-    .incident-card {
-        padding: 10px;
-    }
+  .incident-card {
+    padding: 10px;
+  }
 
-    .incident-card h4 {
-        font-size: 13px;
-    }
+  .incident-card h4 {
+    font-size: 13px;
+  }
 
-    .warning h3 {
-        font-size: 16px;
-    }
+  .warning h3 {
+    font-size: 16px;
+  }
 }
-
-/* =======================================
-   SCROLL SUAVE PARA LISTAS
-   ======================================= */
 
 .incident-card,
 .emergency-step {
-    scroll-margin-top: 20px;
+  scroll-margin-top: 20px;
 }

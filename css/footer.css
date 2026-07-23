@@ -3,14 +3,14 @@
 ======================================= */
 
 .site-footer {
-    margin-top: 50px;
-    background: linear-gradient(#520000, #180000);
-    border-top: 6px ridge var(--gold);
-    color: white;
-    font-family: "Special Elite", cursive;
-    padding: 40px 20px 20px;
-    position: relative;
-    overflow: hidden;
+  margin-top: 50px;
+  background: linear-gradient(#520000, #180000);
+  border-top: 6px ridge var(--gold);
+  color: white;
+  font-family: "Special Elite", cursive;
+  padding: 40px 20px 20px;
+  position: relative;
+  overflow: hidden;
 }
 
 /* =======================================
@@ -18,12 +18,12 @@
 ======================================= */
 
 .footer-content {
-    width: min(1200px, 95%);
-    margin: auto;
-    display: grid;
-    grid-template-columns: 1.2fr 1fr 1fr;
-    gap: 35px;
-    align-items: start;
+  width: min(1200px, 95%);
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr;
+  gap: 35px;
+  align-items: start;
 }
 
 /* =======================================
@@ -31,35 +31,35 @@
 ======================================= */
 
 .footer-brand {
-    text-align: center;
+  text-align: center;
 }
 
 .footer-logo {
-    width: clamp(90px, 12vw, 130px);
-    aspect-ratio: 1;
-    object-fit: cover;
-    border: 5px ridge var(--gold);
-    box-shadow: 0 0 15px rgba(214,165,55,.45);
-    margin-bottom: 15px;
-    transition: .3s;
+  width: clamp(90px, 12vw, 130px);
+  aspect-ratio: 1;
+  object-fit: cover;
+  border: 5px ridge var(--gold);
+  box-shadow: 0 0 15px rgba(214, 165, 55, 0.45);
+  margin-bottom: 15px;
+  transition: 0.3s;
 }
 
 .footer-logo:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 20px #ffd45c;
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #ffd45c;
 }
 
 .footer-brand h2 {
-    margin: 0;
-    color: #ffd45c;
-    font-family: "Bowlby One SC", cursive;
-    font-size: clamp(24px, 2vw, 30px);
-    text-shadow: 2px 2px black;
+  margin: 0;
+  color: #ffd45c;
+  font-family: "Bowlby One SC", cursive;
+  font-size: clamp(24px, 2vw, 30px);
+  text-shadow: 2px 2px black;
 }
 
 .footer-brand p {
-    margin-top: 12px;
-    line-height: 1.6;
+  margin-top: 12px;
+  line-height: 1.6;
 }
 
 /* =======================================
@@ -68,22 +68,22 @@
 
 .footer-links,
 .footer-info {
-    background: linear-gradient(#fff0c2, #c99c4c);
-    padding: 20px;
-    border: 4px ridge var(--gold);
-    box-shadow: 4px 5px 12px rgba(0,0,0,.45);
-    color: #300000;
-    border-radius: 6px;
+  background: linear-gradient(#fff0c2, #c99c4c);
+  padding: 20px;
+  border: 4px ridge var(--gold);
+  box-shadow: 4px 5px 12px rgba(0, 0, 0, 0.45);
+  color: #300000;
+  border-radius: 6px;
 }
 
 .footer-links h3,
 .footer-info h3 {
-    margin-top: 0;
-    text-align: center;
-    color: #8b0000;
-    font-family: "Bowlby One SC", cursive;
-    border-bottom: 2px dashed #8b0000;
-    padding-bottom: 10px;
+  margin-top: 0;
+  text-align: center;
+  color: #8b0000;
+  font-family: "Bowlby One SC", cursive;
+  border-bottom: 2px dashed #8b0000;
+  padding-bottom: 10px;
 }
 
 /* =======================================
@@ -91,23 +91,23 @@
 ======================================= */
 
 .footer-links a {
-    display: block;
-    margin: 10px 0;
-    padding: 11px;
-    text-align: center;
-    text-decoration: none;
-    color: white;
-    background: #8b0000;
-    border: 3px ridge var(--gold);
-    transition: .25s;
-    font-family: "Bowlby One SC", cursive;
-    font-size: 15px;
+  display: block;
+  margin: 10px 0;
+  padding: 11px;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  background: #8b0000;
+  border: 3px ridge var(--gold);
+  transition: 0.25s;
+  font-family: "Bowlby One SC", cursive;
+  font-size: 15px;
 }
 
 .footer-links a:hover {
-    background: #c00000;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0,0,0,.3);
+  background: #c00000;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 /* =======================================
@@ -115,11 +115,11 @@
 ======================================= */
 
 .footer-info p {
-    margin: 12px 0;
-    line-height: 1.5;
-    font-family: "Special Elite", cursive;
-    font-size: 16px;
-    color: #2b1a10;
+  margin: 12px 0;
+  line-height: 1.5;
+  font-family: "Special Elite", cursive;
+  font-size: 16px;
+  color: #2b1a10;
 }
 
 /* =======================================
@@ -127,24 +127,24 @@
 ======================================= */
 
 .secret-button {
-    display: block;
-    margin: 20px auto 0;
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    border: 3px ridge var(--gold);
-    background: #111;
-    color: #ffd45c;
-    font-size: 24px;
-    cursor: pointer;
-    transition: .3s;
-    font-family: "Rye", cursive;
+  display: block;
+  margin: 20px auto 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 3px ridge var(--gold);
+  background: #111;
+  color: #ffd45c;
+  font-size: 24px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-family: "Rye", cursive;
 }
 
 .secret-button:hover {
-    transform: rotate(180deg) scale(1.15);
-    box-shadow: 0 0 20px #ffd45c;
-    background: #2a1a0a;
+  transform: rotate(180deg) scale(1.15);
+  box-shadow: 0 0 20px #ffd45c;
+  background: #2a1a0a;
 }
 
 /* =======================================
@@ -152,17 +152,17 @@
 ======================================= */
 
 .footer-bottom {
-    width: min(1200px, 95%);
-    margin: 35px auto 0;
-    padding-top: 20px;
-    border-top: 2px dashed #ffd45c;
-    text-align: center;
-    color: #ffd45c;
-    font-size: 15px;
+  width: min(1200px, 95%);
+  margin: 35px auto 0;
+  padding-top: 20px;
+  border-top: 2px dashed #ffd45c;
+  text-align: center;
+  color: #ffd45c;
+  font-size: 15px;
 }
 
 .footer-bottom p {
-    margin: 6px 0;
+  margin: 6px 0;
 }
 
 /* =======================================
@@ -170,25 +170,29 @@
 ======================================= */
 
 #goldenJumpscare {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,.95);
-    z-index: 9999;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.95);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
 
 #goldenJumpscare img {
-    width: min(700px, 90vw);
-    max-height: 90vh;
-    animation: goldenJump .15s infinite alternate;
+  width: min(700px, 90vw);
+  max-height: 90vh;
+  animation: goldenJump 0.15s infinite alternate;
 }
 
 @keyframes goldenJump {
-    0% { transform: scale(1); }
-    100% { transform: scale(1.1); }
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
 }
 
 /* =======================================
@@ -196,34 +200,34 @@
 ======================================= */
 
 @media (max-width: 900px) {
-    .footer-content {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-    .footer-links,
-    .footer-info {
-        max-width: 500px;
-        margin: auto;
-        width: 100%;
-    }
+  .footer-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .footer-links,
+  .footer-info {
+    max-width: 500px;
+    margin: auto;
+    width: 100%;
+  }
 }
 
 @media (max-width: 550px) {
-    .site-footer {
-        padding: 30px 15px 20px;
-    }
-    .footer-logo {
-        width: 90px;
-    }
-    .footer-brand h2 {
-        font-size: 24px;
-    }
-    .footer-links,
-    .footer-info {
-        padding: 18px;
-    }
-    .footer-links a {
-        padding: 13px;
-        font-size: 15px;
-    }
+  .site-footer {
+    padding: 30px 15px 20px;
+  }
+  .footer-logo {
+    width: 90px;
+  }
+  .footer-brand h2 {
+    font-size: 24px;
+  }
+  .footer-links,
+  .footer-info {
+    padding: 18px;
+  }
+  .footer-links a {
+    padding: 13px;
+    font-size: 15px;
+  }
 }

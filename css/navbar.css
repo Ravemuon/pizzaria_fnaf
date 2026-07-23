@@ -4,12 +4,12 @@
 ======================================= */
 
 .navbar {
-    background: linear-gradient(#700000, #350000);
-    border-bottom: 5px ridge var(--gold);
-    border-top: 2px solid #b88632;
-    box-shadow: 0 5px 12px rgba(0,0,0,.5);
-    position: relative;
-    z-index: 50;
+  background: linear-gradient(#700000, #350000);
+  border-bottom: 5px ridge var(--gold);
+  border-top: 2px solid #b88632;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.5);
+  position: relative;
+  z-index: 50;
 }
 
 /* =======================================
@@ -17,14 +17,14 @@
 ======================================= */
 
 .navbar ul {
-    width: min(1200px, 95%);
-    min-height: 60px;
-    margin: auto;
-    padding: 0;
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: min(1200px, 95%);
+  min-height: 60px;
+  margin: auto;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* =======================================
@@ -32,15 +32,14 @@
 ======================================= */
 
 .navbar li {
-    position: relative;
+  position: relative;
 }
 
-/* separador estrela */
 .navbar li:not(:last-child)::after {
-    content: "★";
-    color: #d6a537;
-    margin: 0 5px;
-    font-size: 12px;
+  content: "★";
+  color: #d6a537;
+  margin: 0 5px;
+  font-size: 12px;
 }
 
 /* =======================================
@@ -48,15 +47,15 @@
 ======================================= */
 
 .navbar a {
-    display: block;
-    padding: 16px 18px;
-    color: #fff0b0;
-    text-decoration: none;
-    font-family: "Bowlby One SC", cursive;
-    font-size: 15px;
-    text-transform: uppercase;
-    letter-spacing: .5px;
-    transition: .3s;
+  display: block;
+  padding: 16px 18px;
+  color: #fff0b0;
+  text-decoration: none;
+  font-family: "Bowlby One SC", cursive;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: 0.3s;
 }
 
 /* =======================================
@@ -64,9 +63,9 @@
 ======================================= */
 
 .navbar a:hover {
-    background: linear-gradient(#b00000, #600000);
-    color: white;
-    text-shadow: 0 0 8px #ffd45c;
+  background: linear-gradient(#b00000, #600000);
+  color: white;
+  text-shadow: 0 0 8px #ffd45c;
 }
 
 /* =======================================
@@ -74,9 +73,9 @@
 ======================================= */
 
 .navbar a.active {
-    background: #300000;
-    color: #ffd45c;
-    box-shadow: inset 0 -4px 0 var(--gold);
+  background: #300000;
+  color: #ffd45c;
+  box-shadow: inset 0 -4px 0 var(--gold);
 }
 
 /* =======================================
@@ -84,16 +83,16 @@
 ======================================= */
 
 .nav-toggle {
-    display: none;
-    width: 100%;
-    padding: 15px;
-    background: #650000;
-    border: none;
-    border-bottom: 4px ridge var(--gold);
-    color: #ffd45c;
-    font-size: 34px;
-    font-family: "Bowlby One SC", cursive;
-    cursor: pointer;
+  display: none;
+  width: 100%;
+  padding: 15px;
+  background: #650000;
+  border: none;
+  border-bottom: 4px ridge var(--gold);
+  color: #ffd45c;
+  font-size: 34px;
+  font-family: "Bowlby One SC", cursive;
+  cursor: pointer;
 }
 
 /* =======================================
@@ -101,32 +100,32 @@
 ======================================= */
 
 @media (max-width: 900px) {
-    .nav-toggle {
-        display: block;
-    }
+  .nav-toggle {
+    display: block;
+  }
 
-    .navbar ul {
-        width: 100%;
-        flex-direction: column;
-        align-items: stretch;
-        display: none;
-    }
+  .navbar ul {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    display: none;
+  }
 
-    .navbar ul.open {
-        display: flex;
-    }
+  .navbar ul.open {
+    display: flex;
+  }
 
-    .navbar li {
-        width: 100%;
-        text-align: center;
-    }
+  .navbar li {
+    width: 100%;
+    text-align: center;
+  }
 
-    .navbar li:not(:last-child)::after {
-        display: none;
-    }
+  .navbar li:not(:last-child)::after {
+    display: none;
+  }
 
-    .navbar a {
-        padding: 18px;
-        border-bottom: 1px dashed #d6a537;
-    }
+  .navbar a {
+    padding: 18px;
+    border-bottom: 1px dashed #d6a537;
+  }
 }

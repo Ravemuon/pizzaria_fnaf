@@ -1,197 +1,222 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-
-    <title>Freddy Fazbear's Pizza | Pedidos</title>
-
-    <meta name="description"
-    content="Faça seu pedido na Freddy Fazbear's Pizza. Delivery e retirada com os melhores sabores.">
-
-    <!-- ============================================================
-         NOTA INTERNA (CENTRAL DE PEDIDOS):
-         Este sistema é utilizado para gerenciar pedidos de clientes.
-         Atenção: pedidos com observações sobre "animatrônicos" devem
-         ser direcionados ao departamento técnico.
-         ============================================================ -->
-
-    <link rel="stylesheet" href="../css/fonts.css">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/header.css">
-    <link rel="stylesheet" href="../css/navbar.css">
-    <link rel="stylesheet" href="../css/sidebar.css">
-    <link rel="stylesheet" href="../css/footer.css">
-    <link rel="stylesheet" href="../css/components.css">
-    <link rel="stylesheet" href="../css/pages.css">
-    <link rel="stylesheet" href="../css/pages/pedidos.css"> <!-- CSS específico -->
-    <link rel="stylesheet" href="../css/vintage.css">
-    <link rel="stylesheet" href="../css/animations.css">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Freddy Fazbear's Pizza | Pedidos</title>
+  <link rel="stylesheet" href="../css/fonts.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/navbar.css">
+  <link rel="stylesheet" href="../css/sidebar.css">
+  <link rel="stylesheet" href="../css/footer.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/pages.css">
+  <link rel="stylesheet" href="../css/pages/pedidos.css">
+  <link rel="stylesheet" href="../css/vintage.css">
+  <link rel="stylesheet" href="../css/animations.css">
 </head>
-
 <body>
 
-    <div id="header"></div>
-    <div id="navbar"></div>
+  <div id="header"></div>
+  <div id="navbar"></div>
 
-    <div class="site-layout">
+  <div class="site-layout">
+    <aside id="sidebar"></aside>
+    <main class="content">
 
-        <aside id="sidebar"></aside>
+      <!-- HERO -->
+      <section class="hero">
+        <img src="../assets/imagens/anuncios/anunciodelivery.jpg" alt="Delivery">
+        <div class="hero-overlay">
+          <h1>Central de Pedidos</h1>
+          <p>Receba sua pizza oficial Freddy's em casa</p>
+        </div>
+      </section>
 
-        <main class="content">
+      <!-- FORMULÁRIO -->
+      <section class="topic vintage-paper">
+        <h2>★ Faça seu Pedido ★</h2>
 
-            <!-- =========================================================
-                 HERO – Delivery
-                 ========================================================= -->
-            <section class="hero">
-                <img src="../assets/imagens/anuncios/anunciodelivery.jpg"
-                     alt="Delivery Freddy Fazbear's Pizza">
-                <div class="hero-overlay">
-                    <h1>Central de Pedidos</h1>
-                    <p>Receba sua pizza oficial Freddy's em casa</p>
-                </div>
-            </section>
+        <!-- Mensagem para usuário não logado -->
+        <div id="loginWarning" style="background:#2b1a10; padding:15px; border:3px ridge var(--gold); margin-bottom:20px; text-align:center; display:none;">
+          <p style="color:#ffd45c; font-family:'Special Elite', cursive; font-size:18px;">
+            🔐 Você não está logado.
+          </p>
+          <p style="color:#b8a69b;">
+            <a href="login/login.html" style="color:#ffd45c; font-weight:bold;">Faça login</a> 
+            ou 
+            <a href="login/register.html" style="color:#ffd45c; font-weight:bold;">crie uma conta</a> 
+            para salvar seus pedidos.
+          </p>
+        </div>
 
-            <!-- =========================================================
-                 FORMULÁRIO DE PEDIDO
-                 ========================================================= -->
-            <section class="topic vintage-paper">
-                <h2>★ Faça seu Pedido ★</h2>
+        <div class="order-intro">
+          <p>Bem-vindo ao sistema oficial de pedidos.</p>
+          <p>Escolha sua pizza, adicione observações e aguarde a confirmação.</p>
+        </div>
 
-                <div class="order-intro">
-                    <p>
-                        Bem-vindo ao sistema oficial de pedidos da Freddy Fazbear's Pizza.
-                    </p>
-                    <p>
-                        Escolha sua pizza favorita, adicione observações e aguarde
-                        a confirmação da central.
-                    </p>
-                </div>
+        <form class="order-form" id="orderForm">
+          <div class="form-group">
+            <label>Nome do Cliente</label>
+            <input type="text" id="clienteNome" placeholder="Digite seu nome" required>
+          </div>
+          <div class="form-group">
+            <label>Telefone</label>
+            <input type="tel" id="clienteTelefone" placeholder="(00) 00000-0000" required>
+          </div>
+          <div class="form-group">
+            <label>Escolha sua Pizza</label>
+            <select id="pizzaSelect">
+              <option>🍕 Freddy Especial da Casa</option>
+              <option>🍕 Quatro Queijos</option>
+              <option>🍕 Calabresa Tradicional</option>
+              <option>🍕 Frango com Catupiry</option>
+              <option>🍕 Marguerita</option>
+              <option>🍕 Pizza Sensação</option>
+              <option>🍕 Salvatore Especial</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Tamanho</label>
+            <select id="tamanhoSelect">
+              <option>Pequena</option>
+              <option>Média</option>
+              <option>Grande</option>
+              <option>Família</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Bebida</label>
+            <select id="bebidaSelect">
+              <option>Sem bebida</option>
+              <option>Refrigerante</option>
+              <option>Suco</option>
+              <option>Combo Freddy's</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Forma de Pagamento</label>
+            <select id="pagamentoSelect">
+              <option>Cartão</option>
+              <option>Dinheiro</option>
+              <option>PIX</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Endereço de Entrega</label>
+            <textarea id="enderecoText" placeholder="Rua, número e bairro" required></textarea>
+          </div>
+          <div class="form-group">
+            <label>Observações Especiais</label>
+            <textarea id="obsText" placeholder="Alguma observação sobre seu pedido?"></textarea>
+          </div>
 
-                <form class="order-form">
+          <button class="btn order-button" type="submit">🍕 Confirmar Pedido</button>
+        </form>
 
-                    <div class="form-group">
-                        <label>Nome do Cliente</label>
-                        <input type="text" placeholder="Digite seu nome" required>
-                    </div>
+        <div id="confirmacaoPedido" class="order-confirmation">
+          <h3>✅ Pedido Confirmado!</h3>
+          <p>Seu pedido foi salvo com sucesso.</p>
+          <p style="font-size:14px;">Tempo médio de entrega: 45 minutos.</p>
+          <div style="margin-top:15px;">
+            <a href="pedidos-salvos.html" class="btn" style="font-size:14px;">📋 Meus Pedidos</a>
+            <a href="menu.html" class="btn" style="font-size:14px; background:#2b1a10;">🍕 Voltar ao Cardápio</a>
+          </div>
+          <p class="small-note">© 1983-2026 Fazbear Entertainment</p>
+        </div>
 
-                    <div class="form-group">
-                        <label>Telefone</label>
-                        <input type="tel" placeholder="(00) 00000-0000" required>
-                    </div>
+        <!-- Link para criar conta (visível se não logado) -->
+        <div id="registerLink" style="text-align:center; margin-top:20px; padding-top:15px; border-top:1px dashed #b8a69b; display:none;">
+          <p style="font-family:'Special Elite', cursive; color:#6b4a3a;">
+            Quer salvar seus pedidos? 
+            <a href="login/register.html" style="color:#850000; font-weight:bold;">Crie uma conta grátis</a>
+          </p>
+        </div>
 
-                    <div class="form-group">
-                        <label>Escolha sua Pizza</label>
-                        <select>
-                            <option>🍕 Freddy Especial da Casa</option>
-                            <option>🍕 Quatro Queijos</option>
-                            <option>🍕 Calabresa Tradicional</option>
-                            <option>🍕 Frango com Catupiry</option>
-                            <option>🍕 Marguerita</option>
-                            <option>🍕 Pizza Sensação</option>
-                            <option>🍕 Salvatore Especial</option>
-                        </select>
-                    </div>
+      </section>
 
-                    <div class="form-group">
-                        <label>Tamanho</label>
-                        <select>
-                            <option>Pequena</option>
-                            <option>Média</option>
-                            <option>Grande</option>
-                            <option>Família</option>
-                        </select>
-                    </div>
+      <!-- AVISO -->
+      <section class="topic security">
+        <h2>★ Aviso da Central ★</h2>
+        <div class="warning-box">
+          <p>⚠ Pedidos podem sofrer atrasos em horários de grande movimento.</p>
+          <p>★ Obrigado por escolher a Freddy Fazbear's Pizza.</p>
+          <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:15px; margin-top:18px;">
+            <a href="menu.html" class="btn" style="font-size:14px;">📋 Ver Cardápio</a>
+            <a href="contato.html" class="btn" style="font-size:14px;">📞 Fale Conosco</a>
+          </div>
+        </div>
+      </section>
 
-                    <div class="form-group">
-                        <label>Bebida</label>
-                        <select>
-                            <option>Sem bebida</option>
-                            <option>Refrigerante</option>
-                            <option>Suco</option>
-                            <option>Combo Freddy's</option>
-                        </select>
-                    </div>
+    </main>
+  </div>
 
-                    <div class="form-group">
-                        <label>Forma de Pagamento</label>
-                        <select>
-                            <option>Cartão</option>
-                            <option>Dinheiro</option>
-                            <option>PIX</option>
-                        </select>
-                    </div>
+  <div id="footer"></div>
 
-                    <div class="form-group">
-                        <label>Endereço de Entrega</label>
-                        <textarea placeholder="Rua, número e bairro" required></textarea>
-                    </div>
+  <script src="../js/core/main.js"></script>
+  <script src="../js/pages/pedidos.js"></script>
+  <script>
+    (function() {
+      // Verifica se o usuário está logado
+      const currentUser = localStorage.getItem('currentUser');
+      const loginWarning = document.getElementById('loginWarning');
+      const registerLink = document.getElementById('registerLink');
 
-                    <div class="form-group">
-                        <label>Observações Especiais</label>
-                        <textarea placeholder="Alguma observação sobre seu pedido?"></textarea>
-                    </div>
+      if (!currentUser) {
+        // Mostra aviso e link para criar conta
+        loginWarning.style.display = 'block';
+        registerLink.style.display = 'block';
 
-                    <button class="btn order-button" type="submit">
-                        🍕 Confirmar Pedido
-                    </button>
+        // Desabilita o envio do formulário (opcional)
+        document.getElementById('orderForm').addEventListener('submit', function(e) {
+          e.preventDefault();
+          alert('Você precisa estar logado para fazer um pedido. Crie uma conta ou faça login.');
+        });
+      } else {
+        // Usuário logado: esconde avisos e permite pedidos
+        loginWarning.style.display = 'none';
+        registerLink.style.display = 'none';
 
-                </form>
+        // Sobrescreve o comportamento do submit para salvar com userId
+        const form = document.getElementById('orderForm');
+        const originalSubmit = form.submit;
+        form.addEventListener('submit', function(e) {
+          e.preventDefault();
 
-                <!-- Mensagem de confirmação -->
-                <div id="confirmacaoPedido" class="order-confirmation">
-                    <h3>✅ Pedido Confirmado!</h3>
-                    <p>
-                        Seu pedido foi recebido pela central. Em breve você receberá a confirmação.
-                        <br>
-                        <span style="font-size:14px;">Tempo médio de entrega: 45 minutos (sujeito à demanda).</span>
-                    </p>
-                    <p class="small-note">
-                        © 1983-2026 Fazbear Entertainment – Todos os direitos reservados
-                    </p>
-                </div>
+          // Coleta dados
+          const pedido = {
+            userId: currentUser,
+            nome: document.getElementById('clienteNome').value.trim(),
+            telefone: document.getElementById('clienteTelefone').value.trim(),
+            pizza: document.getElementById('pizzaSelect').value,
+            tamanho: document.getElementById('tamanhoSelect').value,
+            bebida: document.getElementById('bebidaSelect').value,
+            pagamento: document.getElementById('pagamentoSelect').value,
+            endereco: document.getElementById('enderecoText').value.trim(),
+            observacoes: document.getElementById('obsText').value.trim(),
+            data: new Date().toLocaleString('pt-BR')
+          };
 
-            </section>
+          // Validação básica
+          if (!pedido.nome || !pedido.telefone || !pedido.endereco) {
+            alert('Preencha nome, telefone e endereço.');
+            return;
+          }
 
-            <!-- =========================================================
-                 AVISO DA CENTRAL
-                 ========================================================= -->
-            <section class="topic security">
-                <h2>★ Aviso da Central ★</h2>
+          // Salva no localStorage (array de pedidos)
+          const pedidos = JSON.parse(localStorage.getItem('pedidosFazbear')) || [];
+          pedidos.push(pedido);
+          localStorage.setItem('pedidosFazbear', JSON.stringify(pedidos));
 
-                <div class="warning-box">
-                    <p>
-                        ⚠ Pedidos podem sofrer atrasos em horários de grande movimento.
-                    </p>
-                    <p>
-                        ⚠ Funcionários devem confirmar disponibilidade dos produtos
-                        antes de finalizar a entrega.
-                    </p>
-                    <p>
-                        ★ Obrigado por escolher a Freddy Fazbear's Pizza.
-                    </p>
-
-                    <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:15px; margin-top:18px;">
-                        <a href="menu.html" class="btn" style="font-size:14px;">📋 Ver Cardápio</a>
-                        <a href="contato.html" class="btn" style="font-size:14px;">📞 Fale Conosco</a>
-                    </div>
-                </div>
-            </section>
-
-        </main>
-
-    </div>
-
-    <div id="footer"></div>
-
-    <!-- ============================================================
-         SCRIPTS – Efeitos visuais e validação do formulário
-         ============================================================ -->
-    <script src="../js/core/main.js"></script>
-    <script src="../js/pages/pedidos.js"></script>
-
+          // Mostra confirmação
+          document.getElementById('confirmacaoPedido').style.display = 'block';
+          document.getElementById('orderForm').reset();
+          // Scroll suave até a confirmação
+          document.getElementById('confirmacaoPedido').scrollIntoView({ behavior: 'smooth' });
+        });
+      }
+    })();
+  </script>
 </body>
-
 </html>

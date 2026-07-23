@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | Freddy Fazbear's Pizza</title>
+
+  <!-- ============================================================
+       FOLHAS DE ESTILO
+       ============================================================ -->
+  <link rel="stylesheet" href="../../css/fonts.css">
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="../../css/header.css">
+  <link rel="stylesheet" href="../../css/navbar.css">
+  <link rel="stylesheet" href="../../css/footer.css">
+  <link rel="stylesheet" href="../../css/components.css">
+  <link rel="stylesheet" href="../../css/vintage.css">
+  <link rel="stylesheet" href="../../css/login.css">
+</head>
+
+<body>
+
+  <!-- ============================================================
+       CABEÇALHO (CARREGADO VIA JS)
+       ============================================================ -->
+  <div id="header"></div>
+
+  <!-- ============================================================
+       CONTEÚDO PRINCIPAL – LOGIN
+       ============================================================ -->
+  <main class="login-wrapper">
+    <div class="auth-card">
+
+      <!-- Logo / Marca -->
+      <div class="auth-brand">
+        <img src="../../assets/imagens/logos/selo.jpg" alt="Freddy Fazbear's Pizza">
+        <h2>🔐 Acesso</h2>
+        <p>Área restrita – funcionários</p>
+      </div>
+
+      <!-- Mensagem de erro -->
+      <div id="loginAlert" class="auth-alert"></div>
+
+      <!-- Formulário de login -->
+      <form id="loginForm" class="auth-form" novalidate>
+
+        <div class="form-group">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" placeholder="exemplo@fazbear.com" required autofocus>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Senha</label>
+          <input type="password" id="password" name="password" placeholder="••••••••" required>
+        </div>
+
+        <div class="auth-options">
+          <label>
+            <input type="checkbox" name="remember">
+            Lembrar-me
+          </label>
+          <a href="#">Esqueceu sua senha?</a>
+        </div>
+
+        <button type="submit" class="btn-auth">Entrar</button>
+
+      </form>
+
+      <!-- Rodapé com link para criar conta -->
+      <div class="auth-footer">
+        <p>Não tem uma conta? <a href="register.html">Crie uma agora</a></p>
+        <p style="font-size:12px; color:#6b4a3a; margin-top:6px;">
+          <a href="../../index.html">← Voltar ao site</a>
+        </p>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ============================================================
+       RODAPÉ (CARREGADO VIA JS)
+       ============================================================ -->
+  <div id="footer"></div>
+
+  <!-- ============================================================
+       SCRIPTS – Autenticação centralizada
+       ============================================================ -->
+  <script src="../../js/core/main.js"></script>
+  <script src="../../js/core/login.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const form = document.getElementById('loginForm');
+      const alertBox = document.getElementById('loginAlert');
+
+      // Salva redirecionamento (volta para a página anterior)
+      const referrer = document.referrer || '../../index.html';
+      Auth.setRedirect(referrer);
+
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        alertBox.classList.remove('show', 'success');
+        alertBox.innerHTML = '';
+
+        const email = document.getElementById('email').value.trim();
+        const password = document.getElementById('password').value.trim();
+
+        if (!email || !password) {
+          alertBox.textContent = 'Preencha todos os campos.';
+          alertBox.classList.add('show');
+          return;
+        }
+
+        if (Auth.login(email, password)) {
+          // Sucesso
+          alertBox.textContent = '✅ Login bem-sucedido! Redirecionando...';
+          alertBox.classList.add('show', 'success');
+
+          setTimeout(() => {
+            const redirect = Auth.getRedirect();
+            window.location.href = redirect;
+          }, 1200);
+        } else {
+          alertBox.textContent = 'E-mail ou senha incorretos. Tente novamente.';
+          alertBox.classList.add('show');
+          document.getElementById('password').value = '';
+          document.getElementById('password').focus();
+        }
+      });
+
+      // Remove a mensagem de erro ao digitar novamente
+      document.querySelectorAll('#loginForm input').forEach(input => {
+        input.addEventListener('input', function() {
+          alertBox.classList.remove('show');
+        });
+      });
+    });
+  </script>
+
+</body>
+
+</html>

@@ -1,15 +1,22 @@
 <nav class="navbar">
-    <button class="nav-toggle" id="navToggle" aria-label="Abrir menu">
-        ☰
-    </button>
+  <button class="nav-toggle" id="navToggle" aria-label="Abrir menu">☰</button>
+  <ul class="navbar-list" id="navMenu">
+    <li><a href="/index.html">🏠 Início</a></li>
+    <li><a href="/paginas/menu.html">🍕 Cardápio</a></li>
+    <li><a href="/paginas/pizzas.html">🍕 Pizzas</a></li>
+    <li><a href="/paginas/animatronics.html">🤖 Animatrônicos</a></li>
+    <li><a href="/paginas/eventos.html">🎂 Eventos</a></li>
+    <li><a href="/paginas/historia.html">📜 História</a></li>
+    <li><a href="/paginas/contato.html">☎ Contato</a></li>
 
-    <ul class="navbar-list" id="navMenu">
-        <li><a href="/index.html">🏠 Início</a></li>
-        <li><a href="/paginas/menu.html">🍕 Cardápio</a></li>
-        <li><a href="/paginas/pizzas.html">🍕 Pizzas</a></li>
-        <li><a href="/paginas/animatronics.html">🤖 Animatrônicos</a></li>
-        <li><a href="/paginas/eventos.html">🎂 Eventos</a></li>
-        <li><a href="/paginas/historia.html">📜 História</a></li>
-        <li><a href="/paginas/contato.html">☎ Contato</a></li>
-    </ul>
+    <!-- ============================================
+         ITENS DINÂMICOS DE AUTENTICAÇÃO
+         ============================================ -->
+    <li id="authLink">
+      <a href="/paginas/login/login.html" id="authAnchor">🔐 Login</a>
+    </li>
+    <li id="meusPedidosLink" style="display: none;">
+      <a href="/paginas/pedidos-salvos.html">📋 Meus Pedidos</a>
+    </li>
+  </ul>
 </nav>

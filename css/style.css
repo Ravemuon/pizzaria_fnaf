@@ -4,257 +4,131 @@
    NÚCLEO DO SITE
 ======================================= */
 
-
 /* =======================================
    RESET
 ======================================= */
 
 *,
 *::before,
-*::after{
-
-    box-sizing:border-box;
-
-    margin:0;
-
-    padding:0;
-
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-
-
-html{
-
-    width:100%;
-
-    scroll-behavior:smooth;
-
+html {
+  width: 100%;
+  scroll-behavior: smooth;
 }
 
-
-
-body{
-
-    width:100%;
-
-    min-height:100vh;
-
-
-    background:
-    url("../assets/imagens/backgrounds-site/fundo.png")
-    repeat;
-
-
-    color:#222;
-
-
-    font-family:
-    Arial,
-    Helvetica,
-    sans-serif;
-
-
-    overflow-x:hidden;
-
+body {
+  width: 100%;
+  min-height: 100vh;
+  background: url("../assets/imagens/backgrounds-site/fundo.png") repeat;
+  color: #222;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
 }
-
-
 
 /* =======================================
    VARIÁVEIS
 ======================================= */
 
-
-:root{
-
-
-    --red-dark:#450000;
-
-    --red:#8b0000;
-
-    --red-light:#b30000;
-
-
-    --gold:#d6a537;
-
-    --gold-dark:#8d6714;
-
-
-    --cream:#f4e7c8;
-
-
-    --brown:#3b2414;
-
-
-    --black:#080808;
-
-
-    --shadow:
-    0 4px 12px rgba(0,0,0,.5);
-
-
+:root {
+  --red-dark: #450000;
+  --red: #8b0000;
+  --red-light: #b30000;
+  --gold: #d6a537;
+  --gold-dark: #8d6714;
+  --cream: #f4e7c8;
+  --brown: #3b2414;
+  --black: #080808;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
 }
-
-
 
 /* =======================================
    LINKS
 ======================================= */
 
-
-a{
-
-    color:var(--gold);
-
-    text-decoration:none;
-
-    transition:.3s ease;
-
+a {
+  color: var(--gold);
+  text-decoration: none;
+  transition: 0.3s ease;
 }
 
-
-
-a:hover{
-
-    color:white;
-
-    text-shadow:
-
-    0 0 8px var(--gold);
-
+a:hover {
+  color: white;
+  text-shadow: 0 0 8px var(--gold);
 }
-
-
 
 /* =======================================
    IMAGENS
 ======================================= */
 
-
-img{
-
-    max-width:100%;
-
-    height:auto;
-
-    display:block;
-
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
-
-
 
 /* =======================================
    ESTRUTURA
 ======================================= */
 
-
-.page{
-
-    width:100%;
-
-    min-height:100vh;
-
+.page {
+  width: 100%;
+  min-height: 100vh;
 }
 
-
-
-.container{
-
-    width:min(1200px,95%);
-
-    margin:auto;
-
+.container {
+  width: min(1200px, 95%);
+  margin: auto;
 }
-
-
 
 /* =======================================
    TEXTO
 ======================================= */
 
-
-p{
-
-    line-height:1.6;
-
+p {
+  line-height: 1.6;
 }
 
-
-
-ul{
-
-    list-style:none;
-
+ul {
+  list-style: none;
 }
-
-
 
 /* =======================================
    SELEÇÃO
 ======================================= */
 
-
-::selection{
-
-    background:var(--red);
-
-    color:white;
-
+::selection {
+  background: var(--red);
+  color: white;
 }
-
-
 
 /* =======================================
    SCROLLBAR
 ======================================= */
 
-
-::-webkit-scrollbar{
-
-    width:12px;
-
+::-webkit-scrollbar {
+  width: 12px;
 }
 
-
-
-::-webkit-scrollbar-track{
-
-    background:#111;
-
+::-webkit-scrollbar-track {
+  background: #111;
 }
 
-
-
-::-webkit-scrollbar-thumb{
-
-
-    background:
-
-    linear-gradient(
-        var(--gold),
-        var(--gold-dark)
-    );
-
-
-    border-radius:10px;
-
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(var(--gold), var(--gold-dark));
+  border-radius: 10px;
 }
-
-
 
 /* =======================================
    MOBILE BASE
 ======================================= */
 
-
-@media(max-width:768px){
-
-
-    body{
-
-        font-size:15px;
-
-    }
-
-
+@media (max-width: 768px) {
+  body {
+    font-size: 15px;
+  }
 }

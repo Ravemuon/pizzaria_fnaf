@@ -3,407 +3,141 @@
    VINTAGE EFFECTS
 ======================================= */
 
-
 /* =======================================
    PAPEL ANTIGO
 ======================================= */
 
-
-.vintage-paper{
-
-
-    position:relative;
-
-
-    background:
-
-    linear-gradient(
-        135deg,
-        #fff8dd,
-        #ead29b
-    );
-
-
-    color:#3b2414;
-
-
-    overflow:hidden;
-
-
+.vintage-paper {
+  position: relative;
+  background: linear-gradient(135deg, #fff8dd, #ead29b);
+  color: #3b2414;
+  overflow: hidden;
 }
 
-
-
-.vintage-paper::before{
-
-
-    content:"";
-
-
-    position:absolute;
-
-
-    inset:0;
-
-
-    pointer-events:none;
-
-
-    background:
-
-
-    repeating-linear-gradient(
-
-        0deg,
-
-        rgba(80,40,0,.03),
-
-        rgba(80,40,0,.03) 1px,
-
-        transparent 1px,
-
-        transparent 4px
-
-    );
-
-
-    mix-blend-mode:multiply;
-
-
+.vintage-paper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: repeating-linear-gradient(0deg, rgba(80, 40, 0, 0.03), rgba(80, 40, 0, 0.03) 1px, transparent 1px, transparent 4px);
+  mix-blend-mode: multiply;
 }
-
-
 
 /* =======================================
    DOCUMENTO INTERNO
 ======================================= */
 
-
-.document-paper{
-
-
-    background:
-
-
-    linear-gradient(
-
-        #fffdf0,
-
-        #e5c98d
-
-    );
-
-
-    border:
-
-    5px ridge var(--gold);
-
-
-    padding:
-
-    clamp(15px,3vw,35px);
-
-
-    box-shadow:
-
-    6px 6px 20px rgba(0,0,0,.4);
-
-
+.document-paper {
+  background: linear-gradient(#fffdf0, #e5c98d);
+  border: 5px ridge var(--gold);
+  padding: clamp(15px, 3vw, 35px);
+  box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.4);
 }
-
-
 
 /* =======================================
    ARQUIVO CONFIDENCIAL
 ======================================= */
 
-
-.confidential{
-
-
-    position:relative;
-
-
+.confidential {
+  position: relative;
 }
 
-
-
-.confidential::after{
-
-
-    content:"CONFIDENTIAL";
-
-
-    position:absolute;
-
-
-    top:20px;
-
-
-    right:20px;
-
-
-    transform:rotate(-15deg);
-
-
-    font-family:
-    "Press Start 2P",
-    monospace;
-
-
-    font-size:
-
-    clamp(8px,1vw,14px);
-
-
-    color:#8b0000;
-
-
-    border:
-
-    3px solid #8b0000;
-
-
-    padding:8px;
-
-
-    opacity:.7;
-
-
+.confidential::after {
+  content: "CONFIDENTIAL";
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  transform: rotate(-15deg);
+  font-family: "Press Start 2P", monospace;
+  font-size: clamp(8px, 1vw, 14px);
+  color: #8b0000;
+  border: 3px solid #8b0000;
+  padding: 8px;
+  opacity: 0.7;
 }
-
-
 
 /* =======================================
    TEXTO DE ARQUIVO
 ======================================= */
 
-
-.archive-text{
-
-
-    font-family:
-    "Special Elite",
-    cursive;
-
-
-    color:#2b1a10;
-
-
+.archive-text {
+  font-family: "Special Elite", cursive;
+  color: #2b1a10;
 }
 
-
-
-.archive-title{
-
-
-    text-align:center;
-
-
-    font-family:
-    "Bowlby One SC",
-    cursive;
-
-
-    color:#8b0000;
-
-
-    text-shadow:
-
-    2px 2px #d6a537;
-
-
+.archive-title {
+  text-align: center;
+  font-family: "Bowlby One SC", cursive;
+  color: #8b0000;
+  text-shadow: 2px 2px #d6a537;
 }
-
-
 
 /* =======================================
    CARIMBO OFICIAL
 ======================================= */
 
-
-.official-stamp{
-
-
-    font-family:
-    "Rye",
-    cursive;
-
-
-    color:#8b0000;
-
-
-    font-size:
-
-    clamp(28px,5vw,48px);
-
-
-    text-align:center;
-
-
-    transform:
-
-    rotate(-8deg);
-
-
+.official-stamp {
+  font-family: "Rye", cursive;
+  color: #8b0000;
+  font-size: clamp(28px, 5vw, 48px);
+  text-align: center;
+  transform: rotate(-8deg);
 }
-
-
 
 /* =======================================
    PAPEL RASGADO
 ======================================= */
 
-
-.torn-paper{
-
-
-    clip-path:
-
-    polygon(
-
-    0 2%,
-    5% 0,
-    12% 3%,
-    20% 1%,
-    30% 4%,
-    40% 1%,
-    50% 3%,
-    60% 0,
-    75% 2%,
-    90% 0,
-    100% 3%,
-    100% 97%,
-    90% 100%,
-    75% 97%,
-    60% 100%,
-    45% 97%,
-    30% 100%,
-    15% 97%,
-    0 100%
-
-    );
-
-
+.torn-paper {
+  clip-path: polygon(0 2%, 5% 0, 12% 3%, 20% 1%, 30% 4%, 40% 1%, 50% 3%, 60% 0, 75% 2%, 90% 0, 100% 3%, 100% 97%, 90% 100%, 75% 97%, 60% 100%, 45% 97%, 30% 100%, 15% 97%, 0 100%);
 }
-
-
 
 /* =======================================
    GLITCH / VHS
 ======================================= */
 
-
-.vhs-effect{
-
-
-    animation:
-
-    vhsShake .15s infinite;
-
-
+.vhs-effect {
+  animation: vhsShake 0.15s infinite;
 }
 
-
-
-@keyframes vhsShake{
-
-
-    0%{
-
-        transform:translateX(0);
-
-    }
-
-
-    50%{
-
-        transform:translateX(1px);
-
-    }
-
-
-    100%{
-
-        transform:translateX(-1px);
-
-    }
-
-
+@keyframes vhsShake {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(1px);
+  }
+  100% {
+    transform: translateX(-1px);
+  }
 }
-
-
 
 /* =======================================
    NOISE
 ======================================= */
 
-
-.old-noise{
-
-
-    position:relative;
-
-
+.old-noise {
+  position: relative;
 }
 
-
-
-.old-noise::before{
-
-
-    content:"";
-
-
-    position:absolute;
-
-
-    inset:0;
-
-
-    background:
-
-    radial-gradient(
-
-    rgba(0,0,0,.15) 1px,
-
-    transparent 1px
-
-    );
-
-
-    background-size:4px 4px;
-
-
-    opacity:.15;
-
-
-    pointer-events:none;
-
-
+.old-noise::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(rgba(0, 0, 0, 0.15) 1px, transparent 1px);
+  background-size: 4px 4px;
+  opacity: 0.15;
+  pointer-events: none;
 }
-
-
 
 /* =======================================
    MOBILE
 ======================================= */
 
-
-@media(max-width:600px){
-
-
-    .confidential::after{
-
-
-        font-size:7px;
-
-        top:10px;
-
-        right:10px;
-
-
-    }
-
-
+@media (max-width: 600px) {
+  .confidential::after {
+    font-size: 7px;
+    top: 10px;
+    right: 10px;
+  }
 }

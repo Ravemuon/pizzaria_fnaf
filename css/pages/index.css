@@ -9,14 +9,14 @@
 ======================================= */
 
 .content {
-    width: 100%;
-    overflow: hidden;
+  width: 100%;
+  overflow: hidden;
 }
 
 .content > section,
 .content > .hero,
 .content > .restaurant-strip {
-    max-width: 100%;
+  max-width: 100%;
 }
 
 /* =======================================
@@ -24,22 +24,22 @@
 ======================================= */
 
 .hero {
-    width: 100%;
+  width: 100%;
 }
 
 .hero img {
-    width: 100%;
-    max-width: 100%;
-    height: 430px;
-    object-fit: cover;
+  width: 100%;
+  max-width: 100%;
+  height: 430px;
+  object-fit: cover;
 }
 
 .hero-overlay {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .hero-overlay h1 {
-    word-break: break-word;
+  word-break: break-word;
 }
 
 /* =======================================
@@ -47,9 +47,9 @@
 ======================================= */
 
 .restaurant-strip span {
-    text-align: center;
-    flex: 1;
-    min-width: 180px;
+  text-align: center;
+  flex: 1;
+  min-width: 180px;
 }
 
 /* =======================================
@@ -57,12 +57,12 @@
 ======================================= */
 
 .topic {
-    width: 100%;
-    overflow: hidden;
+  width: 100%;
+  overflow: hidden;
 }
 
 .topic p {
-    max-width: 800px;
+  max-width: 800px;
 }
 
 /* =======================================
@@ -70,20 +70,20 @@
 ======================================= */
 
 .topic-grid {
-    width: 100%;
+  width: 100%;
 }
 
 .topic-grid > * {
-    min-width: 0;
+  min-width: 0;
 }
 
 .topic-grid img {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    aspect-ratio: 4 / 3;
-    object-fit: cover; /* ALTERADO: cover para preencher sem bordas brancas */
-    border: 4px ridge var(--gold);
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border: 4px ridge var(--gold);
 }
 
 /* =======================================
@@ -91,19 +91,19 @@
 ======================================= */
 
 .featured-grid {
-    width: 100%;
+  width: 100%;
 }
 
 .promo-card {
-    min-width: 0;
+  min-width: 0;
 }
 
 .promo-card img {
-    width: 100%;
-    max-width: 100%;
-    height: 200px;
-    object-fit: cover; /* ALTERADO: cover para preencher sem bordas brancas */
-    border: 4px solid #720000;
+  width: 100%;
+  max-width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border: 4px solid #720000;
 }
 
 /* =======================================
@@ -111,27 +111,27 @@
 ======================================= */
 
 .banner-box {
-    width: 100%;
-    overflow: hidden;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-    align-items: center;
+  width: 100%;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: center;
 }
 
 .banner-box img {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    aspect-ratio: 16 / 9;
-    object-fit: cover; /* ALTERADO: cover para preencher */
-    border: 4px solid var(--gold);
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border: 4px solid var(--gold);
 }
 
 .banner-box div {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 /* =======================================
@@ -139,34 +139,38 @@
 ======================================= */
 
 .poster-carousel {
-    max-width: 100%;
-    overflow: hidden;
-    padding: 20px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 20px 0;
 }
 
 .poster-track {
-    display: flex;
-    gap: 20px;
-    width: max-content;
-    animation: postersMove 35s linear infinite;
+  display: flex;
+  gap: 20px;
+  width: max-content;
+  animation: postersMove 35s linear infinite;
 }
 
 .poster-track img {
-    height: 260px;
-    width: 180px;
-    flex-shrink: 0;
-    object-fit: cover;
-    border: 5px ridge var(--gold);
-    box-shadow: 0 0 15px black;
+  height: 260px;
+  width: 180px;
+  flex-shrink: 0;
+  object-fit: cover;
+  border: 5px ridge var(--gold);
+  box-shadow: 0 0 15px black;
 }
 
 .poster-track:hover {
-    animation-play-state: paused;
+  animation-play-state: paused;
 }
 
 @keyframes postersMove {
-    from { transform: translateX(0); }
-    to { transform: translateX(-50%); }
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 /* =======================================
@@ -174,24 +178,24 @@
 ======================================= */
 
 @media (max-width: 999px) {
-    .topic-grid {
-        grid-template-columns: 1fr;
-    }
+  .topic-grid {
+    grid-template-columns: 1fr;
+  }
 
-    .topic-grid img {
-        max-height: 280px;
-        aspect-ratio: auto;
-    }
+  .topic-grid img {
+    max-height: 280px;
+    aspect-ratio: auto;
+  }
 
-    .banner-box {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
+  .banner-box {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
 
-    .banner-box img {
-        max-height: 300px;
-        aspect-ratio: auto;
-    }
+  .banner-box img {
+    max-height: 300px;
+    aspect-ratio: auto;
+  }
 }
 
 /* =======================================
@@ -199,111 +203,111 @@
 ======================================= */
 
 @media (max-width: 767px) {
-    .content {
-        width: 100%;
-        padding: 0;
-    }
+  .content {
+    width: 100%;
+    padding: 0;
+  }
 
-    .hero {
-        border-width: 3px;
-    }
+  .hero {
+    border-width: 3px;
+  }
 
-    .hero img {
-        height: 200px;
-        object-fit: cover;
-    }
+  .hero img {
+    height: 200px;
+    object-fit: cover;
+  }
 
-    .hero-overlay {
-        padding: 15px 20px;
-    }
+  .hero-overlay {
+    padding: 15px 20px;
+  }
 
-    .hero-overlay h1 {
-        font-size: 22px;
-    }
+  .hero-overlay h1 {
+    font-size: 22px;
+  }
 
-    .hero-overlay p {
-        font-size: 13px;
-    }
+  .hero-overlay p {
+    font-size: 13px;
+  }
 
-    .restaurant-strip {
-        padding: 12px;
-        flex-direction: column;
-        gap: 8px;
-    }
+  .restaurant-strip {
+    padding: 12px;
+    flex-direction: column;
+    gap: 8px;
+  }
 
-    .restaurant-strip span {
-        min-width: auto;
-        width: 100%;
-        text-align: center;
-    }
+  .restaurant-strip span {
+    min-width: auto;
+    width: 100%;
+    text-align: center;
+  }
 
-    .topic {
-        padding: 15px 12px;
-        border-width: 3px;
-    }
+  .topic {
+    padding: 15px 12px;
+    border-width: 3px;
+  }
 
-    .topic h2 {
-        font-size: 20px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 6px;
-    }
+  .topic h2 {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
 
-    .topic-grid {
-        gap: 15px;
-    }
+  .topic-grid {
+    gap: 15px;
+  }
 
-    .topic-grid img {
-        max-height: 220px;
-        width: 100%;
-        object-fit: cover;
-        aspect-ratio: auto;
-    }
+  .topic-grid img {
+    max-height: 220px;
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: auto;
+  }
 
-    .featured-grid {
-        grid-template-columns: 1fr;
-        gap: 15px;
-    }
+  .featured-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
 
-    .promo-card img {
-        height: 180px;
-        object-fit: cover;
-    }
+  .promo-card img {
+    height: 180px;
+    object-fit: cover;
+  }
 
-    .banner-box {
-        grid-template-columns: 1fr;
-        gap: 15px;
-        padding: 10px;
-    }
+  .banner-box {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 10px;
+  }
 
-    .banner-box img {
-        max-height: 200px;
-        width: 100%;
-        object-fit: cover;
-        aspect-ratio: auto;
-    }
+  .banner-box img {
+    max-height: 200px;
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: auto;
+  }
 
-    .poster-carousel {
-        padding: 10px 0;
-    }
+  .poster-carousel {
+    padding: 10px 0;
+  }
 
-    .poster-track {
-        gap: 12px;
-    }
+  .poster-track {
+    gap: 12px;
+  }
 
-    .poster-track img {
-        height: 180px;
-        width: 120px;
-        flex-shrink: 0;
-    }
+  .poster-track img {
+    height: 180px;
+    width: 120px;
+    flex-shrink: 0;
+  }
 
-    .btn {
-        width: 100%;
-        text-align: center;
-        box-sizing: border-box;
-    }
+  .btn {
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+  }
 }
 
 /* =======================================
@@ -311,63 +315,63 @@
 ======================================= */
 
 @media (max-width: 480px) {
-    .hero img {
-        height: 150px;
-        object-fit: cover;
-    }
+  .hero img {
+    height: 150px;
+    object-fit: cover;
+  }
 
-    .hero-overlay {
-        padding: 10px 15px;
-    }
+  .hero-overlay {
+    padding: 10px 15px;
+  }
 
-    .hero-overlay h1 {
-        font-size: 18px;
-    }
+  .hero-overlay h1 {
+    font-size: 18px;
+  }
 
-    .hero-overlay p {
-        font-size: 12px;
-    }
+  .hero-overlay p {
+    font-size: 12px;
+  }
 
-    .topic h2 {
-        font-size: 17px;
-        padding-bottom: 10px;
-    }
+  .topic h2 {
+    font-size: 17px;
+    padding-bottom: 10px;
+  }
 
-    .section-icon {
-        width: 18px;
-        height: 18px;
-    }
+  .section-icon {
+    width: 18px;
+    height: 18px;
+  }
 
-    .topic-grid img {
-        max-height: 180px;
-    }
+  .topic-grid img {
+    max-height: 180px;
+  }
 
-    .promo-card img {
-        height: 150px;
-    }
+  .promo-card img {
+    height: 150px;
+  }
 
-    .banner-box img {
-        max-height: 160px;
-    }
+  .banner-box img {
+    max-height: 160px;
+  }
 
-    .poster-track img {
-        height: 140px;
-        width: 90px;
-        border-width: 3px;
-    }
+  .poster-track img {
+    height: 140px;
+    width: 90px;
+    border-width: 3px;
+  }
 
-    .poster-track {
-        gap: 10px;
-    }
+  .poster-track {
+    gap: 10px;
+  }
 
-    .restaurant-strip span {
-        font-size: 12px;
-    }
+  .restaurant-strip span {
+    font-size: 12px;
+  }
 
-    .btn {
-        font-size: 14px;
-        padding: 10px 15px;
-    }
+  .btn {
+    font-size: 14px;
+    padding: 10px 15px;
+  }
 }
 
 /* =======================================
@@ -375,36 +379,36 @@
 ======================================= */
 
 @media (max-width: 360px) {
-    .hero img {
-        height: 120px;
-    }
+  .hero img {
+    height: 120px;
+  }
 
-    .hero-overlay h1 {
-        font-size: 16px;
-    }
+  .hero-overlay h1 {
+    font-size: 16px;
+  }
 
-    .hero-overlay p {
-        font-size: 11px;
-    }
+  .hero-overlay p {
+    font-size: 11px;
+  }
 
-    .topic h2 {
-        font-size: 15px;
-    }
+  .topic h2 {
+    font-size: 15px;
+  }
 
-    .topic-grid img {
-        max-height: 150px;
-    }
+  .topic-grid img {
+    max-height: 150px;
+  }
 
-    .promo-card img {
-        height: 130px;
-    }
+  .promo-card img {
+    height: 130px;
+  }
 
-    .banner-box img {
-        max-height: 140px;
-    }
+  .banner-box img {
+    max-height: 140px;
+  }
 
-    .poster-track img {
-        height: 120px;
-        width: 75px;
-    }
+  .poster-track img {
+    height: 120px;
+    width: 75px;
+  }
 }

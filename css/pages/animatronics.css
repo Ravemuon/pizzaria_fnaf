@@ -7,31 +7,31 @@
    TAMANHO PADRÃO PARA IMAGENS (SEM CORTES)
 ======================================= */
 
-/* Imagens dentro de character-box - agora com contain para não cortar */
+/* Imagens dentro de character-box */
 .character-box img {
-    width: 100%;
-    height: 240px;
-    object-fit: contain;  /* <--- ALTERADO: contain em vez de cover */
-    border: 3px solid #720000;
-    background: #fff;
-    display: block;
+  width: 100%;
+  height: 240px;
+  object-fit: contain; 
+  border: 3px solid #720000;
+  background: #fff;
+  display: block;
 }
 
 /* Pelúcias (com fundo branco) - também com contain */
 .character-box.toy img {
-    object-fit: contain;
-    background: white;
-    padding: 8px;
+  object-fit: contain;
+  background: white;
+  padding: 8px;
 }
 
 /* Imagens dentro de promo-card (usadas na seção "Outras unidades") */
 .promo-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: contain;  /* <--- ALTERADO: contain em vez de cover */
-    border: 4px solid #720000;
-    margin-bottom: 12px;
-    background: #fff;
+  width: 100%;
+  height: 200px;
+  object-fit: contain;  
+  border: 4px solid #720000;
+  margin-bottom: 12px;
+  background: #fff;
 }
 
 /* =======================================
@@ -39,33 +39,33 @@
 ======================================= */
 
 .character-profile {
-    background: linear-gradient(#fff8dd, #d4ae65);
-    border: 6px ridge var(--gold);
-    padding: 25px;
-    box-shadow: 5px 8px 18px rgba(0,0,0,0.45);
-    transition: 0.3s;
-    text-align: center;
+  background: linear-gradient(#fff8dd, #d4ae65);
+  border: 6px ridge var(--gold);
+  padding: 25px;
+  box-shadow: 5px 8px 18px rgba(0, 0, 0, 0.45);
+  transition: 0.3s;
+  text-align: center;
 }
 
 .character-profile:hover {
-    transform: translateY(-10px);
+  transform: translateY(-10px);
 }
 
 .character-profile h3 {
-    font-family: "Bowlby One SC", cursive;
-    color: #850000;
-    font-size: 28px;
-    margin-top: 20px;
-    border-bottom: 3px double #850000;
-    padding-bottom: 12px;
+  font-family: "Bowlby One SC", cursive;
+  color: #850000;
+  font-size: 28px;
+  margin-top: 20px;
+  border-bottom: 3px double #850000;
+  padding-bottom: 12px;
 }
 
 .character-profile p {
-    font-family: "Special Elite", cursive;
-    font-size: 18px;
-    color: #2b1a10;
-    line-height: 1.5;
-    margin-top: 12px;
+  font-family: "Special Elite", cursive;
+  font-size: 18px;
+  color: #2b1a10;
+  line-height: 1.5;
+  margin-top: 12px;
 }
 
 /* =======================================
@@ -73,54 +73,54 @@
 ======================================= */
 
 .character-gallery {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
 }
 
 .character-box {
-    background: white;
-    border: 4px solid #720000;
-    padding: 12px;
-    position: relative;
-    box-shadow: inset 0 0 15px rgba(0,0,0,0.15);
-    transition: 0.2s;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  background: white;
+  border: 4px solid #720000;
+  padding: 12px;
+  position: relative;
+  box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.15);
+  transition: 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .character-box:hover {
-    transform: scale(1.02);
-    box-shadow: 0 0 20px rgba(212, 160, 23, 0.3);
+  transform: scale(1.02);
+  box-shadow: 0 0 20px rgba(212, 160, 23, 0.3);
 }
 
 .character-box h4 {
-    text-align: center;
-    margin: 10px -12px -12px;
-    padding: 10px;
-    background: #850000;
-    color: white;
-    font-family: "Press Start 2P", monospace;
-    font-size: 10px;
-    letter-spacing: 1px;
-    width: calc(100% + 24px);
+  text-align: center;
+  margin: 10px -12px -12px;
+  padding: 10px;
+  background: #850000;
+  color: white;
+  font-family: "Press Start 2P", monospace;
+  font-size: 10px;
+  letter-spacing: 1px;
+  width: calc(100% + 24px);
 }
 
 .character-box.toy::before {
-    content: "OFFICIAL MERCH";
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: #d4a017;
-    color: white;
-    padding: 6px 10px;
-    font-family: "Press Start 2P", monospace;
-    font-size: 8px;
-    border: 2px solid #700000;
-    z-index: 2;
-    border-radius: 4px;
+  content: "OFFICIAL MERCH";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #d4a017;
+  color: white;
+  padding: 6px 10px;
+  font-family: "Press Start 2P", monospace;
+  font-size: 8px;
+  border: 2px solid #700000;
+  z-index: 2;
+  border-radius: 4px;
 }
 
 /* =======================================
@@ -128,33 +128,33 @@
 ======================================= */
 
 .featured-grid .promo-card {
-    background: linear-gradient(#fff5d1, #d8b36a);
-    border: 5px ridge var(--gold);
-    padding: 15px;
-    text-align: center;
-    transition: 0.3s;
-    min-height: 240px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  background: linear-gradient(#fff5d1, #d8b36a);
+  border: 5px ridge var(--gold);
+  padding: 15px;
+  text-align: center;
+  transition: 0.3s;
+  min-height: 240px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .featured-grid .promo-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
 }
 
 .featured-grid .promo-card h3 {
-    font-family: "Bowlby One SC", cursive;
-    color: #850000;
-    font-size: 22px;
-    margin: 10px 0 6px;
+  font-family: "Bowlby One SC", cursive;
+  color: #850000;
+  font-size: 22px;
+  margin: 10px 0 6px;
 }
 
 .featured-grid .promo-card p {
-    font-family: "Special Elite", cursive;
-    font-size: 16px;
-    color: #2b1a10;
+  font-family: "Special Elite", cursive;
+  font-size: 16px;
+  color: #2b1a10;
 }
 
 /* =======================================
@@ -162,8 +162,8 @@
 ======================================= */
 
 .topic-grid .warning-text {
-    margin-top: 15px;
-    font-size: 18px;
+  margin-top: 15px;
+  font-size: 18px;
 }
 
 /* =======================================
@@ -171,32 +171,32 @@
 ======================================= */
 
 @media (max-width: 1000px) {
-    .character-gallery {
-        grid-template-columns: 1fr;
-    }
-    .character-box img {
-        height: 220px;
-    }
+  .character-gallery {
+    grid-template-columns: 1fr;
+  }
+  .character-box img {
+    height: 220px;
+  }
 }
 
 @media (max-width: 600px) {
-    .character-profile {
-        padding: 18px;
-    }
-    .character-profile h3 {
-        font-size: 22px;
-    }
-    .character-profile p {
-        font-size: 16px;
-    }
-    .character-box img {
-        height: 180px;
-    }
-    .featured-grid .promo-card {
-        min-height: auto;
-        padding: 18px;
-    }
-    .character-box h4 {
-        font-size: 9px;
-    }
+  .character-profile {
+    padding: 18px;
+  }
+  .character-profile h3 {
+    font-size: 22px;
+  }
+  .character-profile p {
+    font-size: 16px;
+  }
+  .character-box img {
+    height: 180px;
+  }
+  .featured-grid .promo-card {
+    min-height: auto;
+    padding: 18px;
+  }
+  .character-box h4 {
+    font-size: 9px;
+  }
 }

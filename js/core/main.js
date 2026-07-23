@@ -40,6 +40,8 @@ async function loadComponents() {
             // Inicializa a sidebar IMEDIATAMENTE após carregar
             if (component === 'sidebar') {
                 initSidebar();
+                // Adiciona redirecionamento específico para "Estamos Contratando"
+                setupContratandoRedirect();
             }
         } catch (error) {
             console.error("Erro carregando componente:", component, error);
@@ -127,6 +129,52 @@ function initSidebar() {
     });
 
     console.log('[SIDEBAR] Drawer mobile inicializado com sucesso.');
+}
+
+/*
+=======================================
+ REDIRECIONAMENTO "ESTAMOS CONTRATANDO"
+=======================================
+*/
+
+function setupContratandoRedirect() {
+    // Procura por links que apontem para "contratando.html" (na sidebar)
+    const contratandoLinks = document.querySelectorAll(
+        '.sidebar-box a[href*="contratando"], .sidebar-box a[href*="contratando.html"]'
+    );
+
+    contratandoLinks.forEach(link => {
+        // Substitui o comportamento padrão pelo redirecionamento inteligente
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            // Usa a função global goTo para redirecionar corretamente
+            if (typeof goTo === 'function') {
+                goTo('contratando.html');
+            } else {
+                // Fallback: redireciona manualmente
+                const isInsidePages = window.location.pathname.includes("/paginas/");
+                window.location.href = isInsidePages ? 'contratando.html' : 'paginas/contratando.html';
+            }
+        });
+    });
+
+    // Se houver algum link com o texto "Estamos Contratando" ou similar, também redireciona
+    const allLinks = document.querySelectorAll('.sidebar-box a');
+    allLinks.forEach(link => {
+        if (link.textContent.trim() === 'Ver Vagas' || link.textContent.trim() === 'Estamos Contratando') {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                if (typeof goTo === 'function') {
+                    goTo('contratando.html');
+                } else {
+                    const isInsidePages = window.location.pathname.includes("/paginas/");
+                    window.location.href = isInsidePages ? 'contratando.html' : 'paginas/contratando.html';
+                }
+            });
+        }
+    });
+
+    console.log('[REDIRECT] Redirecionamento "Estamos Contratando" configurado.');
 }
 
 /*

@@ -2,119 +2,60 @@
    COMPONENTS GLOBAL
 ===================================== */
 
-
-.card-title{
-
-    font-family:
-    "Bowlby One SC";
-
-    color:
-    var(--red-dark);
-
+.card-title {
+  font-family: "Bowlby One SC";
+  color: var(--red-dark);
 }
 
-
-
-.card{
-
-    background:#fff;
-
-    border:
-
-    4px ridge var(--gold);
-
-
-    padding:20px;
-
-
-    box-shadow:
-
-    var(--shadow);
-
+.card {
+  background: #fff;
+  border: 4px ridge var(--gold);
+  padding: 20px;
+  box-shadow: var(--shadow);
 }
+
 /* =======================================
-MENU MOBILE
+   MENU MOBILE
 ======================================= */
 
-.nav-toggle{
-
-    display:none;
-
-    width:100%;
-
-    padding:15px;
-
-    background:#650000;
-
-    border:none;
-
-    border-bottom:4px ridge var(--gold);
-
-    color:#ffd45c;
-
-    font-size:34px;
-
-    font-family:"Bowlby One SC";
-
-    cursor:pointer;
-
+.nav-toggle {
+  display: none;
+  width: 100%;
+  padding: 15px;
+  background: #650000;
+  border: none;
+  border-bottom: 4px ridge var(--gold);
+  color: #ffd45c;
+  font-size: 34px;
+  font-family: "Bowlby One SC";
+  cursor: pointer;
 }
 
+@media (max-width: 900px) {
+  .nav-toggle {
+    display: block;
+  }
 
+  .navbar ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
 
-@media(max-width:900px){
+  .navbar ul.open {
+    display: flex;
+  }
 
+  .navbar li {
+    width: 100%;
+  }
 
-    .nav-toggle{
+  .navbar li::after {
+    display: none !important;
+  }
 
-        display:block;
-
-    }
-
-
-
-    .navbar ul{
-
-        display:none;
-
-        flex-direction:column;
-
-        width:100%;
-
-    }
-
-
-
-    .navbar ul.open{
-
-        display:flex;
-
-    }
-
-
-
-    .navbar li{
-
-        width:100%;
-
-    }
-
-
-
-    .navbar li::after{
-
-        display:none!important;
-
-    }
-
-
-
-    .navbar a{
-
-        padding:18px;
-
-        border-bottom:1px solid rgba(255,255,255,.15);
-
-    }
-
+  .navbar a {
+    padding: 18px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  }
 }

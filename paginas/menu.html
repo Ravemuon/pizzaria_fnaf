@@ -2,139 +2,137 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Freddy Fazbear's Pizza | Cardápio</title>
+  <meta name="description" content="Cardápio oficial da Freddy Fazbear's Pizza. Pizzas clássicas, especiais e combos exclusivos.">
 
-    <title>Freddy Fazbear's Pizza | Cardápio</title>
+  <!-- ============================================================
+       NOTA INTERNA (DEPARTAMENTO DE ALIMENTOS):
+       Este é o cardápio oficial da empresa. Os preços podem
+       sofrer alterações sem aviso prévio.
+       ============================================================ -->
 
-    <meta name="description"
-    content="Cardápio oficial da Freddy Fazbear's Pizza. Pizzas clássicas, especiais e combos exclusivos.">
-
-    <!-- ============================================================
-         NOTA INTERNA (DEPARTAMENTO DE ALIMENTOS):
-         Este é o cardápio oficial da empresa. Os preços podem
-         sofrer alterações sem aviso prévio.
-         ============================================================ -->
-
-    <link rel="stylesheet" href="../css/fonts.css">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/header.css">
-    <link rel="stylesheet" href="../css/navbar.css">
-    <link rel="stylesheet" href="../css/sidebar.css">
-    <link rel="stylesheet" href="../css/footer.css">
-    <link rel="stylesheet" href="../css/components.css">
-    <link rel="stylesheet" href="../css/pages.css">
-    <link rel="stylesheet" href="../css/pages/menu.css"> <!-- CSS específico -->
-    <link rel="stylesheet" href="../css/vintage.css">
-    <link rel="stylesheet" href="../css/animations.css">
+  <link rel="stylesheet" href="../css/fonts.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/navbar.css">
+  <link rel="stylesheet" href="../css/sidebar.css">
+  <link rel="stylesheet" href="../css/footer.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/pages.css">
+  <link rel="stylesheet" href="../css/pages/menu.css">
+  <link rel="stylesheet" href="../css/vintage.css">
+  <link rel="stylesheet" href="../css/animations.css">
 
 </head>
 
 <body>
 
-    <div id="header"></div>
-    <div id="navbar"></div>
+  <div id="header"></div>
+  <div id="navbar"></div>
 
-    <div class="site-layout">
+  <div class="site-layout">
+    <aside id="sidebar"></aside>
+    <main class="content">
 
-        <aside id="sidebar"></aside>
+      <!-- HERO – Cardápio -->
+      <section class="hero">
+        <img src="../assets/imagens/banners/celebrate.jpg" alt="Cardápio Freddy Fazbear">
+        <div class="hero-overlay">
+          <h1>★ Cardápio Oficial Freddy's ★</h1>
+          <p>Escolha entre nossas pizzas clássicas, especiais e sabores exclusivos da casa.</p>
+          <!-- Redireciona para pedidos.html -->
+          <a href="pedidos.html" class="btn">Fazer Pedido</a>
+        </div>
+      </section>
 
-        <main class="content">
+      <!-- PIZZAS – Grid dinâmico -->
+      <section class="topic vintage-paper">
+        <h2>
+          <img class="section-icon" src="../assets/imagens/icons/star.gif" alt="Estrela">
+          Pizzas Oficiais
+        </h2>
 
-            <!-- =========================================================
-                 HERO – Cardápio
-                 ========================================================= -->
-            <section class="hero">
-                <img src="../assets/imagens/banners/celebrate.jpg" alt="Cardápio Freddy Fazbear">
-                <div class="hero-overlay">
-                    <h1>★ Cardápio Oficial Freddy's ★</h1>
-                    <p>
-                        Escolha entre nossas pizzas clássicas, especiais e sabores exclusivos da casa.
-                    </p>
-                    <a href="pedidos.html" class="btn">Fazer Pedido</a>
-                </div>
-            </section>
+        <div id="menu-container" class="pizza-grid">
+          <!-- Os cards serão inseridos via JavaScript -->
+        </div>
 
-            <!-- =========================================================
-                 PIZZAS – Grid dinâmico
-                 ========================================================= -->
-            <section class="topic vintage-paper">
-                <h2>
-                    <img class="section-icon" src="../assets/imagens/icons/star.gif" alt="Estrela">
-                    Pizzas Oficiais
-                </h2>
+        <p style="text-align:center; font-family:'Press Start 2P', monospace; font-size:10px; color:#6b4a3a; margin-top:15px;">
+          * Consulte a disponibilidade dos sabores na unidade mais próxima.
+        </p>
+      </section>
 
-                <div id="menu-container" class="pizza-grid">
-                    <!-- Os cards serão inseridos via JavaScript -->
-                </div>
+      <!-- COMBOS – Promoções -->
+      <section class="topic">
+        <h2>
+          <img class="section-icon" src="../assets/imagens/icons/golden.gif" alt="Golden">
+          Combos Freddy's
+        </h2>
 
-                <p style="text-align:center; font-family:'Press Start 2P', monospace; font-size:10px; color:#6b4a3a; margin-top:15px;">
-                    * Consulte a disponibilidade dos sabores na unidade mais próxima.
-                </p>
-            </section>
+        <div class="featured-grid">
 
-            <!-- =========================================================
-                 COMBOS – Promoções
-                 ========================================================= -->
-            <section class="topic">
-                <h2>
-                    <img class="section-icon" src="../assets/imagens/icons/golden.gif" alt="Golden">
-                    Combos Freddy's
-                </h2>
+          <article class="promo-card">
+            <img src="../assets/imagens/pizzas/especial_aniversariante.jpg" alt="Combo Família">
+            <h3>Combo Família</h3>
+            <p>Pizza grande, bebidas e sobremesa. Ideal para até 4 pessoas.</p>
+            <!-- Redireciona para pedidos.html -->
+            <a href="pedidos.html" class="btn" style="font-size:14px;">Pedir</a>
+          </article>
 
-                <div class="featured-grid">
+          <article class="promo-card">
+            <img src="../assets/imagens/banners/birthday.jpg" alt="Combo Festa">
+            <h3>Combo Festa</h3>
+            <p>Perfeito para aniversários. Inclui decoração e apresentação animatrônica.</p>
+            <a href="eventos.html" class="btn" style="font-size:14px;">Reservar</a>
+          </article>
 
-                    <article class="promo-card">
-                        <img src="../assets/imagens/pizzas/especial_aniversariante.jpg" alt="Combo Família">
-                        <h3>Combo Família</h3>
-                        <p>Pizza grande, bebidas e sobremesa. Ideal para até 4 pessoas.</p>
-                        <a href="pedidos.html" class="btn" style="font-size:14px;">Pedir</a>
-                    </article>
+          <article class="promo-card">
+            <img src="../assets/imagens/anuncios/anunciodelivery.jpg" alt="Delivery">
+            <h3>Delivery</h3>
+            <p>Receba sua pizza Freddy's na porta de casa. Entrega rápida.</p>
+            <!-- Redireciona para pedidos.html -->
+            <a href="pedidos.html" class="btn" style="font-size:14px;">Comprar</a>
+          </article>
 
-                    <article class="promo-card">
-                        <img src="../assets/imagens/banners/birthday.jpg" alt="Combo Festa">
-                        <h3>Combo Festa</h3>
-                        <p>Perfeito para aniversários. Inclui decoração e apresentação animatrônica.</p>
-                        <a href="eventos.html" class="btn" style="font-size:14px;">Reservar</a>
-                    </article>
+        </div>
+      </section>
 
-                    <article class="promo-card">
-                        <img src="../assets/imagens/anuncios/anunciodelivery.jpg" alt="Delivery">
-                        <h3>Delivery</h3>
-                        <p>Receba sua pizza Freddy's na porta de casa. Entrega rápida.</p>
-                        <a href="pedidos.html" class="btn" style="font-size:14px;">Comprar</a>
-                    </article>
+      <!-- AVISO ADMINISTRATIVO -->
+      <section class="topic warning-box">
+        <h2>⚠ Aviso da Administração</h2>
+        <p>
+          Alguns sabores podem sofrer alteração de disponibilidade conforme o estoque.
+          Consulte nossa equipe para mais informações.
+        </p>
+        <p style="font-family:'Special Elite', cursive; color:#ffd45c; margin-top:10px;">
+          Agradecemos pela compreensão.
+        </p>
+      </section>
 
-                </div>
-            </section>
+    </main>
+  </div>
 
-            <!-- =========================================================
-                 AVISO ADMINISTRATIVO
-                 ========================================================= -->
-            <section class="topic warning-box">
-                <h2>⚠ Aviso da Administração</h2>
-                <p>
-                    Alguns sabores podem sofrer alteração de disponibilidade conforme o estoque.
-                    Consulte nossa equipe para mais informações.
-                </p>
-                <p style="font-family:'Special Elite', cursive; color:#ffd45c; margin-top:10px;">
-                    Agradecemos pela compreensão.
-                </p>
-            </section>
+  <div id="footer"></div>
 
-        </main>
+  <!-- ============================================================
+       SCRIPTS
+       ============================================================ -->
+  <script src="../js/core/main.js"></script>
+  <script src="../js/core/effects.js"></script>
+  <script src="../js/core/audio.js"></script>
+  <script src="../js/pages/menu.js"></script>
 
-    </div>
-
-    <div id="footer"></div>
-
-    <!-- ============================================================
-         SCRIPTS – Efeitos visuais e carregamento do cardápio
-         ============================================================ -->
-    <script src="../js/core/main.js"></script>
-    <script src="../js/core/effects.js"></script>
-    <script src="../js/core/audio.js"></script>
-    <script src="../js/pages/menu.js"></script>
+  <!-- Redirecionamento automático (opcional) para pedidos se logado -->
+  <script>
+    (function() {
+      // Se a URL tiver ?action=pedido, redireciona para pedidos.html
+      const urlParams = new URLSearchParams(window.location.search);
+      if (urlParams.get('action') === 'pedido') {
+        window.location.href = 'pedidos.html';
+      }
+    })();
+  </script>
 
 </body>
 

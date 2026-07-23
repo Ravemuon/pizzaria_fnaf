@@ -4,969 +4,307 @@
    COMPONENTES DAS PÁGINAS
 ======================================= */
 
-
 /* =======================================
    LAYOUT PRINCIPAL
 ======================================= */
 
-
-.site-layout{
-
-
-    width:min(
-        1450px,
-        calc(100% - 40px)
-    );
-
-
-    margin:auto;
-
-
-    display:flex;
-
-
-    gap:25px;
-
-
-    padding:25px 0;
-
-
-    align-items:flex-start;
-
-
+.site-layout {
+  width: min(1450px, calc(100% - 40px));
+  margin: auto;
+  display: flex;
+  gap: 25px;
+  padding: 25px 0;
+  align-items: flex-start;
 }
 
-
-
-.content{
-
-
-    flex:1;
-
-
-    min-width:0;
-
-
-    overflow-wrap:anywhere;
-
-
+.content {
+  flex: 1;
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
-
-
 
 /* =======================================
    HERO
 ======================================= */
 
-
-.hero{
-
-
-    position:relative;
-
-
-    overflow:hidden;
-
-
-    border:
-
-    6px ridge var(--gold);
-
-
-    background:#000;
-
-
-    margin-bottom:25px;
-
-
+.hero {
+  position: relative;
+  overflow: hidden;
+  border: 6px ridge var(--gold);
+  background: #000;
+  margin-bottom: 25px;
 }
 
-
-
-.hero img{
-
-
-    width:100%;
-
-
-    height:
-
-    clamp(
-        200px,
-        40vh,
-        430px
-    );
-
-
-    object-fit:cover;
-
-
+.hero img {
+  width: 100%;
+  height: clamp(200px, 40vh, 430px);
+  object-fit: cover;
 }
 
-
-
-.hero-overlay{
-
-
-    position:absolute;
-
-
-    bottom:0;
-
-
-    left:0;
-
-
-    width:100%;
-
-
-    padding:
-
-    clamp(
-        15px,
-        4vw,
-        45px
-    );
-
-
-    color:white;
-
-
-    background:
-
-    linear-gradient(
-        transparent,
-        rgba(0,0,0,.9)
-    );
-
-
+.hero-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: clamp(15px, 4vw, 45px);
+  color: white;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
 }
 
-
-
-.hero-overlay h1{
-
-
-    font-family:
-    "Bowlby One SC",
-    cursive;
-
-
-    font-size:
-
-    clamp(
-        22px,
-        5vw,
-        48px
-    );
-
-
-    color:white;
-
-
-    text-shadow:
-
-    4px 4px black;
-
-
+.hero-overlay h1 {
+  font-family: "Bowlby One SC", cursive;
+  font-size: clamp(22px, 5vw, 48px);
+  color: white;
+  text-shadow: 4px 4px black;
 }
 
-
-
-.hero-overlay p{
-
-
-    font-family:
-    "Special Elite",
-    cursive;
-
-
-    color:#ffd45c;
-
-
-    font-size:
-
-    clamp(
-        14px,
-        2vw,
-        22px
-    );
-
-
-    margin-top:6px;
-
-
+.hero-overlay p {
+  font-family: "Special Elite", cursive;
+  color: #ffd45c;
+  font-size: clamp(14px, 2vw, 22px);
+  margin-top: 6px;
 }
-
-
-
 
 /* =======================================
    ÍCONES DE SEÇÃO
 ======================================= */
 
-
-.section-icon{
-
-
-    width:28px;
-
-
-    height:28px;
-
-
-    object-fit:contain;
-
-
-    vertical-align:middle;
-
-
-    margin-right:12px;
-
-
+.section-icon {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  vertical-align: middle;
+  margin-right: 12px;
 }
-
-
-
 
 /* =======================================
    FAIXA DO RESTAURANTE
 ======================================= */
 
-
-.restaurant-strip{
-
-
-    display:flex;
-
-
-    justify-content:space-around;
-
-
-    align-items:center;
-
-
-    flex-wrap:wrap;
-
-
-    gap:15px;
-
-
-    padding:18px;
-
-
-    margin-bottom:25px;
-
-
-    background:
-
-
-    linear-gradient(
-        #970000,
-        #430000
-    );
-
-
-    color:white;
-
-
-    border:
-
-    5px ridge var(--gold);
-
-
-    font-family:
-    "Press Start 2P",
-    monospace;
-
-
-    font-size:
-
-    clamp(
-        10px,
-        1.2vw,
-        12px
-    );
-
-
+.restaurant-strip {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 18px;
+  margin-bottom: 25px;
+  background: linear-gradient(#970000, #430000);
+  color: white;
+  border: 5px ridge var(--gold);
+  font-family: "Press Start 2P", monospace;
+  font-size: clamp(10px, 1.2vw, 12px);
 }
-
-
 
 /* =======================================
    BLOCOS DE CONTEÚDO
 ======================================= */
 
-
-.topic{
-
-
-    background:
-
-    rgba(
-        255,
-        245,
-        210,
-        .95
-    );
-
-
-    border:
-
-    5px ridge var(--gold);
-
-
-    padding:
-
-    clamp(
-        15px,
-        3vw,
-        30px
-    );
-
-
-    margin-bottom:30px;
-
-
-    box-shadow:
-
-    5px 5px 15px rgba(0,0,0,.4);
-
-
+.topic {
+  background: rgba(255, 245, 210, 0.95);
+  border: 5px ridge var(--gold);
+  padding: clamp(15px, 3vw, 30px);
+  margin-bottom: 30px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
 }
 
-
-
-.topic h2{
-
-
-    text-align:center;
-
-
-    color:#8b0000;
-
-
-    font-size:
-
-    clamp(
-        20px,
-        3.5vw,
-        28px
-    );
-
-
-    border-bottom:
-
-    3px double #8b0000;
-
-
-    padding-bottom:15px;
-
-
-    margin-bottom:25px;
-
-
+.topic h2 {
+  text-align: center;
+  color: #8b0000;
+  font-size: clamp(20px, 3.5vw, 28px);
+  border-bottom: 3px double #8b0000;
+  padding-bottom: 15px;
+  margin-bottom: 25px;
 }
 
-
-
-.topic-grid{
-
-
-    display:grid;
-
-
-    grid-template-columns:
-
-    repeat(
-        2,
-        1fr
-    );
-
-
-    gap:
-
-    clamp(
-        15px,
-        3vw,
-        35px
-    );
-
-
-    align-items:center;
-
-
+.topic-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(15px, 3vw, 35px);
+  align-items: center;
 }
 
-
-
-.topic-grid img{
-
-
-    width:100%;
-
-
-    max-height:320px;
-
-
-    object-fit:contain;
-
-
-    border:
-
-    4px ridge var(--gold);
-
-
-    background:white;
-
-
-    padding:6px;
-
-
+.topic-grid img {
+  width: 100%;
+  max-height: 320px;
+  object-fit: contain;
+  border: 4px ridge var(--gold);
+  background: white;
+  padding: 6px;
 }
-
-
 
 /* =======================================
    GRID DE CARDS
 ======================================= */
 
-
-.featured-grid{
-
-
-    display:grid;
-
-
-    grid-template-columns:
-
-    repeat(
-        auto-fit,
-        minmax(
-            220px,
-            1fr
-        )
-    );
-
-
-    gap:
-
-    clamp(
-        15px,
-        2.5vw,
-        25px
-    );
-
-
+.featured-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: clamp(15px, 2.5vw, 25px);
 }
 
-
-
-
-.promo-card{
-
-
-    background:
-
-    linear-gradient(
-        #fff5d1,
-        #d8b36a
-    );
-
-
-    border:
-
-    5px ridge var(--gold);
-
-
-    padding:
-
-    clamp(
-        12px,
-        2vw,
-        20px
-    );
-
-
-    text-align:center;
-
-
-    display:flex;
-
-
-    flex-direction:column;
-
-
-    align-items:center;
-
-
-    transition:.3s;
-
-
+.promo-card {
+  background: linear-gradient(#fff5d1, #d8b36a);
+  border: 5px ridge var(--gold);
+  padding: clamp(12px, 2vw, 20px);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: 0.3s;
 }
 
-
-
-.promo-card:hover{
-
-
-    transform:translateY(-8px);
-
-
-    box-shadow:
-
-    0 8px 20px rgba(0,0,0,.5);
-
-
+.promo-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
 }
 
-
-
-.promo-card img{
-
-
-    width:100%;
-
-
-    aspect-ratio:4/3;
-
-
-    object-fit:contain;
-
-
-    background:white;
-
-
-    border:
-
-    3px solid #720000;
-
-
-    padding:6px;
-
-
+.promo-card img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+  background: white;
+  border: 3px solid #720000;
+  padding: 6px;
 }
 
-
-
-.promo-card h3{
-
-
-    color:#850000;
-
-
-    font-family:
-    "Bowlby One SC",
-    cursive;
-
-
-    font-size:
-
-    clamp(
-        16px,
-        2vw,
-        22px
-    );
-
-
-    margin:10px 0;
-
-
+.promo-card h3 {
+  color: #850000;
+  font-family: "Bowlby One SC", cursive;
+  font-size: clamp(16px, 2vw, 22px);
+  margin: 10px 0;
 }
 
-
-
-.promo-card p{
-
-
-    font-family:
-    "Special Elite",
-    cursive;
-
-
-    color:#2b1a10;
-
-
-    flex:1;
-
-
+.promo-card p {
+  font-family: "Special Elite", cursive;
+  color: #2b1a10;
+  flex: 1;
 }
-
-
 
 /* =======================================
    BOTÕES
 ======================================= */
 
-
-.btn{
-
-
-    display:inline-block;
-
-
-    padding:
-
-    clamp(
-        10px,
-        1.2vw,
-        16px
-    );
-
-
-    background:
-
-    linear-gradient(
-        #a00000,
-        #500000
-    );
-
-
-    color:white;
-
-
-    border:
-
-    4px ridge var(--gold);
-
-
-    font-family:
-    "Bowlby One SC",
-    cursive;
-
-
-    text-align:center;
-
-
-    text-decoration:none;
-
-
-    transition:.3s;
-
-
+.btn {
+  display: inline-block;
+  padding: clamp(10px, 1.2vw, 16px);
+  background: linear-gradient(#a00000, #500000);
+  color: white;
+  border: 4px ridge var(--gold);
+  font-family: "Bowlby One SC", cursive;
+  text-align: center;
+  text-decoration: none;
+  transition: 0.3s;
 }
 
-
-
-.btn:hover{
-
-
-    filter:brightness(1.2);
-
-
+.btn:hover {
+  filter: brightness(1.2);
 }
-
-
-
 
 /* =======================================
    AVISOS
 ======================================= */
 
-
-.warning-box{
-
-
-    background:
-
-    linear-gradient(
-        #400000,
-        #150000
-    );
-
-
-    color:white;
-
-
-    border:
-
-    5px ridge var(--gold);
-
-
-    padding:
-
-    clamp(
-        15px,
-        3vw,
-        25px
-    );
-
-
+.warning-box {
+  background: linear-gradient(#400000, #150000);
+  color: white;
+  border: 5px ridge var(--gold);
+  padding: clamp(15px, 3vw, 25px);
 }
 
-
-
-.warning-box p{
-
-
-    color:#ffd45c;
-
-
-    font-size:
-
-    clamp(
-        14px,
-        1.5vw,
-        18px
-    );
-
-
+.warning-box p {
+  color: #ffd45c;
+  font-size: clamp(14px, 1.5vw, 18px);
 }
-
-
 
 /* =======================================
    CARROSSEL DE POSTERS
 ======================================= */
 
-
-.poster-carousel{
-
-
-    overflow:hidden;
-
-
-    background:
-
-    linear-gradient(
-        #450000,
-        #090000
-    );
-
-
-    padding:
-
-    clamp(
-        12px,
-        2vw,
-        25px
-    );
-
-
-    border:
-
-    6px ridge var(--gold);
-
-
+.poster-carousel {
+  overflow: hidden;
+  background: linear-gradient(#450000, #090000);
+  padding: clamp(12px, 2vw, 25px);
+  border: 6px ridge var(--gold);
 }
 
-
-
-.poster-track{
-
-
-    display:flex;
-
-
-    gap:
-
-    clamp(
-        15px,
-        2vw,
-        25px
-    );
-
-
-    width:max-content;
-
-
-    animation:
-
-    postersMove 35s linear infinite;
-
-
+.poster-track {
+  display: flex;
+  gap: clamp(15px, 2vw, 25px);
+  width: max-content;
+  animation: postersMove 35s linear infinite;
 }
 
-
-
-.poster-track img{
-
-
-    height:
-
-    clamp(
-        160px,
-        25vw,
-        260px
-    );
-
-
-    width:
-
-    clamp(
-        110px,
-        18vw,
-        180px
-    );
-
-
-    object-fit:cover;
-
-
-    border:
-
-    5px ridge var(--gold);
-
-
-    flex-shrink:0;
-
-
+.poster-track img {
+  height: clamp(160px, 25vw, 260px);
+  width: clamp(110px, 18vw, 180px);
+  object-fit: cover;
+  border: 5px ridge var(--gold);
+  flex-shrink: 0;
 }
 
-
-
-.poster-track:hover{
-
-
-    animation-play-state:paused;
-
-
+.poster-track:hover {
+  animation-play-state: paused;
 }
 
-
-
-@keyframes postersMove{
-
-
-    from{
-
-        transform:translateX(0);
-
-    }
-
-
-    to{
-
-        transform:translateX(-50%);
-
-    }
-
-
+@keyframes postersMove {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }
-
-
 
 /* =======================================
    RESPONSIVO
 ======================================= */
 
+@media (max-width: 999px) {
+  .site-layout {
+    flex-direction: column;
+  }
 
-@media(max-width:999px){
-
-
-    .site-layout{
-
-        flex-direction:column;
-
-    }
-
-
-
-    .topic-grid{
-
-        grid-template-columns:1fr;
-
-    }
-
-
-
+  .topic-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
+@media (max-width: 767px) {
+  .site-layout {
+    width: calc(100% - 20px);
+    padding: 12px 0;
+  }
 
+  .restaurant-strip {
+    flex-direction: column;
+    text-align: center;
+  }
 
-@media(max-width:767px){
+  .featured-grid {
+    grid-template-columns: 1fr;
+  }
 
-
-    .site-layout{
-
-
-        width:
-
-        calc(100% - 20px);
-
-
-        padding:12px 0;
-
-
-    }
-
-
-
-    .restaurant-strip{
-
-
-        flex-direction:column;
-
-        text-align:center;
-
-    }
-
-
-
-    .featured-grid{
-
-        grid-template-columns:1fr;
-
-    }
-
-
-
-    .btn{
-
-        width:100%;
-
-    }
-
-
+  .btn {
+    width: 100%;
+  }
 }
 
+@media (max-width: 480px) {
+  .site-layout {
+    width: calc(100% - 14px);
+  }
 
+  .hero img {
+    height: 150px;
+  }
 
-@media(max-width:480px){
+  .hero-overlay {
+    padding: 10px;
+  }
 
-
-    .site-layout{
-
-
-        width:
-
-        calc(100% - 14px);
-
-
-    }
-
-
-
-    .hero img{
-
-
-        height:150px;
-
-
-    }
-
-
-
-    .hero-overlay{
-
-
-        padding:10px;
-
-
-    }
-
-
-
-    .section-icon{
-
-
-        width:20px;
-
-        height:20px;
-
-
-    }
-
-
-
+  .section-icon {
+    width: 20px;
+    height: 20px;
+  }
 }
