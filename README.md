@@ -12,20 +12,22 @@
 
 O objetivo é simular um antigo site empresarial de uma rede de pizzarias dos anos 90/2000, combinando:
 
-- 🍕 identidade visual de restaurantes antigos;
-- 📺 estética vintage;
-- 📁 arquivos corporativos fictícios;
-- 🤖 personagens animatrônicos;
-- 🔒 sistemas internos;
-- 📷 galerias e registros históricos;
-- 🖥️ experiência de portal empresarial retrô.
+* 🍕 identidade visual de restaurantes antigos;
+* 📺 estética vintage;
+* 📁 arquivos corporativos fictícios;
+* 🤖 personagens animatrônicos;
+* 🔒 sistemas internos;
+* 📷 galerias e registros históricos;
+* 🖥️ experiência de portal empresarial retrô;
+* 🏪 registros visuais da banca promocional da pizzaria;
+* 🎪 materiais de divulgação e decoração da unidade.
 
 O projeto foi desenvolvido como:
 
-- estudo de desenvolvimento web;
-- prática de organização de projetos;
-- criação de interfaces temáticas;
-- experimentação com HTML, CSS e JavaScript.
+* estudo de desenvolvimento web;
+* prática de organização profissional de projetos;
+* criação de interfaces temáticas;
+* experimentação com HTML, CSS e JavaScript.
 
 ---
 
@@ -35,12 +37,53 @@ Este projeto é um **fan project sem fins comerciais**.
 
 Ele:
 
-✅ não é oficial;  
-✅ não possui ligação com a franquia original;  
-✅ não representa a empresa real;  
+✅ não é oficial;
+✅ não possui ligação com a franquia original;
+✅ não representa uma empresa real;
 ✅ foi criado apenas para estudo e entretenimento.
 
 Todos os direitos relacionados a **Five Nights at Freddy's**, personagens e marcas pertencem aos seus respectivos proprietários.
+
+---
+
+# 🖼️ Screenshots
+
+Algumas imagens do projeto:
+
+## Página inicial
+
+![Página inicial](assets/imagens/screenshots/site/site1.png)
+
+---
+
+## Interface do sistema
+
+![Interface](assets/imagens/screenshots/site/site2.png)
+
+---
+
+## Página interna
+
+![Página interna](assets/imagens/screenshots/site/site3.png)
+
+---
+
+# 🏪 Banca promocional
+
+O projeto também inclui registros visuais de uma banca promocional fictícia da Freddy Fazbear's Pizza.
+
+Essas imagens representam:
+
+* estandes promocionais;
+* materiais publicitários;
+* decoração temática;
+* elementos visuais da marca.
+
+Localização:
+
+```
+assets/imagens/banca/
+```
 
 ---
 
@@ -50,9 +93,9 @@ Todos os direitos relacionados a **Five Nights at Freddy's**, personagens e marc
 
 Necessário:
 
-- Visual Studio Code;
-- Live Server ou outro servidor local;
-- Navegador moderno.
+* Visual Studio Code;
+* Live Server ou outro servidor local;
+* Navegador moderno.
 
 ---
 
@@ -64,13 +107,13 @@ Clone o projeto:
 git clone URL_DO_REPOSITORIO
 ```
 
-Abra a pasta:
+Entre na pasta:
 
-```
-Freddy-Fazbears-Pizza/
+```bash
+cd pizzaria_fnaf
 ```
 
-Ela deve conter:
+A estrutura principal deve conter:
 
 ```
 index.html
@@ -78,6 +121,7 @@ assets/
 components/
 css/
 js/
+data/
 paginas/
 ```
 
@@ -91,14 +135,14 @@ Abra:
 index.html
 ```
 
-No VS Code:
+No Visual Studio Code:
 
 ```
 Botão direito
 → Open with Live Server
 ```
 
-ou utilize:
+ou:
 
 ```
 Go Live
@@ -116,32 +160,32 @@ file:///C:/projeto/index.html
 
 O projeto utiliza carregamento dinâmico de componentes:
 
-- header;
-- navbar;
-- sidebar;
-- footer.
+* header;
+* navbar;
+* sidebar;
+* footer.
 
-Eles são carregados através de JavaScript, portanto precisam de um servidor local.
+Esses componentes são carregados através de JavaScript e precisam de um servidor local.
 
 ---
 
 # 🌐 Páginas disponíveis
 
-## 🏠 Index
+# 🏠 Index
 
 Página principal da Freddy Fazbear's Pizza.
 
 Inclui:
 
-- Banner principal;
-- Apresentação da empresa;
-- Serviços;
-- Promoções;
-- Cards de experiência;
-- Pizzas;
-- Animatrônicos;
-- Posters;
-- História.
+* banner principal;
+* apresentação da empresa;
+* serviços;
+* promoções;
+* cards de experiência;
+* pizzas;
+* animatrônicos;
+* posters;
+* história.
 
 ---
 
@@ -153,11 +197,11 @@ Sistema de cardápio da pizzaria.
 
 Inclui:
 
-- pizzas;
-- bebidas;
-- produtos especiais.
+* pizzas;
+* bebidas;
+* produtos especiais.
 
-Dados carregados utilizando JSON.
+Os dados são carregados utilizando JSON.
 
 ---
 
@@ -165,42 +209,42 @@ Dados carregados utilizando JSON.
 
 Catálogo de sabores:
 
-- tradicionais;
-- especiais;
-- aniversariantes;
-- sabores exclusivos.
+* tradicionais;
+* especiais;
+* sabores exclusivos;
+* pizzas comemorativas.
 
 ---
 
 ## Pedidos
 
-Página de pedidos fictícios.
+Sistema fictício de pedidos.
 
-Possui estrutura preparada para:
+Possui:
 
-- envio de informações;
-- armazenamento local;
-- gerenciamento futuro.
+* envio de informações;
+* armazenamento local;
+* gerenciamento futuro.
 
 ---
 
 # 🤖 Animatrônicos
 
-Catálogo dos personagens da pizzaria:
+Catálogo dos personagens da pizzaria.
 
 Inclui:
 
-- Freddy Fazbear;
-- Bonnie;
-- Chica;
-- Foxy;
-- Golden Freddy.
+* Freddy Fazbear;
+* Bonnie;
+* Chica;
+* Foxy;
+* Golden Freddy.
 
-Com:
+Possui:
 
-- imagens;
-- informações;
-- apresentações.
+* imagens;
+* informações;
+* apresentações individuais.
 
 ---
 
@@ -210,20 +254,22 @@ Com:
 
 Inclui:
 
-- fundação;
-- expansão;
-- eventos antigos;
-- arquivos corporativos.
+* fundação;
+* expansão;
+* eventos antigos;
+* arquivos corporativos.
 
 ---
 
 # 📰 Notícias
 
-Sistema de comunicados fictícios:
+Sistema de comunicados fictícios.
 
-- anúncios;
-- atualizações;
-- informações internas.
+Inclui:
+
+* anúncios;
+* atualizações;
+* informações internas.
 
 ---
 
@@ -233,10 +279,10 @@ Sistema de comunicados fictícios:
 
 Inclui:
 
-- relatórios;
-- registros;
-- arquivos confidenciais;
-- documentos históricos.
+* relatórios;
+* registros;
+* arquivos confidenciais;
+* documentos históricos.
 
 ---
 
@@ -246,22 +292,56 @@ Página baseada em protocolos internos.
 
 Inclui:
 
-- regras da pizzaria;
-- segurança dos funcionários;
-- monitoramento;
-- procedimentos de emergência.
+* regras da pizzaria;
+* segurança dos funcionários;
+* monitoramento;
+* procedimentos de emergência.
 
 ---
 
 # 👥 Funcionários
 
-Área administrativa fictícia da empresa.
+Área administrativa fictícia.
 
 Inclui:
 
-- informações internas;
-- setores;
-- registros de funcionários.
+* informações internas;
+* setores;
+* registros de funcionários.
+
+---
+
+# 🛡️ Área administrativa
+
+O projeto possui páginas administrativas internas.
+
+## Administração de candidaturas
+
+Arquivo:
+
+```
+admin-candidaturas.html
+```
+
+Função:
+
+* gerenciamento fictício de candidatos;
+* registros internos de funcionários.
+
+---
+
+## Administração de pedidos
+
+Arquivo:
+
+```
+admin-pedidos.html
+```
+
+Função:
+
+* visualização de pedidos;
+* gerenciamento interno.
 
 ---
 
@@ -271,17 +351,18 @@ Sistema de galeria visual.
 
 Inclui:
 
-- fotos dos animatrônicos;
-- posters promocionais;
-- imagens da pizzaria;
-- arquivos históricos;
-- registros de câmeras.
+* fotos dos animatrônicos;
+* posters promocionais;
+* imagens da pizzaria;
+* arquivos históricos;
+* registros de câmeras;
+* imagens da banca promocional.
 
 Recursos:
 
-- filtros por categoria;
-- visualizador de imagens;
-- layout responsivo.
+* filtros por categoria;
+* visualizador de imagens;
+* layout responsivo.
 
 Categorias:
 
@@ -289,6 +370,7 @@ Categorias:
 Animatronics
 Posters
 Pizzaria
+Banca
 Extras
 ```
 
@@ -300,22 +382,42 @@ Página de comunicação fictícia.
 
 Inclui:
 
-- formulário;
-- informações da empresa;
-- integração com JavaScript.
+* formulário;
+* informações da empresa;
+* integração JavaScript.
 
 ---
 
 # 🏗️ Estrutura do projeto
 
-```
+```text
 .
 ├── assets/
-│   ├── audio/
-│   ├── documentos/
-│   │   └── relatorios/
 │   ├── fonts/
+│   │   ├── BowlbyOneSC-Regular.ttf
+│   │   ├── Creepster-Regular.ttf
+│   │   ├── PressStart2P-Regular.ttf
+│   │   ├── Rye-Regular.ttf
+│   │   └── SpecialElite-Regular.ttf
+│   │
 │   └── imagens/
+│       ├── anuncios/
+│       ├── background/
+│       ├── backgrounds-site/
+│       ├── banners/
+│       ├── banca/
+│       ├── characters/
+│       │   ├── animatronics/
+│       │   ├── carousel-posters/
+│       │   ├── desenho-criancas/
+│       │   └── pelucias/
+│       │
+│       ├── icons/
+│       ├── jogo/
+│       ├── logos/
+│       ├── pizzas/
+│       └── screenshots/
+│           └── site/
 │
 ├── components/
 │   ├── header.html
@@ -333,12 +435,13 @@ Inclui:
 │   ├── fonts.css
 │   ├── footer.css
 │   ├── header.css
+│   ├── menu.css
 │   ├── navbar.css
 │   ├── pages.css
 │   ├── sidebar.css
 │   ├── style.css
-│   ├── vintage.css
-│   │
+│   └── vintage.css
+│
 │   └── pages/
 │       ├── animatronics.css
 │       ├── arquivos.css
@@ -360,10 +463,9 @@ Inclui:
 │
 ├── js/
 │   ├── core/
-│   │   ├── main.js
-│   │   ├── effects.js
 │   │   ├── audio.js
-│   │   └── sidebar.js
+│   │   ├── effects.js
+│   │   └── main.js
 │   │
 │   └── pages/
 │       ├── arquivos.js
@@ -372,7 +474,11 @@ Inclui:
 │       ├── eventos.js
 │       ├── galeria.js
 │       ├── menu.js
+│       ├── navbar.js
+│       ├── order.js
 │       ├── pedidos.js
+│       ├── pedidos-salvos.js
+│       ├── secrets.js
 │       └── seguranca.js
 │
 ├── paginas/
@@ -390,6 +496,8 @@ Inclui:
 │   ├── pizzas.html
 │   └── seguranca.html
 │
+├── admin-candidaturas.html
+├── admin-pedidos.html
 ├── index.html
 ├── LICENSE
 └── README.md
@@ -401,24 +509,25 @@ Inclui:
 
 ## Front-end
 
-- HTML5
-- CSS3
-- JavaScript
+* HTML5;
+* CSS3;
+* JavaScript.
 
 ---
 
-## Recursos utilizados
+# ⚙️ Recursos utilizados
 
-- Componentização HTML;
-- CSS modular;
-- JavaScript separado por página;
-- JSON externo;
-- Fontes personalizadas;
-- Animações CSS;
-- Layout responsivo;
-- Sistema de filtros;
-- Visualizadores de imagem;
-- Carregamento dinâmico.
+* Componentização HTML;
+* CSS modular;
+* JavaScript separado por páginas;
+* JSON externo;
+* Fontes personalizadas;
+* Animações CSS;
+* Layout responsivo;
+* Sistema de filtros;
+* Visualizadores de imagens;
+* Manipulação de DOM;
+* Carregamento dinâmico de componentes.
 
 ---
 
@@ -426,13 +535,14 @@ Inclui:
 
 O projeto utiliza inspiração em:
 
-- sites antigos de empresas;
-- páginas promocionais dos anos 90;
-- sistemas corporativos;
-- documentos internos;
-- publicidade vintage.
+* sites antigos de empresas;
+* páginas promocionais dos anos 90;
+* sistemas corporativos;
+* documentos internos;
+* publicidade vintage;
+* estandes promocionais.
 
-A intenção é criar a sensação de acessar um antigo sistema perdido da Fazbear Entertainment.
+A intenção é criar a sensação de acessar um antigo sistema perdido da **Fazbear Entertainment**.
 
 ---
 
@@ -440,18 +550,18 @@ A intenção é criar a sensação de acessar um antigo sistema perdido da Fazbe
 
 As imagens utilizadas podem incluir:
 
-- materiais de referência;
-- artes de fãs;
-- imagens públicas;
-- elementos inspirados na franquia.
+* materiais de referência;
+* artes de fãs;
+* imagens públicas;
+* elementos inspirados na franquia.
 
 Os direitos pertencem aos seus respectivos criadores.
 
 Caso algum autor deseje:
 
-- receber créditos;
-- corrigir informações;
-- solicitar remoção;
+* receber créditos;
+* corrigir informações;
+* solicitar remoção;
 
 entre em contato.
 
@@ -461,14 +571,14 @@ entre em contato.
 
 Este projeto pratica:
 
-- Desenvolvimento Front-End;
-- Organização profissional de arquivos;
-- Criação de interfaces temáticas;
-- Responsividade;
-- Componentização;
-- Manipulação de DOM;
-- Sistemas interativos;
-- Estruturação de grandes projetos web.
+* Desenvolvimento Front-End;
+* Organização profissional de arquivos;
+* Criação de interfaces temáticas;
+* Responsividade;
+* Componentização;
+* Manipulação de DOM;
+* Sistemas interativos;
+* Estruturação de grandes projetos web.
 
 ---
 
@@ -482,7 +592,7 @@ Personagens, marcas e imagens de terceiros permanecem protegidos por seus respec
 
 # ⭐ Considerações finais
 
-A Freddy Fazbear's Pizza foi recriada como uma experiência web fictícia, simulando um antigo portal corporativo encontrado no tempo.
+A **Freddy Fazbear's Pizza** foi recriada como uma experiência web fictícia, simulando um antigo portal corporativo encontrado no tempo.
 
 O objetivo é transformar uma simples página em uma experiência completa envolvendo:
 
@@ -493,6 +603,8 @@ O objetivo é transformar uma simples página em uma experiência completa envol
 📁 arquivos;
 
 📷 memórias;
+
+🏪 banca promocional;
 
 🔒 mistérios;
 

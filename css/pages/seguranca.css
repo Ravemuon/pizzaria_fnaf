@@ -5,7 +5,7 @@
 
 /* =======================================
    ARQUIVO SECRETO / MANUAL
-======================================= */
+   ======================================= */
 
 .secret-file {
     font-family: "Special Elite", cursive;
@@ -44,7 +44,7 @@
 
 /* =======================================
    AVISOS DE PROTOCOLO
-======================================= */
+   ======================================= */
 
 .warning {
     background: rgba(40, 20, 10, 0.9);
@@ -99,7 +99,7 @@
 
 /* =======================================
    SELO DE SEGURANÇA
-======================================= */
+   ======================================= */
 
 .security-stamp {
     font-family: "Rye", cursive;
@@ -114,12 +114,12 @@
 }
 
 /* =======================================
-   HISTÓRICO DE INCIDENTES (GRID 2x2)
-======================================= */
+   HISTÓRICO DE INCIDENTES – EM UMA COLUNA
+   ======================================= */
 
 .incident-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: column;
     gap: 20px;
 }
 
@@ -129,6 +129,13 @@
     padding: 18px;
     border-radius: 6px;
     transition: 0.3s;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Remove qualquer tentativa de grid-column inline que possa conflitar */
+.incident-card[style*="grid-column"] {
+    grid-column: auto !important;
 }
 
 .incident-card:hover {
@@ -163,8 +170,24 @@
 }
 
 /* =======================================
+   TOPIC-GRID (imagem + texto) – Mais responsivo
+   ======================================= */
+
+.topic-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.topic-grid > * {
+    flex: 1 1 300px;
+    min-width: 0;
+}
+
+/* =======================================
    PROTOCOLO DE EMERGÊNCIA (GRID 2x2)
-======================================= */
+   ======================================= */
 
 .emergency-grid {
     display: grid;
@@ -202,7 +225,7 @@
 
 /* =======================================
    IMAGEM PADRÃO DO PROTOCOLO
-======================================= */
+   ======================================= */
 
 .protocol-image,
 .topic-grid img {
@@ -212,15 +235,16 @@
     border: 4px ridge var(--gold);
     background: #fff;
     padding: 6px;
+    box-sizing: border-box;
 }
 
 /* =======================================
    RESPONSIVIDADE
-======================================= */
+   ======================================= */
 
 @media (max-width: 900px) {
+    /* Incidentes já estão em coluna única, ajustamos apenas espaçamento */
     .incident-grid {
-        grid-template-columns: 1fr;
         gap: 15px;
     }
 
@@ -239,6 +263,11 @@
 
     .emergency-step h4 {
         font-size: 15px;
+    }
+
+    /* Força os itens do topic-grid a empilhar em telas médias */
+    .topic-grid > * {
+        flex: 1 1 100%;
     }
 }
 
@@ -317,7 +346,7 @@
 
 /* =======================================
    SCROLL SUAVE PARA LISTAS
-======================================= */
+   ======================================= */
 
 .incident-card,
 .emergency-step {
