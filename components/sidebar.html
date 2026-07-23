@@ -1,271 +1,109 @@
-<aside class="sidebar">
+<!-- ============================================
+     SIDEBAR - FREDDY FAZBEAR'S PIZZA
+     Versão profissional com drawer mobile
+============================================ -->
+
+<aside class="sidebar" role="complementary" aria-label="Barra lateral">
+
+    <!-- Botão toggle para mobile -->
+    <button class="sidebar-toggle" id="sidebarToggle" aria-label="Abrir/fechar menu lateral" aria-expanded="false">
+        <span class="hamburger-icon">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </span>
+        <span class="toggle-label">Menu</span>
+    </button>
+
+    <!-- Conteúdo da sidebar (drawer) -->
+    <div class="sidebar-drawer" id="sidebarDrawer">
+
+        <!-- Cabeçalho do drawer -->
+        <div class="drawer-header">
+            <img src="/assets/imagens/logos/logo.jpg" alt="Freddy Fazbear's Pizza" class="drawer-logo">
+            <button class="drawer-close" id="sidebarClose" aria-label="Fechar menu">✕</button>
+        </div>
+
+        <!-- =========================
+             NOTÍCIAS
+        ========================== -->
+        <section class="sidebar-box news-box">
+            <header class="sidebar-title">
+                <span class="icon">⭐</span> Últimas Notícias
+            </header>
+            <div class="sidebar-content">
+                <ul class="news-list">
+                    <li>🍕 Novo cardápio disponível!</li>
+                    <li>🎉 Pacotes de aniversário liberados!</li>
+                    <li>🤖 Novos shows animatrônicos!</li>
+                </ul>
+                <a href="/paginas/noticias.html" class="sidebar-btn">Ver Notícias</a>
+            </div>
+        </section>
+
+        <!-- =========================
+             EVENTOS
+        ========================== -->
+        <section class="sidebar-box">
+            <header class="sidebar-title">
+                <span class="icon">🎂</span> Eventos Especiais
+            </header>
+            <img class="sidebar-image" src="/assets/imagens/banners/birthday.jpg" alt="Eventos especiais">
+            <div class="sidebar-content">
+                <p>Reserve festas, aniversários e eventos com nossos personagens.</p>
+                <a href="/paginas/eventos.html" class="sidebar-btn">Ver Eventos</a>
+            </div>
+        </section>
+
+        <!-- =========================
+             ANIMATRÔNICOS
+        ========================== -->
+        <section class="sidebar-box">
+            <header class="sidebar-title">
+                <span class="icon">🤖</span> Banda Animatrônica
+            </header>
+            <img class="sidebar-image" src="/assets/imagens/banners/animatronics.jpg" alt="Animatrônicos">
+            <div class="sidebar-content">
+                <p>Freddy, Bonnie, Chica e Foxy aguardam sua visita.</p>
+                <a href="/paginas/animatronics.html" class="sidebar-btn">Conhecer</a>
+            </div>
+        </section>
+
+        <!-- =========================
+             PIZZA DA SEMANA
+        ========================== -->
+        <section class="sidebar-box pizza-box">
+            <header class="sidebar-title">
+                <span class="icon">🍕</span> Pizza da Semana
+            </header>
+            <img class="sidebar-image" src="/assets/imagens/pizzas/especial_dacasa.jpg" alt="Pizza especial">
+            <div class="sidebar-content">
+                <p>Nosso sabor especial selecionado da semana.</p>
+                <a href="/paginas/pizzas.html" class="sidebar-btn">Cardápio</a>
+            </div>
+        </section>
+
+        <!-- =========================
+             SEGURANÇA
+        ========================== -->
+        <section class="sidebar-box warning-box">
+            <header class="sidebar-title">
+                <span class="icon">⚠</span> Segurança
+            </header>
+            <div class="sidebar-content">
+                <p>Consulte os protocolos internos da pizzaria.</p>
+                <a href="/paginas/seguranca.html" class="sidebar-btn">Ler Avisos</a>
+            </div>
+        </section>
+
+        <!-- Rodapé do drawer -->
+        <div class="drawer-footer">
+            <p>© 1983-2026 Fazbear Entertainment</p>
+        </div>
 
+    </div><!-- fim .sidebar-drawer -->
 
-<div class="sidebar-track">
-
-
-
-<!-- NOTÍCIAS -->
-
-<section class="sidebar-box news-box">
-
-
-<header class="sidebar-title">
-
-⭐ Últimas Notícias
-
-</header>
-
-
-
-<div class="sidebar-content">
-
-
-<ul class="news-list">
-
-<li>
-🍕 Novo cardápio disponível!
-</li>
-
-
-<li>
-🎉 Pacotes de aniversário liberados!
-</li>
-
-
-<li>
-🤖 Novos shows animatrônicos!
-</li>
-
-
-</ul>
-
-
-
-<a class="sidebar-btn"
-href="/paginas/noticias.html">
-
-Ver Notícias
-
-</a>
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-
-<!-- EVENTOS -->
-
-
-<section class="sidebar-box">
-
-
-<header class="sidebar-title">
-
-🎂 Eventos Especiais
-
-</header>
-
-
-
-<img
-class="sidebar-image"
-src="/assets/imagens/banners/birthday.jpg"
-alt="Eventos">
-
-
-
-<div class="sidebar-content">
-
-
-<p>
-
-Reserve festas,
-aniversários e eventos
-com nossos personagens.
-
-</p>
-
-
-
-<a class="sidebar-btn"
-href="/paginas/eventos.html">
-
-Ver Eventos
-
-</a>
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-
-<!-- ANIMATRONICS -->
-
-
-<section class="sidebar-box">
-
-
-<header class="sidebar-title">
-
-🤖 Banda Animatrônica
-
-</header>
-
-
-
-<img
-class="sidebar-image"
-src="/assets/imagens/banners/animatronics.jpg"
-alt="Animatrônicos">
-
-
-
-<div class="sidebar-content">
-
-
-<p>
-
-Freddy, Bonnie,
-Chica e Foxy aguardam
-sua visita.
-
-</p>
-
-
-
-<a class="sidebar-btn"
-href="/paginas/animatronics.html">
-
-Conhecer
-
-</a>
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-
-
-<!-- PIZZA -->
-
-
-<section class="sidebar-box pizza-box">
-
-
-<header class="sidebar-title">
-
-🍕
-
-Pizza da Semana
-
-</header>
-
-
-
-<img
-class="sidebar-image"
-src="/assets/imagens/pizzas/especial_dacasa.jpg"
-alt="Pizza especial">
-
-
-
-<div class="sidebar-content">
-
-
-<p>
-
-Nosso sabor especial
-selecionado da semana.
-
-</p>
-
-
-
-<a class="sidebar-btn"
-href="/paginas/pizzas.html">
-
-Cardápio
-
-</a>
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-
-<!-- SEGURANÇA -->
-
-
-<section class="sidebar-box warning-box">
-
-
-<header class="sidebar-title">
-
-⚠ Segurança
-
-</header>
-
-
-
-<div class="sidebar-content">
-
-
-<p>
-
-Consulte os protocolos
-internos da pizzaria.
-
-</p>
-
-
-
-<a class="sidebar-btn"
-href="/paginas/seguranca.html">
-
-Ler Avisos
-
-</a>
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-</div>
-
+    <!-- Overlay (fundo escuro ao abrir o drawer) -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
 
 </aside>

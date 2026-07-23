@@ -1,311 +1,403 @@
-/* =======================================
-   SIDEBAR
-======================================= */
+/* ============================================
+   SIDEBAR - FREDDY FAZBEAR'S PIZZA
+   ESTILOS PROFISSIONAIS E RESPONSIVOS
+============================================ */
 
+/* =========================================
+   BOTÃO TOGGLE (VISÍVEL APENAS NO MOBILE)
+========================================= */
 
-.sidebar{
-
-    width:320px;
-
-    flex-shrink:0;
-
+.sidebar-toggle {
+    display: none; /* oculto por padrão (desktop) */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    background: linear-gradient(135deg, #9b0000, #520000);
+    border: 3px ridge var(--gold, #d4a017);
+    border-radius: 50px;
+    padding: 12px 18px;
+    color: #fff;
+    font-family: "Bowlby One SC", cursive;
+    font-size: 14px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
-
-
-.sidebar-track{
-
-    display:flex;
-
-    flex-direction:column;
-
-    gap:25px;
-
+.sidebar-toggle:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 25px rgba(212, 160, 23, 0.4);
 }
 
-
-
-
-/* BOX */
-
-.sidebar-box{
-
-
-    background:
-
-    linear-gradient(
-        #fff5d1,
-        #d8b36a
-    );
-
-
-    border:
-
-    5px ridge var(--gold);
-
-
-    box-shadow:
-
-    5px 5px 15px rgba(0,0,0,.4);
-
-
-    overflow:hidden;
-
-
+.hamburger-icon {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 22px;
 }
 
-
-
-
-
-
-.sidebar-title{
-
-
-    background:
-
-    linear-gradient(
-        #850000,
-        #400000
-    );
-
-
-    color:white;
-
-
-    text-align:center;
-
-
-    padding:15px;
-
-
-    font-family:
-    "Bowlby One SC";
-
-
-    font-size:18px;
-
-
-    border-bottom:
-
-    3px solid var(--gold);
-
-
+.hamburger-icon .bar {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background: #fff;
+    border-radius: 2px;
+    transition: all 0.3s ease;
 }
 
-
-
-
-
-
-
-.sidebar-content{
-
-
-    padding:18px;
-
-
-    text-align:center;
-
-
+.sidebar-toggle.active .hamburger-icon .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+.sidebar-toggle.active .hamburger-icon .bar:nth-child(2) {
+    opacity: 0;
+}
+.sidebar-toggle.active .hamburger-icon .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
 }
 
-
-
-
-
-.sidebar-image{
-
-
-    width:100%;
-
-
-    height:170px;
-
-
-    object-fit:cover;
-
-
-    border-bottom:
-
-    4px ridge var(--gold);
-
-
+.toggle-label {
+    font-size: 13px;
+    letter-spacing: 0.5px;
 }
 
+/* =========================================
+   DRAWER (SIDEBAR MOBILE)
+========================================= */
 
-
-
-
-
-.news-list{
-
-
-    text-align:left;
-
-
-    margin-bottom:20px;
-
-
+.sidebar-drawer {
+    position: fixed;
+    top: 0;
+    left: -340px; /* escondido à esquerda */
+    width: 320px;
+    max-width: 85vw;
+    height: 100%;
+    background: linear-gradient(180deg, #1a0a05, #0d0503);
+    border-right: 4px ridge var(--gold, #d4a017);
+    box-shadow: 4px 0 30px rgba(0,0,0,0.8);
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 20px 18px 30px;
+    z-index: 1001;
+    transition: left 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    scrollbar-width: thin;
+    scrollbar-color: #d4a017 #2b1a10;
 }
 
-
-
-.news-list li{
-
-
-    padding:8px 0;
-
-
-    border-bottom:
-
-    1px dashed #850000;
-
-
-    font-family:
-
-    "Special Elite";
-
-
+.sidebar-drawer::-webkit-scrollbar {
+    width: 6px;
+}
+.sidebar-drawer::-webkit-scrollbar-track {
+    background: #2b1a10;
+}
+.sidebar-drawer::-webkit-scrollbar-thumb {
+    background: #d4a017;
+    border-radius: 3px;
 }
 
-
-
-
-
-
-
-.sidebar-btn{
-
-
-    display:block;
-
-
-    margin-top:15px;
-
-
-    padding:12px;
-
-
-    background:
-
-
-    linear-gradient(
-        #a00000,
-        #500000
-    );
-
-
-    color:white;
-
-
-    border:
-
-    3px ridge var(--gold);
-
-
-    font-family:
-
-    "Press Start 2P";
-
-
-    font-size:10px;
-
-
+.sidebar-drawer.open {
+    left: 0;
 }
 
-
-
-.sidebar-btn:hover{
-
-
-    filter:brightness(1.3);
-
-
+/* Cabeçalho do drawer */
+.drawer-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #3d2517;
 }
 
-
-
-
-
-
-/* ALERTA */
-
-.warning-box{
-
-
-    background:
-
-    linear-gradient(
-        #300000,
-        #080000
-    );
-
-
+.drawer-logo {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--gold, #d4a017);
 }
 
-
-.warning-box p{
-
-
-    color:#ffd45c;
-
-
+.drawer-close {
+    background: none;
+    border: none;
+    color: #ffd45c;
+    font-size: 28px;
+    cursor: pointer;
+    transition: transform 0.3s;
+    padding: 4px 8px;
+    line-height: 1;
 }
 
-
-
-
-
-
-
-/* =========================
-   MOBILE CAROUSEL
-========================= */
-
-
-@media(max-width:1000px){
-
-
-.sidebar{
-
-
-    width:100%;
-
-
+.drawer-close:hover {
+    transform: rotate(90deg);
 }
 
+/* =========================================
+   OVERLAY (FUNDO ESCURO)
+========================================= */
 
-
-.sidebar-track{
-
-
-    flex-direction:row;
-
-
-    overflow-x:auto;
-
-
-    scroll-snap-type:x mandatory;
-
-
-    gap:15px;
-
-
+.sidebar-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(2px);
+    z-index: 1000;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.35s ease;
 }
 
-
-
-.sidebar-box{
-
-
-    min-width:280px;
-
-
-    scroll-snap-align:center;
-
-
+.sidebar-overlay.show {
+    display: block;
+    opacity: 1;
 }
 
+/* =========================================
+   SIDEBAR BOXES (CONTEÚDO)
+========================================= */
 
+.sidebar-box {
+    background: rgba(255, 245, 210, 0.06);
+    border: 2px ridge #6b3f2b;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 20px;
+    transition: background 0.2s;
+}
+
+.sidebar-box:hover {
+    background: rgba(255, 245, 210, 0.1);
+}
+
+.sidebar-title {
+    font-family: "Bowlby One SC", cursive;
+    color: #ffd45c;
+    font-size: 16px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    letter-spacing: 0.5px;
+}
+
+.sidebar-title .icon {
+    font-size: 18px;
+}
+
+.sidebar-content {
+    color: #d0c0b0;
+    font-family: "Special Elite", cursive;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.sidebar-content p {
+    margin: 0 0 8px 0;
+}
+
+/* Lista de notícias */
+.news-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 12px 0;
+}
+
+.news-list li {
+    padding: 6px 0;
+    border-bottom: 1px dashed #3d2517;
+    font-size: 14px;
+    color: #d0c0b0;
+}
+
+.news-list li:last-child {
+    border-bottom: none;
+}
+
+/* Imagens dentro da sidebar */
+.sidebar-image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border: 3px solid #6b3f2b;
+    border-radius: 4px;
+    margin-bottom: 12px;
+    background: #0a0a0a;
+}
+
+/* Botões da sidebar */
+.sidebar-btn {
+    display: inline-block;
+    padding: 8px 18px;
+    background: linear-gradient(135deg, #a00000, #600000);
+    color: #fff;
+    border: 2px ridge var(--gold, #d4a017);
+    border-radius: 30px;
+    font-family: "Bowlby One SC", cursive;
+    font-size: 13px;
+    text-decoration: none;
+    transition: all 0.25s;
+    margin-top: 6px;
+}
+
+.sidebar-btn:hover {
+    background: linear-gradient(135deg, #c00000, #800000);
+    transform: scale(1.03);
+    box-shadow: 0 0 15px rgba(212, 160, 23, 0.3);
+}
+
+/* Box de segurança (destaque) */
+.warning-box {
+    border-color: #b00000;
+    background: rgba(180, 0, 0, 0.12);
+}
+
+.warning-box .sidebar-title {
+    color: #ff6666;
+}
+
+.warning-box .sidebar-btn {
+    background: linear-gradient(135deg, #8b0000, #400000);
+    border-color: #ff6666;
+}
+
+.warning-box .sidebar-btn:hover {
+    background: linear-gradient(135deg, #b00000, #600000);
+}
+
+/* Box da pizza (destaque) */
+.pizza-box {
+    border-color: #d4a017;
+    background: rgba(212, 160, 23, 0.08);
+}
+
+.pizza-box .sidebar-title {
+    color: #f5c542;
+}
+
+/* Rodapé do drawer */
+.drawer-footer {
+    margin-top: 25px;
+    padding-top: 15px;
+    border-top: 2px solid #3d2517;
+    text-align: center;
+    color: #6b4a3a;
+    font-family: "Press Start 2P", monospace;
+    font-size: 9px;
+}
+
+/* =========================================
+   DESKTOP (SIDEBAR FIXA COM FUNDO)
+========================================= */
+
+@media (min-width: 769px) {
+    .sidebar {
+        position: sticky;
+        top: 20px;
+        align-self: flex-start;
+        flex: 0 0 280px;
+        max-width: 280px;
+        margin-top: 0;
+        background: linear-gradient(180deg, #1a0a05, #0d0503);
+        border: 3px ridge var(--gold, #d4a017);
+        border-radius: 8px;
+        padding: 18px 15px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+    }
+
+    .sidebar-drawer {
+        position: static;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        padding: 0;
+        overflow-y: visible;
+        left: auto !important;
+        transition: none;
+        border-right: none;
+    }
+
+    .sidebar-toggle,
+    .drawer-header,
+    .drawer-close,
+    .drawer-footer,
+    .sidebar-overlay {
+        display: none !important;
+    }
+
+    .sidebar-box {
+        background: rgba(255, 245, 210, 0.06);
+        border: 2px ridge #6b3f2b;
+        border-radius: 6px;
+        padding: 14px;
+        margin-bottom: 16px;
+    }
+
+    .sidebar-box:hover {
+        background: rgba(255, 245, 210, 0.12);
+    }
+
+    .sidebar-title {
+        font-size: 15px;
+    }
+
+    .sidebar-content {
+        font-size: 13px;
+    }
+
+    .sidebar-btn {
+        font-size: 12px;
+        padding: 6px 16px;
+    }
+}
+
+/* =========================================
+   AJUSTES PARA TELAS PEQUENAS (até 480px)
+========================================= */
+
+@media (max-width: 480px) {
+    .sidebar-toggle {
+        padding: 10px 14px;
+        font-size: 12px;
+        bottom: 15px;
+        right: 15px;
+        gap: 6px;
+    }
+
+    .hamburger-icon {
+        width: 18px;
+        gap: 3px;
+    }
+    .hamburger-icon .bar {
+        height: 2.5px;
+    }
+
+    .sidebar-drawer {
+        width: 290px;
+        padding: 15px 12px 20px;
+    }
+
+    .drawer-logo {
+        width: 40px;
+        height: 40px;
+    }
+
+    .sidebar-title {
+        font-size: 15px;
+    }
+
+    .sidebar-content {
+        font-size: 13px;
+    }
+
+    .sidebar-btn {
+        font-size: 12px;
+        padding: 6px 14px;
+    }
 }

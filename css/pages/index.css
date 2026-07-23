@@ -1,487 +1,410 @@
 /* =======================================
    FREDDY FAZBEAR'S PIZZA
    INDEX PAGE STYLE
-   CORREÇÕES RESPONSIVAS
+   CORREÇÕES RESPONSIVAS E REMOÇÃO DE BORDAS BRANCAS
 ======================================= */
-
 
 /* =======================================
    CONTROLE GERAL INDEX
 ======================================= */
 
-
-.content{
-
-    width:100%;
-    overflow:hidden;
-
+.content {
+    width: 100%;
+    overflow: hidden;
 }
-
-
 
 .content > section,
 .content > .hero,
-.content > .restaurant-strip{
-
-    max-width:100%;
-
+.content > .restaurant-strip {
+    max-width: 100%;
 }
-
-
 
 /* =======================================
    HERO INDEX
 ======================================= */
 
-
-.hero{
-
-    width:100%;
-
+.hero {
+    width: 100%;
 }
 
-
-
-.hero img{
-
-    width:100%;
-
-    max-width:100%;
-
-    object-fit:cover;
-
+.hero img {
+    width: 100%;
+    max-width: 100%;
+    height: 430px;
+    object-fit: cover;
 }
 
-
-
-.hero-overlay{
-
-    box-sizing:border-box;
-
+.hero-overlay {
+    box-sizing: border-box;
 }
 
-
-
-.hero-overlay h1{
-
-    word-break:break-word;
-
+.hero-overlay h1 {
+    word-break: break-word;
 }
-
-
-
-
 
 /* =======================================
    FAIXA DE SERVIÇOS
 ======================================= */
 
-
-.restaurant-strip span{
-
-    text-align:center;
-
-    flex:1;
-
-    min-width:180px;
-
+.restaurant-strip span {
+    text-align: center;
+    flex: 1;
+    min-width: 180px;
 }
-
-
-
-
 
 /* =======================================
    BLOCOS INDEX
 ======================================= */
 
-
-.topic{
-
-    width:100%;
-
-    overflow:hidden;
-
+.topic {
+    width: 100%;
+    overflow: hidden;
 }
 
-
-
-.topic p{
-
-    max-width:800px;
-
+.topic p {
+    max-width: 800px;
 }
-
-
 
 /* =======================================
    GRID PRINCIPAL
 ======================================= */
 
-
-.topic-grid{
-
-    width:100%;
-
+.topic-grid {
+    width: 100%;
 }
 
-
-
-.topic-grid > *{
-
-    min-width:0;
-
+.topic-grid > * {
+    min-width: 0;
 }
 
-
-
-
-
-.topic-grid img{
-
-    max-width:100%;
-
+.topic-grid img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: cover; /* ALTERADO: cover para preencher sem bordas brancas */
+    border: 4px ridge var(--gold);
 }
-
-
-
-
 
 /* =======================================
    CARDS DE EXPERIÊNCIA
 ======================================= */
 
-
-.featured-grid{
-
-    width:100%;
-
+.featured-grid {
+    width: 100%;
 }
 
-
-
-.promo-card{
-
-    min-width:0;
-
+.promo-card {
+    min-width: 0;
 }
 
-
-
-.promo-card img{
-
-    max-width:100%;
-
+.promo-card img {
+    width: 100%;
+    max-width: 100%;
+    height: 200px;
+    object-fit: cover; /* ALTERADO: cover para preencher sem bordas brancas */
+    border: 4px solid #720000;
 }
-
-
-
-
 
 /* =======================================
    BANNER ANIMATRONICS
 ======================================= */
 
-
-.banner-box{
-
-    width:100%;
-
-    overflow:hidden;
-
+.banner-box {
+    width: 100%;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: center;
 }
 
-
-
-.banner-box img{
-
-    width:100%;
-
-    max-width:100%;
-
-    object-fit:cover;
-
+.banner-box img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover; /* ALTERADO: cover para preencher */
+    border: 4px solid var(--gold);
 }
 
-
-
-
+.banner-box div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
 
 /* =======================================
-   POSTERS
+   POSTERS (CARROSSEL)
 ======================================= */
 
-
-.poster-carousel{
-
-    max-width:100%;
-
-    overflow:hidden;
-
+.poster-carousel {
+    max-width: 100%;
+    overflow: hidden;
+    padding: 20px 0;
 }
 
-
-
-.poster-track{
-
-    max-width:none;
-
+.poster-track {
+    display: flex;
+    gap: 20px;
+    width: max-content;
+    animation: postersMove 35s linear infinite;
 }
 
-
-
-.poster-track img{
-
-    flex-shrink:0;
-
+.poster-track img {
+    height: 260px;
+    width: 180px;
+    flex-shrink: 0;
+    object-fit: cover;
+    border: 5px ridge var(--gold);
+    box-shadow: 0 0 15px black;
 }
 
+.poster-track:hover {
+    animation-play-state: paused;
+}
 
-
-
+@keyframes postersMove {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
 
 /* =======================================
-   AJUSTES TABLET
+   AJUSTES TABLET (max-width: 999px)
 ======================================= */
 
-
-@media(max-width:999px){
-
-
-    .topic-grid{
-
-        grid-template-columns:1fr;
-
+@media (max-width: 999px) {
+    .topic-grid {
+        grid-template-columns: 1fr;
     }
 
-
-
-    .topic-grid img{
-
-        max-height:280px;
-
+    .topic-grid img {
+        max-height: 280px;
+        aspect-ratio: auto;
     }
 
+    .banner-box {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
 
+    .banner-box img {
+        max-height: 300px;
+        aspect-ratio: auto;
+    }
 }
 
-
-
-
-
-
-
 /* =======================================
-   MOBILE
+   MOBILE (max-width: 767px)
 ======================================= */
 
-
-@media(max-width:767px){
-
-
-
-    .content{
-
-        width:100%;
-
+@media (max-width: 767px) {
+    .content {
+        width: 100%;
+        padding: 0;
     }
 
-
-
-    .hero{
-
-        border-width:3px;
-
+    .hero {
+        border-width: 3px;
     }
 
-
-
-    .hero img{
-
-
-        height:200px;
-
+    .hero img {
+        height: 200px;
+        object-fit: cover;
     }
 
-
-
-    .hero-overlay h1{
-
-
-        font-size:22px;
-
-
+    .hero-overlay {
+        padding: 15px 20px;
     }
 
-
-
-    .hero-overlay p{
-
-
-        font-size:13px;
-
-
+    .hero-overlay h1 {
+        font-size: 22px;
     }
 
-
-
-    .restaurant-strip{
-
-
-        padding:12px;
-
+    .hero-overlay p {
+        font-size: 13px;
     }
 
-
-
-    .restaurant-strip span{
-
-
-        min-width:auto;
-
-        width:100%;
-
-
+    .restaurant-strip {
+        padding: 12px;
+        flex-direction: column;
+        gap: 8px;
     }
 
-
-
-    .topic{
-
-
-        padding:15px 12px;
-
-        border-width:3px;
-
-
+    .restaurant-strip span {
+        min-width: auto;
+        width: 100%;
+        text-align: center;
     }
 
-
-
-    .topic h2{
-
-
-        font-size:20px;
-
-
-        display:flex;
-
-        align-items:center;
-
-        justify-content:center;
-
-        flex-wrap:wrap;
-
-
+    .topic {
+        padding: 15px 12px;
+        border-width: 3px;
     }
 
-
-
-    .featured-grid{
-
-
-        grid-template-columns:1fr;
-
+    .topic h2 {
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 6px;
     }
 
-
-
-    .promo-card img{
-
-
-        aspect-ratio:auto;
-
-
-        max-height:220px;
-
-
+    .topic-grid {
+        gap: 15px;
     }
 
-
-
-    .banner-box img{
-
-
-        max-height:220px;
-
-
+    .topic-grid img {
+        max-height: 220px;
+        width: 100%;
+        object-fit: cover;
+        aspect-ratio: auto;
     }
 
+    .featured-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
 
+    .promo-card img {
+        height: 180px;
+        object-fit: cover;
+    }
 
+    .banner-box {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 10px;
+    }
+
+    .banner-box img {
+        max-height: 200px;
+        width: 100%;
+        object-fit: cover;
+        aspect-ratio: auto;
+    }
+
+    .poster-carousel {
+        padding: 10px 0;
+    }
+
+    .poster-track {
+        gap: 12px;
+    }
+
+    .poster-track img {
+        height: 180px;
+        width: 120px;
+        flex-shrink: 0;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+        box-sizing: border-box;
+    }
 }
 
-
-
-
-
 /* =======================================
-   CELULARES PEQUENOS
+   CELULARES PEQUENOS (max-width: 480px)
 ======================================= */
 
-
-@media(max-width:480px){
-
-
-
-    .hero img{
-
-        height:150px;
-
+@media (max-width: 480px) {
+    .hero img {
+        height: 150px;
+        object-fit: cover;
     }
 
-
-
-    .hero-overlay{
-
-        padding:10px;
-
+    .hero-overlay {
+        padding: 10px 15px;
     }
 
-
-
-    .hero-overlay h1{
-
-
-        font-size:18px;
-
-
+    .hero-overlay h1 {
+        font-size: 18px;
     }
 
-
-
-    .topic h2{
-
-
-        font-size:17px;
-
-
+    .hero-overlay p {
+        font-size: 12px;
     }
 
-
-
-    .section-icon{
-
-
-        width:18px;
-
-        height:18px;
-
-
+    .topic h2 {
+        font-size: 17px;
+        padding-bottom: 10px;
     }
 
-
-
-    .poster-track img{
-
-
-        height:140px;
-
-        width:90px;
-
-
+    .section-icon {
+        width: 18px;
+        height: 18px;
     }
 
+    .topic-grid img {
+        max-height: 180px;
+    }
 
+    .promo-card img {
+        height: 150px;
+    }
 
+    .banner-box img {
+        max-height: 160px;
+    }
+
+    .poster-track img {
+        height: 140px;
+        width: 90px;
+        border-width: 3px;
+    }
+
+    .poster-track {
+        gap: 10px;
+    }
+
+    .restaurant-strip span {
+        font-size: 12px;
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+}
+
+/* =======================================
+   CELULARES MUITO PEQUENOS (max-width: 360px)
+======================================= */
+
+@media (max-width: 360px) {
+    .hero img {
+        height: 120px;
+    }
+
+    .hero-overlay h1 {
+        font-size: 16px;
+    }
+
+    .hero-overlay p {
+        font-size: 11px;
+    }
+
+    .topic h2 {
+        font-size: 15px;
+    }
+
+    .topic-grid img {
+        max-height: 150px;
+    }
+
+    .promo-card img {
+        height: 130px;
+    }
+
+    .banner-box img {
+        max-height: 140px;
+    }
+
+    .poster-track img {
+        height: 120px;
+        width: 75px;
+    }
 }

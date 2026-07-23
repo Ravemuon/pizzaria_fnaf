@@ -1,7 +1,8 @@
 /* =======================================
    PÁGINA: GALERIA OFICIAL
    Estilos específicos para a página de galeria
-   ======================================= */
+   SEM BORDAS BRANCAS NAS IMAGENS
+======================================= */
 
 /* =======================================
    CABEÇALHO DA GALERIA
@@ -101,14 +102,15 @@
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 }
 
+/* --- CORREÇÃO: SEM BORDAS BRANCAS --- */
 .gallery-item img {
     width: 100%;
     aspect-ratio: 1 / 1;
-    object-fit: contain;
+    object-fit: cover;          /* ALTERADO: cover em vez de contain */
     border: 3px solid #700000;
-    background: #fff;
-    padding: 6px;
+    background: #2b1a10;        /* Fundo escuro para harmonizar */
     max-height: 220px;
+    display: block;
 }
 
 .gallery-item h3 {
@@ -152,11 +154,11 @@
 
 .image-viewer img {
     max-width: 90%;
-    max-height: 70vh;
+    max-height: 75vh;
     border: 6px ridge var(--gold);
-    object-fit: contain;
+    object-fit: contain;        /* No modal, usa contain para ver a imagem inteira */
     background: #0a0a0a;
-    padding: 8px;
+    padding: 6px;
 }
 
 .image-viewer h2 {
@@ -220,6 +222,7 @@
     }
     .gallery-item img {
         max-height: 200px;
+        object-fit: cover;      /* Garantido */
     }
     .gallery-filter {
         gap: 8px;
