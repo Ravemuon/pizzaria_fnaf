@@ -1,57 +1,91 @@
-/* =====================================
-   NAVBAR 2000s STYLE
-===================================== */
+/* =======================================
+   NAVBAR
+   FREDDY FAZBEAR'S PIZZA
+======================================= */
 
 
 .navbar{
 
-    width:960px;
-
-    margin:15px auto;
-
 
     background:
 
+
     linear-gradient(
-        #800000,
-        #400000
+
+        #700000,
+
+        #350000
+
     );
 
 
-    border:
 
-    5px ridge #d6a537;
+    border-bottom:
+
+
+    5px ridge var(--gold);
+
+
+
+    border-top:
+
+
+    2px solid #b88632;
+
 
 
     box-shadow:
 
-    0 5px 10px black;
+
+    0 5px 12px rgba(0,0,0,.5);
+
 
 
 }
 
 
 
-/* LISTA */
+
+
+
+
 
 .navbar ul{
 
-    display:flex;
 
-    justify-content:center;
+    width:min(
 
-    align-items:center;
+        1200px,
+
+        95%
+
+    );
 
 
-    gap:8px;
+
+    margin:auto;
+
+
+
+    padding:0;
+
 
 
     list-style:none;
 
 
-    margin:0;
 
-    padding:10px;
+    display:flex;
+
+
+
+    justify-content:center;
+
+
+
+    align-items:center;
+
+
 
 }
 
@@ -59,74 +93,94 @@
 
 
 
-/* LINKS */
+
+
+
+.navbar li{
+
+
+    position:relative;
+
+
+}
+
+
+
+
+
+
+
+
+.navbar li:not(:last-child)::after{
+
+
+    content:"★";
+
+
+
+    color:#d6a537;
+
+
+
+    margin:0 5px;
+
+
+
+    font-size:12px;
+
+
+
+}
+
+
+
+
+
+
 
 
 .navbar a{
 
 
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
+    display:block;
 
 
-    min-width:120px;
+
+    padding:16px 18px;
 
 
-    height:45px;
 
+    color:#fff0b0;
 
-    padding:0 15px;
-
-
-    background:
-
-    linear-gradient(
-        #b00000,
-        #650000
-    );
-
-
-    border:
-
-    3px outset #d6a537;
-
-
-    color:#fff;
 
 
     text-decoration:none;
 
 
+
     font-family:
 
-    Verdana,
-    Arial,
-    sans-serif;
+
+    "Bowlby One SC";
 
 
-    font-size:14px;
 
+    font-size:15px;
 
-    font-weight:bold;
-
-
-    letter-spacing:1px;
 
 
     text-transform:uppercase;
 
 
 
-    text-shadow:
-
-    2px 2px #000;
+    transition:.3s;
 
 
 
 }
+
+
+
 
 
 
@@ -137,21 +191,25 @@
 
     background:
 
+
     linear-gradient(
-        #ffd700,
-        #b88600
+
+        #b00000,
+
+        #600000
+
     );
 
 
-    color:#400000;
+
+    color:white;
 
 
-    border-color:white;
+
+    text-shadow:
 
 
-    transform:
-
-    translateY(-2px);
+    0 0 8px #ffd45c;
 
 
 
@@ -161,15 +219,92 @@
 
 
 
-.navbar a:active{
 
 
-    border-style:inset;
+
+/*
+ACTIVE STYLE
+*/
 
 
-    transform:
+.navbar a.active{
 
-    translateY(2px);
+
+    background:#300000;
+
+
+
+    color:#ffd45c;
+
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =======================================
+ MOBILE
+======================================= */
+
+
+@media(max-width:850px){
+
+
+
+.navbar ul{
+
+
+    flex-direction:column;
+
+
+
+}
+
+
+
+.navbar li{
+
+
+    width:100%;
+
+
+
+    text-align:center;
+
+
+
+}
+
+
+
+.navbar li:not(:last-child)::after{
+
+
+    display:none;
+
+
+
+}
+
+
+
+.navbar a{
+
+
+    border-bottom:
+
+
+    1px dashed #d6a537;
+
+
+
+}
 
 
 }

@@ -1,55 +1,18 @@
-/* =====================================
+/* =======================================
    SIDEBAR
-===================================== */
+   FREDDY FAZBEAR'S PIZZA
+======================================= */
 
 
 .sidebar{
 
-    width:220px;
+    width:280px;
 
-}
+    display:flex;
 
+    flex-direction:column;
 
-
-
-.sidebar .box{
-
-
-    margin-bottom:15px;
-
-
-}
-
-
-
-.sidebar h3{
-
-
-    font-family:Bowlby;
-
-
-    color:#ffd700;
-
-
-    text-align:center;
-
-
-    font-size:16px;
-
-
-}
-
-
-
-
-.sidebar p{
-
-
-    font-size:13px;
-
-
-    text-align:center;
-
+    gap:20px;
 
 }
 
@@ -57,25 +20,299 @@
 
 
 
-.warning{
 
 
-    border-color:#ffcc00;
+/* BOX */
 
-
-}
-
-
-
-
-.hiring{
+.sidebar-box{
 
 
     background:
 
     linear-gradient(
-        #500000,
-        #200000
+        #fff3c7,
+        #d2aa61
+    );
+
+
+    border:
+
+    5px ridge var(--gold);
+
+
+
+    padding:18px;
+
+
+
+    box-shadow:
+
+    5px 6px 15px rgba(0,0,0,.45);
+
+
+
+    overflow:hidden;
+
+
+}
+
+
+
+
+
+
+
+/* TITULO */
+
+
+.sidebar-box h3{
+
+
+    text-align:center;
+
+
+    font-family:
+
+    "Bowlby One SC";
+
+
+
+    font-size:18px;
+
+
+
+    color:#850000;
+
+
+
+    margin-top:0;
+
+
+
+    padding-bottom:10px;
+
+
+
+    border-bottom:
+
+    3px double #850000;
+
+
+}
+
+
+
+
+
+
+
+
+/* ICONES DOS TITULOS */
+
+.title-icon{
+
+
+    width:22px !important;
+
+
+    height:22px !important;
+
+
+    object-fit:contain;
+
+
+
+    vertical-align:middle;
+
+
+    margin-right:8px;
+
+
+
+    border:none !important;
+
+
+    box-shadow:none !important;
+
+
+}
+
+
+
+
+
+
+
+
+/* TEXTOS */
+
+
+.sidebar-box p{
+
+
+    line-height:1.5;
+
+
+}
+
+
+
+.sidebar-box ul{
+
+
+    padding-left:20px;
+
+
+}
+
+
+
+.sidebar-box li{
+
+
+    margin-bottom:12px;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* IMAGENS NORMAIS */
+
+.side-image{
+
+
+    width:100%;
+
+
+    height:150px;
+
+
+    object-fit:cover;
+
+
+
+    display:block;
+
+
+
+    border:
+
+    4px solid #720000;
+
+
+
+    box-shadow:
+
+    2px 3px 8px rgba(0,0,0,.5);
+
+
+}
+
+
+
+
+
+
+
+
+
+/* LINKS */
+
+
+.sidebar-box a{
+
+
+    display:block;
+
+
+
+    margin-top:15px;
+
+
+
+    padding:10px;
+
+
+
+    text-align:center;
+
+
+
+    color:white;
+
+
+
+    background:
+
+
+    linear-gradient(
+
+        #a00000,
+
+        #500000
+
+    );
+
+
+
+    border:
+
+    3px ridge var(--gold);
+
+
+
+    font-family:
+
+    "Bowlby One SC";
+
+
+
+    transition:.3s;
+
+
+}
+
+
+
+
+
+.sidebar-box a:hover{
+
+
+    transform:scale(1.05);
+
+
+    filter:brightness(1.2);
+
+
+}
+
+
+
+
+
+
+
+
+
+/* PIZZA */
+
+
+.sidebar-box.promo{
+
+
+    background:
+
+    linear-gradient(
+        #fff0ad,
+        #c9943e
     );
 
 
@@ -83,22 +320,18 @@
 
 
 
-.hiring strong{
+.sidebar-box h4{
 
 
-    display:block;
+    text-align:center;
 
 
-    margin:8px;
+    color:#850000;
 
 
-    color:#ffd700;
+    font-family:
 
-
-    font-family:PressStart;
-
-
-    font-size:11px;
+    "Bowlby One SC";
 
 
 }
@@ -106,30 +339,100 @@
 
 
 
-.hiring a{
 
 
-    display:block;
 
 
-    text-align:center;
+
+/* CRIANÇAS */
 
 
-    padding:7px;
+.sidebar-box.kids{
 
 
-    background:#900000;
+    background:
 
 
-    border:
+    linear-gradient(
 
-    3px outset gold;
+        #ffe8a8,
+
+        #e9bd55
+
+    );
+
+
+}
+
+
+
+
+
+
+
+
+
+/* CONTRATAÇÃO */
+
+
+.sidebar-box.hiring-side{
+
+
+    background:
+
+
+    linear-gradient(
+
+        #e8d09b,
+
+        #9e753c
+
+    );
+
+
+}
+
+
+
+
+
+
+
+
+
+/* AVISO */
+
+
+.sidebar-box.warning{
+
+
+    background:
+
+
+    linear-gradient(
+
+        #450000,
+
+        #120000
+
+    );
+
 
 
     color:white;
 
 
-    text-decoration:none;
+}
+
+
+
+.sidebar-box.warning h3{
+
+
+    color:#ffd45c;
+
+
+    border-color:#ffd45c;
 
 
 }
@@ -137,30 +440,42 @@
 
 
 
-.counter{
+.sidebar-box.warning a{
 
 
-    background:#000;
+    background:
 
 
-    border:
+    linear-gradient(
 
-    3px inset gray;
+        #700000,
 
+        #250000
 
-    padding:10px;
-
-
-    color:#00ff00;
+    );
 
 
-    text-align:center;
+}
 
 
-    font-family:PressStart;
 
 
-    font-size:10px;
+
+
+
+
+
+/* MOBILE */
+
+
+@media(max-width:950px){
+
+
+    .sidebar{
+
+        width:100%;
+
+    }
 
 
 }

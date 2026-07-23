@@ -1,178 +1,43 @@
-/* =====================================
-   FOOTER - FREDDY FAZBEAR STYLE
-===================================== */
+@font-face{
 
+    font-family:Bowlby;
 
-.site-footer{
-
-    width:960px;
-
-    margin:25px auto 0;
-
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
-
-    padding:15px 20px;
-
-
-    background:
-
-    linear-gradient(
-        #650000,
-        #280000
-    );
-
-
-    border-top:
-
-    5px ridge #d6a537;
-
-
-    border-left:
-
-    3px ridge #d6a537;
-
-
-    border-right:
-
-    3px ridge #d6a537;
-
-
-    color:white;
-
-
-    box-shadow:
-
-    inset 0 0 20px black;
+    src:url("../assets/fonts/BowlbyOneSC-Regular.ttf");
 
 }
 
 
+@font-face{
 
-/* LOGO */
+    font-family:Creepster;
 
-
-.footer-logo img{
-
-
-    width:90px;
-
-
-    filter:
-
-    drop-shadow(
-        3px 3px black
-    );
+    src:url("../assets/fonts/Creepster-Regular.ttf");
 
 }
 
 
+@font-face{
 
+    font-family:PressStart;
 
-
-/* TEXTO */
-
-
-.footer-text{
-
-
-    text-align:center;
-
+    src:url("../assets/fonts/PressStart2P-Regular.ttf");
 
 }
 
 
-
-.footer-text h3{
-
-
-    margin:0 0 8px;
-
+@font-face{
 
     font-family:Rye;
 
-
-    color:#ffd700;
-
-
-    font-size:22px;
-
-
-    text-shadow:
-
-    2px 2px black;
-
+    src:url("../assets/fonts/Rye-Regular.ttf");
 
 }
 
 
-
-.footer-text p{
-
-
-    margin:3px;
-
-
-    font-family:Verdana;
-
-
-    font-size:12px;
-
-
-}
-
-
-
-
-
-/* AVISO INTERNO */
-
-
-.footer-secret{
-
-
-    background:
-
-    rgba(0,0,0,.5);
-
-
-    padding:10px;
-
-
-    border:
-
-    2px ridge #777;
-
+@font-face{
 
     font-family:SpecialElite;
 
-
-    color:#d6d6d6;
-
-
-    font-size:12px;
-
-
-    text-align:center;
-
+    src:url("../assets/fonts/SpecialElite-Regular.ttf");
 
 }
-
-
-.footer-secret::before{
-
-
-    content:"NOTICE: ";
-
-
-    color:#d6a537;
-
-
-}
-
-

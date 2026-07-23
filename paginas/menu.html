@@ -1,33 +1,49 @@
 <!DOCTYPE html>
+
 <html lang="pt-BR">
 
 
 <head>
 
+
 <meta charset="UTF-8">
 
 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
 <title>
-Menu | Freddy Fazbear's Pizza
+Freddy Fazbear's Pizza | Cardápio
 </title>
+
+
 
 
 <link rel="stylesheet" href="../css/fonts.css">
 <link rel="stylesheet" href="../css/style.css">
 <link rel="stylesheet" href="../css/header.css">
 <link rel="stylesheet" href="../css/navbar.css">
+<link rel="stylesheet" href="../css/sidebar.css">
 <link rel="stylesheet" href="../css/footer.css">
+<link rel="stylesheet" href="../css/components.css">
+<link rel="stylesheet" href="../css/menu.css">
 <link rel="stylesheet" href="../css/pages.css">
 <link rel="stylesheet" href="../css/vintage.css">
+<link rel="stylesheet" href="../css/animations.css">
+
 
 </head>
+
 
 
 
 <body>
 
 
+
 <div id="header"></div>
+
 
 <div id="navbar"></div>
 
@@ -35,103 +51,57 @@ Menu | Freddy Fazbear's Pizza
 
 
 
-<main class="page">
+<div class="site-layout">
 
 
-<h1 class="page-title">
 
-★ Menu Oficial ★
+<aside id="sidebar"></aside>
 
+
+
+
+
+
+<main class="content">
+
+
+
+
+
+<section class="hero">
+
+
+<img
+
+src="../assets/imagens/banners/celebrate.jpg">
+
+alt="Cardápio Freddy Fazbear">
+
+
+<div class="hero-overlay">
+
+
+<h1>
+★ Cardápio Oficial Freddy's ★
 </h1>
 
 
+<p>
+Escolha entre nossas pizzas clássicas,
+especiais e sabores exclusivos da casa.
+</p>
 
 
 
+<a href="pedidos.html"
+class="btn">
 
-<section class="card">
+Fazer Pedido
 
-
-<h2>
-Combos Familiares
-</h2>
-
-
-<ul>
+</a>
 
 
-<li>
-
-Combo Freddy -
-
-Pizza + Bebida + Brinde
-
-</li>
-
-
-<li>
-
-Combo Festa -
-
-Pizza Grande + 4 Bebidas
-
-</li>
-
-
-<li>
-
-Combo Criança -
-
-Pizza Pequena + Brinquedo
-
-</li>
-
-
-</ul>
-
-
-</section>
-
-
-
-
-
-
-
-
-<section class="card">
-
-
-<h2>
-Bebidas
-</h2>
-
-
-<ul>
-
-
-<li>
-
-Refrigerantes
-
-</li>
-
-
-<li>
-
-Sucos
-
-</li>
-
-
-<li>
-
-Milkshakes
-
-</li>
-
-
-</ul>
+</div>
 
 
 </section>
@@ -144,23 +114,170 @@ Milkshakes
 
 
 
-<section class="card">
+<section class="topic vintage-paper">
 
+
+<h2>
 
 <img 
-src="../assets/imagens/logos/caixa da pizza.jpg">
+class="section-icon"
+src="../assets/imagens/icons/star.gif">
+
+Pizzas Oficiais
+
+</h2>
+
+
+
+
+
+<div id="menu-container"
+class="pizza-grid">
+
+</div>
+
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<section class="topic">
 
 
 <h2>
-Produtos oficiais
+
+<img 
+class="section-icon"
+src="../assets/imagens/icons/golden.gif">
+
+Combos Freddy's
+
+</h2>
+
+
+
+
+
+
+<div class="featured-grid">
+
+
+
+<article class="promo-card">
+
+
+<img
+src="../assets/imagens/pizzas/especial_aniversariante.jpg">
+
+
+<h3>
+Combo Família
+</h3>
+
+
+<p>
+Pizza grande, bebidas e sobremesa.
+</p>
+
+
+<a href="pedidos.html">
+Pedir
+</a>
+
+
+</article>
+
+
+
+
+
+
+<article class="promo-card">
+
+
+<img
+src="../assets/imagens/banners/birthday.jpg">
+
+
+<h3>
+Combo Festa
+</h3>
+
+
+<p>
+Perfeito para aniversários.
+</p>
+
+
+<a href="eventos.html">
+Reservar
+</a>
+
+
+</article>
+
+
+
+
+
+
+<article class="promo-card">
+
+
+<img
+src="../assets/imagens/anuncios/anunciodelivery.jpg">
+
+
+<h3>
+Delivery
+</h3>
+
+
+<p>
+Receba Freddy's na sua casa.
+</p>
+
+
+<a href="pedidos.html">
+Comprar
+</a>
+
+
+</article>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<section class="topic warning-box">
+
+
+<h2>
+⚠ Aviso da Administração
 </h2>
 
 
 <p>
 
-Além das pizzas,
-nossa loja possui produtos
-exclusivos Freddy Fazbear.
+Alguns sabores podem sofrer alteração
+de disponibilidade.
 
 </p>
 
@@ -172,9 +289,13 @@ exclusivos Freddy Fazbear.
 
 
 
-
-
 </main>
+
+
+</div>
+
+
+
 
 
 
@@ -183,9 +304,22 @@ exclusivos Freddy Fazbear.
 
 
 
-<script src="../js/main.js"></script>
+
+
+
+
+<script src="../js/core/main.js"></script>
+
+<script src="../js/core/effects.js"></script>
+
+<script src="../js/core/audio.js"></script>
+
+<script src="../js/pages/menu.js"></script>
+
+
 
 
 </body>
+
 
 </html>

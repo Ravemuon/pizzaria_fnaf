@@ -1,738 +1,334 @@
-/* ======================================
+/* =======================================
+   FREDDY FAZBEAR'S PIZZA
+   GLOBAL STYLE
+======================================= */
+
+
+/* =======================================
    RESET
-====================================== */
+======================================= */
 
-
-*{
+*,
+*::before,
+*::after{
 
     box-sizing:border-box;
+    margin:0;
+    padding:0;
+
+}
+
+
+html{
+
+    scroll-behavior:smooth;
 
 }
 
 
 body{
 
-    margin:0;
+    min-height:100vh;
 
     background:
-    url("../assets/imagens/backgrounds/fundoquadriculado.jpg");
+    url("../assets/imagens/backgrounds-site/fundo.png");
+
+    color:#222;
 
     font-family:
-
-    Verdana,
     Arial,
+    Helvetica,
     sans-serif;
 
-    color:white;
+    overflow-x:hidden;
 
 }
 
 
+/* =======================================
+   ROOT VARIABLES
+======================================= */
 
-/* ======================================
-   ESTRUTURA PRINCIPAL
-====================================== */
+:root{
 
+    --red-dark:#450000;
+    --red:#8b0000;
+    --red-light:#b30000;
 
-.layout{
+    --gold:#d6a537;
+    --gold-dark:#8d6714;
 
-    width:960px;
+    --cream:#f4e7c8;
 
-    margin:auto;
+    --brown:#3b2414;
 
-    display:flex;
+    --black:#080808;
 
-    gap:15px;
-
-    padding:15px;
-
-
-    background:
-
-    rgba(20,20,20,.95);
-
-
-    border-left:
-
-    5px ridge #d6a537;
-
-
-    border-right:
-
-    5px ridge #d6a537;
-
-
-    box-shadow:
-
-    0 0 30px black;
+    --shadow:
+    0 4px 12px rgba(0,0,0,.5);
 
 }
 
 
-
-aside{
-
-    width:220px;
-
-    flex-shrink:0;
-
-}
-
-
-
-main{
-
-    width:710px;
-
-}
-
-
-
-/* ======================================
-   BOX PADRÃO
-====================================== */
-
-
-.box{
-
-
-    background:
-
-    linear-gradient(
-
-        180deg,
-
-        #720000,
-
-        #350000
-
-    );
-
-
-    border:
-
-    4px ridge #d6a537;
-
-
-    padding:10px;
-
-
-    margin-bottom:15px;
-
-
-    box-shadow:
-
-    inset 0 0 15px black;
-
-
-}
-
-
-
-.box h3{
-
-
-    margin:5px 0 10px;
-
-
-    text-align:center;
-
-
-    font-family:Bowlby,Impact,sans-serif;
-
-
-    color:#ffd700;
-
-
-    text-shadow:
-
-    2px 2px #000;
-
-
-}
-
-
-
-.box img{
-
-
-    width:100%;
-
-
-    border:
-
-    2px solid #111;
-
-
-}
-
-
-
-/* ======================================
-   SIDEBAR
-====================================== */
-
-
-.warning{
-
-
-    border-color:#ffcc00;
-
-
-}
-
-
-
-.warning p{
-
-
-    font-size:12px;
-
-
-    text-align:center;
-
-
-}
-
-
-
-.counter{
-
-
-    background:#000;
-
-
-    padding:10px;
-
-
-    border:
-
-    3px inset #777;
-
-
-    text-align:center;
-
-
-    font-family:PressStart,monospace;
-
-
-    font-size:12px;
-
-
-    color:#00ff00;
-
-
-}
-
-
-
-/* ======================================
-   HERO
-====================================== */
-
-
-.hero{
-
-
-    position:relative;
-
-
-    margin-bottom:20px;
-
-
-}
-
-
-
-.hero img{
-
-
-    width:100%;
-
-
-    height:300px;
-
-
-    object-fit:cover;
-
-
-    border:
-
-    5px ridge #d6a537;
-
-
-}
-
-
-
-.hero-text{
-
-
-    position:absolute;
-
-
-    bottom:15px;
-
-
-    left:15px;
-
-
-    background:
-
-    rgba(0,0,0,.7);
-
-
-    padding:15px;
-
-
-    border-left:
-
-    4px solid #d6a537;
-
-
-}
-
-
-
-.hero-text h1{
-
-
-    margin:0;
-
-
-    font-family:Rye,serif;
-
-
-    font-size:34px;
-
-
-    color:#ffd700;
-
-
-    text-shadow:
-
-    3px 3px black;
-
-
-}
-
-
-
-.hero-text p{
-
-
-    margin:5px 0 0;
-
-
-}
-
-
-
-/* ======================================
-   SEÇÕES PRINCIPAIS
-====================================== */
-
-
-.topic{
-
-
-    background:
-
-    linear-gradient(
-
-    180deg,
-
-    #700000,
-
-    #300000
-
-    );
-
-
-    border:
-
-    5px ridge #d6a537;
-
-
-    padding:15px;
-
-
-    margin-bottom:20px;
-
-
-    box-shadow:
-
-    inset 0 0 20px #000;
-
-
-}
-
-
-
-.topic h2{
-
-
-    margin:0 0 15px;
-
-
-    text-align:center;
-
-
-    font-family:Bowlby,sans-serif;
-
-
-    font-size:28px;
-
-
-    color:#ffd700;
-
-
-    text-shadow:
-
-    3px 3px black;
-
-
-}
-
-
-
-/* ======================================
-   CONTEÚDO DAS SEÇÕES
-====================================== */
-
-
-.topic-content{
-
-
-    display:flex;
-
-
-    gap:20px;
-
-
-    align-items:center;
-
-
-}
-
-
-
-.topic-content img{
-
-
-    width:280px;
-
-
-    height:190px;
-
-
-    object-fit:cover;
-
-
-    border:
-
-    4px ridge #d6a537;
-
-
-}
-
-
-
-.topic-content .character{
-
-
-    width:180px;
-
-
-    height:260px;
-
-
-    object-fit:contain;
-
-
-    background:#111;
-
-
-}
-
-
-
-.topic p{
-
-
-    line-height:1.6;
-
-
-    font-size:14px;
-
-
-}
-
-
-
-.small-warning{
-
-
-    font-family:SpecialElite,monospace;
-
-
-    color:#ffcc00;
-
-
-    font-size:12px!important;
-
-
-}
-
-
-
-/* ======================================
-   RECRUTAMENTO
-====================================== */
-
-
-.recruitment{
-
-
-    background:
-
-    linear-gradient(
-
-    #550000,
-
-    #220000
-
-    );
-
-
-}
-
-
-
-.recruitment h3{
-
-
-    font-family:PressStart,monospace;
-
-
-    font-size:12px;
-
-
-    color:#ffd700;
-
-
-}
-
-
-
-.recruitment p{
-
-
-    font-size:13px;
-
-
-}
-
-
-
-/* ======================================
+/* =======================================
    LINKS
-====================================== */
+======================================= */
 
+a{
 
-.topic a,
-
-
-.box a{
-
-
-    display:inline-block;
-
-
-    margin-top:10px;
-
-
-    padding:8px 15px;
-
-
-    background:#900000;
-
-
-    border:
-
-    3px outset #d6a537;
-
-
-    color:white;
-
+    color:var(--gold);
 
     text-decoration:none;
 
-
-    font-weight:bold;
-
+    transition:.3s ease;
 
 }
 
 
+a:hover{
 
-.topic a:hover,
+    color:#fff;
 
-
-.box a:hover{
-
-
-    background:#d6a537;
-
-
-    color:#400000;
-
+    text-shadow:
+    0 0 8px var(--gold);
 
 }
 
 
+/* =======================================
+   IMAGES
+======================================= */
+
+img{
+
+    max-width:100%;
+
+    height:auto;
+
+    display:block;
+
+}
 
 
+/* =======================================
+   PAGE WRAPPER
+======================================= */
 
-/* ======================================
-   CARROSSEL
-====================================== */
+.page{
+
+    width:100%;
+
+    min-height:100vh;
+
+}
 
 
-.carousel{
+/* =======================================
+   MAIN CONTAINER
+======================================= */
+
+.container{
+
+    width:min(1200px,95%);
+
+    margin:auto;
+
+}
 
 
-    overflow:hidden;
+/* =======================================
+   CONTENT AREA
+======================================= */
 
+.content{
 
-    background:#050505;
-
+    background:
+    rgba(255,255,255,.85);
 
     border:
 
-    4px ridge #d6a537;
+    3px solid var(--gold-dark);
 
+    padding:25px;
+
+    box-shadow:
+
+    var(--shadow);
+
+}
+
+
+/* =======================================
+   TITLES
+======================================= */
+
+h1,
+h2,
+h3{
+
+    font-family:
+    "Bowlby One SC",
+    Impact,
+    sans-serif;
+
+    color:var(--red-dark);
+
+    text-transform:uppercase;
+
+}
+
+
+h1{
+
+    font-size:42px;
+
+}
+
+
+h2{
+
+    font-size:30px;
+
+}
+
+
+h3{
+
+    font-size:22px;
 
 }
 
 
 
-.carousel-track{
+/* =======================================
+   BUTTONS
+======================================= */
+
+button,
+.btn{
+
+    cursor:pointer;
+
+    background:
+
+    linear-gradient(
+        #b30000,
+        #500000
+    );
 
 
-    display:flex;
-
-
-    width:max-content;
-
-
-    animation:
-
-    poster-scroll 25s linear infinite;
-
-
-}
-
-
-
-.carousel img{
-
-
-    width:150px;
-
-
-    height:220px;
-
-
-    margin:10px;
-
-
-    object-fit:cover;
-
+    color:white;
 
     border:
 
-    3px ridge #d6a537;
+    3px ridge var(--gold);
 
 
-}
+    padding:
+
+    10px 20px;
 
 
-
-.carousel:hover .carousel-track{
-
-
-    animation-play-state:paused;
+    font-family:
+    "Press Start 2P",
+    monospace;
 
 
-}
-
-
-
-@keyframes poster-scroll{
-
-
-    from{
-
-        transform:translateX(0);
-
-    }
-
-
-    to{
-
-        transform:translateX(-50%);
-
-    }
+    text-transform:uppercase;
 
 }
 
 
+button:hover,
+.btn:hover{
 
-/* ======================================
+    filter:brightness(1.3);
+
+}
+
+
+/* =======================================
+   LISTS
+======================================= */
+
+ul{
+
+    list-style:none;
+
+}
+
+
+/* =======================================
+   SELECTION
+======================================= */
+
+::selection{
+
+    background:var(--red);
+
+    color:white;
+
+}
+
+
+/* =======================================
+   SCROLLBAR
+======================================= */
+
+::-webkit-scrollbar{
+
+    width:12px;
+
+}
+
+
+::-webkit-scrollbar-track{
+
+    background:#111;
+
+}
+
+
+::-webkit-scrollbar-thumb{
+
+    background:
+
+    linear-gradient(
+        var(--gold),
+        var(--gold-dark)
+    );
+
+    border-radius:10px;
+
+}
+
+
+/* =======================================
    MOBILE
-====================================== */
+======================================= */
+
+@media(max-width:768px){
 
 
-@media(max-width:980px){
+    h1{
+
+        font-size:30px;
+
+    }
 
 
-.layout{
+    h2{
 
-    width:100%;
+        font-size:24px;
 
-    flex-direction:column;
-
-}
+    }
 
 
+    .content{
 
-aside,
-main{
+        padding:15px;
 
-    width:100%;
-
-}
-
-
-
-.topic-content{
-
-    flex-direction:column;
-
-}
-
-
-
-.hero-text{
-
-    position:relative;
-
-    bottom:auto;
-
-    left:auto;
-
-}
+    }
 
 
 }

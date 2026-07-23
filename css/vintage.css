@@ -1,61 +1,233 @@
-/* FONTES DOS COMPONENTES */
+/* =======================================
+   VINTAGE EFFECTS
+   FREDDY FAZBEAR'S PIZZA
+======================================= */
 
 
-.site-header h1{
+/* =======================================
+   OLD PAPER EFFECT
+======================================= */
 
-font-family:Rye;
+.vintage-paper{
+
+    background:
+
+    linear-gradient(
+        rgba(255,240,200,.8),
+        rgba(220,190,130,.8)
+    );
+
+    border:
+
+    3px solid #7b5518;
+
+    box-shadow:
+
+    inset 0 0 30px rgba(0,0,0,.25),
+    0 5px 15px rgba(0,0,0,.4);
+
+}
+
+
+/* =======================================
+   CRT SCREEN EFFECT
+======================================= */
+
+.crt{
+
+    position:relative;
+
+}
+
+
+.crt::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+
+    background:
+
+    repeating-linear-gradient(
+
+        0deg,
+
+        rgba(0,0,0,.08),
+
+        rgba(0,0,0,.08) 1px,
+
+        transparent 1px,
+
+        transparent 3px
+
+    );
+
+
+    pointer-events:none;
+
+}
+
+
+/* =======================================
+   FILM GRAIN
+======================================= */
+
+.noise{
+
+    position:relative;
+
+}
+
+
+.noise::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+
+    background:
+
+    url("../assets/imagens/backgrounds-site/fundoquadriculado.jpg");
+
+
+    opacity:.08;
+
+
+    pointer-events:none;
+
+}
+
+
+/* =======================================
+   GOLD FRAME
+======================================= */
+
+.gold-frame{
+
+    border:
+
+    5px ridge var(--gold);
+
+
+    box-shadow:
+
+    inset 0 0 10px #000,
+    0 0 10px rgba(0,0,0,.6);
+
+}
+
+
+/* =======================================
+   WARNING STYLE
+======================================= */
+
+.warning{
+
+    background:
+
+    linear-gradient(
+        #300000,
+        #050000
+    );
+
+
+    color:#ffcc00;
+
+
+    border:
+
+    3px solid #ffcc00;
+
+
+    padding:20px;
+
+
+    font-family:
+
+    "Special Elite",
+    monospace;
+
+
+    box-shadow:
+
+    0 0 20px rgba(255,0,0,.5);
+
+}
+
+
+/* =======================================
+   FADE OLD WEBSITE
+======================================= */
+
+.old-screen{
+
+    filter:
+
+    contrast(1.05)
+    sepia(.25);
+
+}
+
+
+/* =======================================
+   ANTIQUE CARD
+======================================= */
+
+.vintage-card{
+
+    background:
+
+    #eee0b5;
+
+
+    border:
+
+    4px ridge #8b6b2b;
+
+
+    box-shadow:
+
+    5px 5px 0 rgba(0,0,0,.25);
+
+
+    padding:20px;
 
 }
 
 
 
-.navbar a{
+/* =======================================
+   SECRET FILE STYLE
+======================================= */
 
-font-family:Bowlby;
+.secret-file{
 
-}
+    background:
 
-
-
-.topic h2,
-.box h3{
-
-font-family:Bowlby;
-
-}
+    #d8d0b5;
 
 
+    border-left:
 
-.footer-secret{
-
-font-family:SpecialElite;
-
-color:#00ff00;
-
-background:black;
-
-padding:5px;
-
-font-size:12px;
-
-}
+    8px solid darkred;
 
 
+    font-family:
 
-.hiring{
-
-border-color:#ffd700;
-
-}
+    "Special Elite",
+    monospace;
 
 
+    padding:25px;
 
-.hiring strong{
 
-color:#ffd700;
+    color:#222;
 
-font-family:PressStart;
-
-font-size:11px;
 
 }

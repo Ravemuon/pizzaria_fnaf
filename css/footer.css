@@ -1,81 +1,51 @@
-/* =====================================
-   FOOTER
-===================================== */
+/*
+=======================================
+ FREDDY FAZBEAR'S PIZZA
+ FOOTER STYLE
+=======================================
+*/
+
 
 
 .site-footer{
 
 
-    width:960px;
+margin-top:50px;
 
 
-    margin:auto;
+background:
 
-
-    display:flex;
-
-
-    justify-content:space-between;
-
-
-    align-items:center;
-
-
-    padding:15px;
-
-
-    background:
-
-
-    linear-gradient(
-        #500000,
-        #200000
-    );
-
-
-    border-top:
-
-    5px ridge #d6a537;
-
-
-    color:white;
-
-
-}
+linear-gradient(
+#520000,
+#180000
+);
 
 
 
+border-top:
 
-.footer-logo img{
-
-
-    width:100px;
-
-
-}
+6px ridge var(--gold);
 
 
 
-.footer-text{
-
-
-    text-align:center;
-
-
-}
+color:white;
 
 
 
-.footer-text h3{
+font-family:
+"Special Elite";
 
 
-    margin:0;
+
+padding:40px 20px 20px;
 
 
-    font-family:Rye;
+
+position:relative;
 
 
-    color:#ffd700;
+
+overflow:hidden;
 
 
 }
@@ -83,27 +53,592 @@
 
 
 
-.footer-secret{
 
 
-    background:black;
+
+/*
+=======================================
+ FOOTER CONTENT
+=======================================
+*/
 
 
-    padding:8px;
+
+.footer-content{
 
 
-    border:
-
-    2px solid #333;
-
-
-    font-family:SpecialElite;
+width:min(
+1200px,
+95%
+);
 
 
-    color:#00ff00;
+
+margin:auto;
 
 
-    font-size:12px;
+
+display:grid;
+
+
+
+grid-template-columns:
+
+repeat(
+3,
+1fr
+);
+
+
+
+gap:35px;
+
+
+
+align-items:start;
+
+
+
+}
+
+
+
+
+
+
+
+
+
+/*
+=======================================
+ BRAND
+=======================================
+*/
+
+
+
+.footer-brand{
+
+
+text-align:center;
+
+
+}
+
+
+
+
+
+.footer-logo{
+
+
+width:120px;
+
+
+
+height:120px;
+
+
+
+object-fit:cover;
+
+
+
+border:
+
+5px ridge var(--gold);
+
+
+
+box-shadow:
+
+0 0 15px rgba(214,165,55,.5);
+
+
+
+margin-bottom:15px;
+
+
+
+}
+
+
+
+
+
+.footer-brand h2{
+
+
+font-family:
+
+"Bowlby One SC";
+
+
+
+font-size:26px;
+
+
+
+color:#ffd45c;
+
+
+
+text-shadow:
+
+2px 2px #000;
+
+
+
+margin-bottom:10px;
+
+
+
+}
+
+
+
+
+
+.footer-brand p{
+
+
+line-height:1.6;
+
+
+
+}
+
+
+
+
+
+/*
+=======================================
+ LINKS
+=======================================
+*/
+
+
+
+.footer-links,
+.footer-info{
+
+
+background:
+
+
+linear-gradient(
+#fff0c2,
+#c99c4c
+);
+
+
+
+padding:20px;
+
+
+
+border:
+
+4px ridge var(--gold);
+
+
+
+box-shadow:
+
+4px 5px 12px rgba(0,0,0,.5);
+
+
+
+color:#300000;
+
+
+
+}
+
+
+
+
+
+
+.footer-links h3,
+.footer-info h3{
+
+
+font-family:
+
+"Bowlby One SC";
+
+
+
+text-align:center;
+
+
+
+color:#8b0000;
+
+
+
+border-bottom:
+
+2px dashed #8b0000;
+
+
+
+padding-bottom:10px;
+
+
+
+margin-bottom:15px;
+
+
+
+}
+
+
+
+
+
+
+
+
+.footer-links a{
+
+
+display:block;
+
+
+
+text-align:center;
+
+
+
+background:#8b0000;
+
+
+
+color:white;
+
+
+
+padding:10px;
+
+
+
+margin:10px 0;
+
+
+
+border:
+
+3px ridge var(--gold);
+
+
+
+transition:.3s;
+
+
+
+text-decoration:none;
+
+
+
+}
+
+
+
+
+
+.footer-links a:hover{
+
+
+background:#d00000;
+
+
+
+transform:
+
+scale(1.05);
+
+
+
+}
+
+
+
+
+
+
+
+
+
+/*
+=======================================
+ GOLDEN FREDDY BUTTON
+=======================================
+*/
+
+
+
+.secret-button{
+
+
+display:block;
+
+
+
+margin:20px auto 0;
+
+
+
+width:45px;
+
+
+
+height:45px;
+
+
+
+border-radius:50%;
+
+
+
+border:
+
+3px ridge var(--gold);
+
+
+
+background:#111;
+
+
+
+color:#ffd45c;
+
+
+
+font-size:25px;
+
+
+
+cursor:pointer;
+
+
+
+transition:.3s;
+
+
+
+}
+
+
+
+
+
+.secret-button:hover{
+
+
+transform:
+
+rotate(180deg)
+scale(1.15);
+
+
+
+box-shadow:
+
+0 0 20px #ffd45c;
+
+
+
+}
+
+
+
+
+
+
+
+
+/*
+=======================================
+ FOOTER BOTTOM
+=======================================
+*/
+
+
+
+.footer-bottom{
+
+
+margin-top:35px;
+
+
+
+padding-top:20px;
+
+
+
+border-top:
+
+2px dashed #ffd45c;
+
+
+
+text-align:center;
+
+
+
+color:#ffd45c;
+
+
+
+font-family:
+
+"Special Elite";
+
+
+
+}
+
+
+
+
+
+
+
+/*
+=======================================
+ GOLDEN FREDDY JUMPSCARE
+=======================================
+*/
+
+
+
+#goldenJumpscare{
+
+
+display:none;
+
+
+
+position:fixed;
+
+
+
+inset:0;
+
+
+
+background:
+
+rgba(
+0,
+0,
+0,
+.95
+);
+
+
+
+z-index:9999;
+
+
+
+justify-content:center;
+
+
+
+align-items:center;
+
+
+
+}
+
+
+
+#goldenJumpscare img{
+
+
+width:
+
+min(
+700px,
+90%
+);
+
+
+
+animation:
+
+goldenJump .15s infinite;
+
+
+
+}
+
+
+
+
+@keyframes goldenJump{
+
+
+0%{
+
+transform:
+scale(1);
+
+}
+
+
+50%{
+
+transform:
+scale(1.08);
+
+}
+
+
+100%{
+
+transform:
+scale(.98);
+
+}
+
+
+}
+
+
+
+
+
+
+
+
+/*
+=======================================
+ RESPONSIVO
+=======================================
+*/
+
+
+
+@media(max-width:900px){
+
+
+
+.footer-content{
+
+
+grid-template-columns:
+
+1fr;
+
+
+
+}
+
 
 
 }

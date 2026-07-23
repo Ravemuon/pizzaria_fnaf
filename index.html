@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 
-
 <head>
 
 <meta charset="UTF-8">
@@ -18,21 +17,18 @@ Freddy Fazbear's Pizza | Official Website
 content="Site oficial da Freddy Fazbear's Pizza. Pizza, diversão e entretenimento desde 1983.">
 
 
+
 <link rel="stylesheet" href="css/fonts.css">
-
 <link rel="stylesheet" href="css/style.css">
-
 <link rel="stylesheet" href="css/header.css">
-
 <link rel="stylesheet" href="css/navbar.css">
-
 <link rel="stylesheet" href="css/sidebar.css">
-
-<link rel="stylesheet" href="css/menu.css">
-
 <link rel="stylesheet" href="css/footer.css">
-
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/menu.css">
+<link rel="stylesheet" href="css/pages.css">
 <link rel="stylesheet" href="css/vintage.css">
+<link rel="stylesheet" href="css/animations.css">
 
 
 </head>
@@ -51,294 +47,57 @@ content="Site oficial da Freddy Fazbear's Pizza. Pizza, diversão e entretenimen
 
 
 
-<div class="layout">
 
+<div class="site-layout">
 
 
 
+<aside id="sidebar"></aside>
 
-<aside class="sidebar">
 
 
 
-<section class="box">
 
+<main class="content">
 
-<h3>
-★ Promoção da Semana ★
-</h3>
 
 
-<img 
-src="assets/imagens/anuncios/anunciofreddy.jpg"
-alt="Promoção Freddy Fazbear Pizza">
 
 
-<p>
 
-Pizza familiar + refrigerante grátis!
 
-</p>
-
-
-</section>
-
-
-
-
-
-<section class="box warning">
-
-
-<h3>
-⚠ Aviso aos Visitantes
-</h3>
-
-
-<img 
-src="assets/imagens/alerta-animatronics.jpg"
-alt="Aviso dos animatrônicos">
-
-
-<p>
-
-Para sua segurança, siga todas
-as orientações dos funcionários.
-
-</p>
-
-
-</section>
-
-
-
-
-
-
-<section class="box">
-
-
-<h3>
-Regras da Casa
-</h3>
-
-
-<img 
-src="assets/imagens/rules.jpg"
-alt="Regras da pizzaria">
-
-
-</section>
-
-
-
-
-
-
-
-<section class="box hiring">
-
-
-<h3>
-Estamos Contratando
-</h3>
-
-
-<img
-src="assets/imagens/pizzaria.jpg"
-alt="Freddy Fazbear Pizza">
-
-
-<p>
-
-<strong>
-Guarda Noturno
-</strong>
-
-
-<br>
-
-
-Turno:
-<br>
-
-12:00 AM - 6:00 AM
-
-</p>
-
-
-<a href="paginas/contratando.html">
-
-Ver vaga
-
-</a>
-
-
-</section>
-
-
-
-
-
-<section class="box">
-
-
-<h3>
-Visitantes Online
-</h3>
-
-
-<div class="counter">
-
-00001983
-
-</div>
-
-
-</section>
-
-
-
-
-</aside>
-
-
-
-
-
-
-
-
-<main>
-
-
-
-
+<!-- HERO -->
 
 <section class="hero">
 
 
-<img 
-src="assets/imagens/logos/Fachada_da_Loja.jpg"
-alt="Fachada da Freddy Fazbear Pizza">
+<img
+
+src="assets/imagens/banners/welcome.jpg"
+
+alt="Freddy Fazbear's Pizza">
 
 
-<div class="hero-text">
+<div class="hero-overlay">
 
 
 <h1>
+
 Freddy Fazbear's Pizza
+
 </h1>
 
 
 <p>
-O restaurante favorito das famílias desde 1983!
-</p>
 
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-
-
-
-<section class="topic">
-
-
-<h2>
-★ Bem-vindo à Freddy's ★
-</h2>
-
-
-
-<div class="topic-content">
-
-
-<div>
-
-
-<p>
-
-Obrigado por visitar o site oficial
-da Freddy Fazbear's Pizza.
-
-Aqui você encontra nosso cardápio,
-personagens, eventos e novidades
-da nossa família de restaurantes.
-
-</p>
-
-
-<p>
-
-Diversão garantida para crianças
-de todas as idades!
-
-</p>
-
-
-</div>
-
-
-
-<img 
-src="assets/imagens/ui/golden.gif"
-alt="Selo Freddy Fazbear Entertainment">
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-
-
-
-<section class="topic">
-
-
-<h2>
-★ Sabores Freddy's ★
-</h2>
-
-
-
-<div class="topic-content">
-
-
-<img 
-src="assets/imagens/pizzas/pizzas.jpg"
-alt="Pizzas Freddy Fazbear">
-
-
-<div>
-
-
-<p>
-
-Nossas pizzas são preparadas
-com ingredientes selecionados
-e muito carinho.
-
-Escolha seu sabor favorito!
+Where Fantasy and Fun Come To Life!
 
 </p>
 
 
 
-<a href="paginas/pizzas.html">
+<a href="paginas/menu.html"
+class="btn">
 
 Ver Cardápio
 
@@ -349,6 +108,138 @@ Ver Cardápio
 </div>
 
 
+</section>
+
+
+
+
+
+
+
+
+
+<!-- SERVIÇOS -->
+
+<div class="restaurant-strip">
+
+
+<span>
+
+🍕 Pizza Fresca
+
+</span>
+
+
+<span>
+
+🎂 Festas
+
+</span>
+
+
+<span>
+
+🤖 Shows Animatrônicos
+
+</span>
+
+
+<span>
+
+🚚 Delivery
+
+</span>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- BEM VINDO -->
+
+<section class="topic vintage-paper">
+
+
+<h2>
+
+<img
+
+class="section-icon"
+
+src="assets/imagens/icons/star.gif">
+
+
+Bem-vindo à Freddy's
+
+
+</h2>
+
+
+
+
+
+<div class="topic-grid">
+
+
+<div>
+
+
+<p>
+
+Bem-vindo ao site oficial da
+Freddy Fazbear's Pizza.
+
+</p>
+
+
+
+<p>
+
+Desde 1983 trazendo pizza,
+diversão e entretenimento
+para famílias.
+
+</p>
+
+
+
+<p>
+
+Conheça nossos sabores,
+eventos e atrações.
+
+</p>
+
+
+
+<p class="official-stamp">
+
+EST. 1983
+
+</p>
+
+
+
+</div>
+
+
+
+
+
+<img
+
+src="assets/imagens/logos/selo.jpg"
+
+alt="Official Seal">
+
+
 </div>
 
 
@@ -362,22 +253,211 @@ Ver Cardápio
 
 
 
+<!-- EXPERIÊNCIA -->
+
 <section class="topic">
 
 
 <h2>
-★ A Banda Animatrônica ★
+
+<img
+
+class="section-icon"
+
+src="assets/imagens/icons/star.gif">
+
+
+Experiência Freddy Fazbear
+
+
 </h2>
 
 
 
-<div class="topic-content">
+
+
+
+<div class="featured-grid">
+
+
+
+
+
+
+
+<article class="promo-card">
 
 
 <img
-class="character"
-src="assets/imagens/characters/freddy.jpg"
-alt="Freddy Fazbear">
+
+src="assets/imagens/anuncios/anunciodelivery.jpg"
+
+alt="Delivery">
+
+
+<h3>
+
+Delivery
+
+</h3>
+
+
+<p>
+
+Sua pizza favorita
+entregue na sua casa.
+
+</p>
+
+
+
+<a href="paginas/pedidos.html">
+
+Pedir Agora
+
+</a>
+
+
+</article>
+
+
+
+
+
+
+
+
+
+<article class="promo-card">
+
+
+<img
+
+src="assets/imagens/banners/birthday.jpg"
+
+alt="Birthday">
+
+
+<h3>
+
+Festas de Aniversário
+
+</h3>
+
+
+<p>
+
+Comemore junto com
+nossos personagens.
+
+</p>
+
+
+
+<a href="paginas/eventos.html">
+
+Eventos
+
+</a>
+
+
+</article>
+
+
+
+
+
+
+
+
+
+<article class="promo-card">
+
+
+<img
+
+src="assets/imagens/pizzas/especial_aniversariante.jpg"
+
+alt="Pizza">
+
+
+<h3>
+
+Pizzas Especiais
+
+</h3>
+
+
+<p>
+
+Sabores exclusivos
+da casa.
+
+</p>
+
+
+
+<a href="paginas/pizzas.html">
+
+Cardápio
+
+</a>
+
+
+</article>
+
+
+
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- PIZZAS -->
+
+<section class="topic">
+
+
+
+<h2>
+
+<img
+
+class="section-icon"
+
+src="assets/imagens/icons/star.gif">
+
+
+Nossas Pizzas
+
+
+</h2>
+
+
+
+
+
+
+<div class="topic-grid">
+
+
+
+<img
+
+src="assets/imagens/pizzas/pizzas.jpg"
+
+alt="Pizzas">
 
 
 <div>
@@ -385,24 +465,102 @@ alt="Freddy Fazbear">
 
 <p>
 
-Freddy Fazbear,
-Bonnie, Chica e Foxy
-são responsáveis pela diversão
-dos nossos visitantes.
-
-</p>
-
-
-<p class="small-warning">
-
-* Horários das apresentações
-podem sofrer alterações.
+Conheça nosso cardápio
+com sabores tradicionais
+e especiais.
 
 </p>
 
 
 
-<a href="paginas/animatronics.html">
+<a href="paginas/pizzas.html"
+class="btn">
+
+Ver Pizzas
+
+</a>
+
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- ANIMATRONICS -->
+
+<section class="topic">
+
+
+
+<h2>
+
+<img
+
+class="section-icon"
+
+src="assets/imagens/icons/golden.gif">
+
+
+Banda Animatrônica
+
+
+</h2>
+
+
+
+
+
+
+
+<div class="banner-box">
+
+
+
+<img
+
+src="assets/imagens/banners/animatronics.jpg"
+
+alt="Animatronics">
+
+
+<div>
+
+
+
+<p>
+
+Freddy Fazbear, Bonnie,
+Chica e Foxy estão prontos
+para animar sua visita.
+
+</p>
+
+
+
+
+<p class="warning-text">
+
+⚠ Horários das apresentações
+podem mudar sem aviso.
+
+</p>
+
+
+
+<a href="paginas/animatronics.html"
+class="btn">
 
 Conhecer Personagens
 
@@ -426,82 +584,53 @@ Conhecer Personagens
 
 
 
-<section class="topic recruitment">
+<!-- POSTERS -->
+
+<section class="topic">
 
 
 <h2>
-★ Trabalhe Conosco ★
+
+<img
+
+class="section-icon"
+
+src="assets/imagens/icons/star.gif">
+
+
+Posters Oficiais
+
+
 </h2>
 
 
 
 
-<div class="topic-content">
 
 
-<img 
-src="assets/imagens/pizzaria.jpg"
-alt="Interior da pizzaria">
+<div class="poster-carousel">
 
 
-<div>
-
-
-<h3>
-Vaga disponível:
-<br>
-Guarda Noturno
-</h3>
-
-
-<p>
-
-A Freddy Fazbear Entertainment
-procura um novo funcionário
-para monitoramento durante
-o período noturno.
-
-</p>
-
-
-<p>
-
-<b>Horário:</b>
-
-<br>
-
-12:00 AM até 6:00 AM
-
-
-</p>
+<div class="poster-track">
 
 
 
-<p>
-
-<b>Funções:</b>
-
-<br>
-
-• Monitoramento das câmeras
-
-<br>
-
-• Verificação dos equipamentos
-
-<br>
-
-• Controle da segurança
-
-</p>
+<img src="assets/imagens/characters/carousel-posters/lets-party.jpg">
 
 
+<img src="assets/imagens/characters/carousel-posters/party-time.jpg">
 
-<a href="paginas/contratando.html">
 
-Enviar candidatura
+<img src="assets/imagens/characters/carousel-posters/celebrate.jpg">
 
-</a>
+
+<img src="assets/imagens/characters/carousel-posters/fun-time.jpg">
+
+
+<img src="assets/imagens/characters/carousel-posters/adventure-time.jpg">
+
+
+<img src="assets/imagens/characters/carousel-posters/springbonnie.jpg">
 
 
 
@@ -509,6 +638,7 @@ Enviar candidatura
 
 
 </div>
+
 
 
 </section>
@@ -521,66 +651,41 @@ Enviar candidatura
 
 
 
-<section class="topic">
-
-
-<h2>
-★ Posters Oficiais ★
-</h2>
-
-
-
-<div class="carousel">
-
-
-<div class="carousel-track">
-
-
-<img src="assets/imagens/carrosel-posters/lets party.jpg">
-
-<img src="assets/imagens/carrosel-posters/party time.jpg">
-
-<img src="assets/imagens/carrosel-posters/celebrate.jpg">
-
-<img src="assets/imagens/carrosel-posters/fun time.jpg">
-
-<img src="assets/imagens/carrosel-posters/eating times.jpg">
-
-
-<img src="assets/imagens/carrosel-posters/springtrap - easter egg.jpg">
-
-
-</div>
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-
-
+<!-- HISTÓRIA -->
 
 <section class="topic">
 
 
+
 <h2>
-★ Nossa História ★
+
+<img
+
+class="section-icon"
+
+src="assets/imagens/icons/golden.gif">
+
+
+Nossa História
+
+
 </h2>
 
 
 
-<div class="topic-content">
+
+
+
+
+<div class="topic-grid">
+
 
 
 <img
+
 src="assets/imagens/jogo/Imagem_do_Jogo.jpg"
-alt="História Freddy Fazbear Pizza">
+
+alt="History">
 
 
 <div>
@@ -588,20 +693,26 @@ alt="História Freddy Fazbear Pizza">
 
 <p>
 
-Desde 1983 trazendo alegria
-para milhares de famílias.
-
-Conheça nossa história,
-nossos funcionários e os eventos
-que fizeram parte da Freddy's.
+Conheça a trajetória da
+Freddy Fazbear Entertainment.
 
 </p>
 
 
 
-<a href="paginas/historia.html">
+<p>
 
-Conhecer História
+Veja arquivos antigos,
+eventos e registros.
+
+</p>
+
+
+
+<a href="paginas/historia.html"
+class="btn">
+
+Ler História
 
 </a>
 
@@ -613,45 +724,10 @@ Conhecer História
 </div>
 
 
-</section>
-
-
-
-
-
-
-
-<section class="topic news">
-
-
-<h2>
-★ Notícias da Empresa ★
-</h2>
-
-
-<p>
-
-✔ Novo menu disponível!
-
-</p>
-
-
-<p>
-
-✔ Novos personagens em breve!
-
-</p>
-
-
-<p>
-
-✔ Estamos expandindo nossa equipe!
-
-</p>
-
-
 
 </section>
+
+
 
 
 
@@ -660,7 +736,10 @@ Conhecer História
 </main>
 
 
+
 </div>
+
+
 
 
 
@@ -671,9 +750,18 @@ Conhecer História
 
 
 
-<script src="js/main.js"></script>
+
+
+<script src="js/core/main.js"></script>
+
+<script src="js/core/effects.js"></script>
+
+<script src="js/core/audio.js"></script>
+
+
 
 
 </body>
+
 
 </html>

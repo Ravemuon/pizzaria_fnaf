@@ -1,63 +1,141 @@
-/* =====================================
-   HEADER - FREDDY FAZBEAR PIZZA
-===================================== */
+/* =======================================
+   HEADER
+   FREDDY FAZBEAR'S PIZZA
+======================================= */
 
 
 .site-header{
 
-    width:960px;
-
-    height:180px;
-
-    margin:auto;
 
     position:relative;
 
-    overflow:hidden;
 
 
     background:
 
+
     linear-gradient(
+
         180deg,
-        #850000,
-        #450000,
-        #220000
+
+        #9b0000,
+
+        #520000
+
     );
+
 
 
     border-bottom:
 
-    5px ridge #d6a537;
+
+    6px ridge var(--gold);
 
 
-    box-shadow:
 
-    inset 0 -20px 30px #000;
+    overflow:hidden;
+
+
 
 }
 
 
 
-/* textura */
+
+
+
+
+/*
+TEXTURA DE PLACA
+*/
+
 
 .site-header::before{
 
+
     content:"";
 
+
     position:absolute;
+
+
 
     inset:0;
 
 
+
     background:
 
-    url("../assets/imagens/backgrounds/fundo.png");
+
+    repeating-linear-gradient(
+
+        90deg,
+
+        rgba(255,255,255,.04) 0,
+
+        rgba(255,255,255,.04) 2px,
+
+        transparent 2px,
+
+        transparent 8px
+
+    );
 
 
-    opacity:.15;
+
+    pointer-events:none;
+
+
 
 }
+
+
+
+
+
+
+
+
+.header-container{
+
+
+    width:min(
+        1200px,
+        95%
+    );
+
+
+
+    margin:auto;
+
+
+
+    display:flex;
+
+
+
+    align-items:center;
+
+
+
+    gap:35px;
+
+
+
+    padding:20px 0;
+
+
+
+    position:relative;
+
+
+
+}
+
+
+
+
+
 
 
 
@@ -65,108 +143,104 @@
 /* LOGO */
 
 
+.header-logo-box{
+
+
+    background:
+
+
+    linear-gradient(
+
+        #fff2b0,
+
+        #c58b30
+
+    );
+
+
+
+    padding:8px;
+
+
+
+    border:
+
+
+    5px ridge var(--gold);
+
+
+
+    box-shadow:
+
+
+    0 0 20px black;
+
+
+
+}
+
+
+
+
+
+
 .logo{
 
-    position:absolute;
 
+    width:180px;
 
-    left:15px;
-
-    bottom:15px;
-
-
-    width:170px;
-
-
-    height:140px;
-
-
-    object-fit:contain;
-
-
-    z-index:2;
-
-
-    filter:
-
-    drop-shadow(4px 5px 3px black);
-
-}
-
-
-
-
-/* TITULO */
-
-
-.title{
-
-
-    position:absolute;
-
-
-    left:220px;
-
-    top:35px;
-
-
-    z-index:3;
-
-
-}
-
-
-
-
-.title h1{
-
-
-    margin:0;
-
-
-    font-family:Rye;
-
-
-    font-size:42px;
-
-
-    color:#ffd700;
-
-
-    text-transform:uppercase;
-
-
-    text-shadow:
-
-    3px 3px #000,
-
-    6px 6px #300;
-
-
-
-}
-
-
-
-.title span{
 
 
     display:block;
 
 
-    margin-top:10px;
+
+}
 
 
-    font-family:SpecialElite;
 
 
-    font-size:18px;
+
+
+
+
+
+/* TEXTO */
+
+
+.header-text h1{
+
+
+    margin:0;
+
 
 
     color:white;
 
 
-    text-shadow:2px 2px black;
+
+    font-family:
+
+
+    "Bowlby One SC";
+
+
+
+    font-size:
+
+    clamp(
+        28px,
+        4vw,
+        42px
+    );
+
+
+
+    text-shadow:
+
+
+    3px 3px 0 #300000;
+
 
 
 }
@@ -174,33 +248,143 @@
 
 
 
-/* SELO */
 
 
-.header-badge{
 
 
-    position:absolute;
+.header-text p{
 
 
-    right:25px;
+    margin-top:10px;
 
-    top:20px;
+
+
+    color:#ffd86b;
+
+
+
+    font-size:20px;
+
+
+
+    font-family:
+
+
+    "Special Elite";
+
 
 
 }
 
 
 
-.header-badge img{
 
 
-    width:90px;
 
 
-    filter:
 
-    drop-shadow(3px 3px black);
+.header-text span{
+
+
+    display:inline-block;
+
+
+
+    margin-top:10px;
+
+
+
+    color:white;
+
+
+
+    font-family:
+
+
+    "Press Start 2P";
+
+
+
+    font-size:10px;
+
+
+
+    background:#300000;
+
+
+
+    padding:8px;
+
+
+
+    border:
+
+
+    2px solid var(--gold);
+
+
+
+}
+
+
+
+
+
+
+
+
+
+/* BRILHO */
+
+.site-header:hover .header-logo-box{
+
+
+    box-shadow:
+
+
+    0 0 30px #ffd45c;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* MOBILE */
+
+
+@media(max-width:750px){
+
+
+
+.header-container{
+
+
+    flex-direction:column;
+
+
+
+    text-align:center;
+
+
+
+}
+
+
+
+.logo{
+
+
+    width:140px;
+
+
+}
+
 
 
 }

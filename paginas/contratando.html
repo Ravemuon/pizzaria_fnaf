@@ -2,268 +2,495 @@
 <html lang="pt-BR">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
-<meta charset="UTF-8">
+    <title>Freddy Fazbear's Pizza | Carreiras</title>
 
-<title>
-Trabalhe Conosco | Freddy Fazbear's Pizza
-</title>
+    <meta name="description" content="Trabalhe na Freddy Fazbear's Pizza. Vagas disponíveis para guardas noturnos, técnicos e mais.">
 
+    <!-- ============================================================
+         NOTA INTERNA (RH):
+         Esta página é a principal porta de entrada para novos talentos.
+         Mantenha o tom acolhedor, mas não esqueça de incluir os
+         avisos de segurança exigidos pelo jurídico.
+         ============================================================ -->
 
-<link rel="stylesheet" href="../css/fonts.css">
-<link rel="stylesheet" href="../css/style.css">
-<link rel="stylesheet" href="../css/header.css">
-<link rel="stylesheet" href="../css/navbar.css">
-<link rel="stylesheet" href="../css/footer.css">
-<link rel="stylesheet" href="../css/pages.css">
-<link rel="stylesheet" href="../css/vintage.css">
+    <link rel="stylesheet" href="../css/fonts.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/sidebar.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/pages.css">
+    <link rel="stylesheet" href="../css/vintage.css">
+    <link rel="stylesheet" href="../css/animations.css">
 
+    <style>
+        /* Estilos extras para a página de carreiras */
+        .job-card {
+            background: linear-gradient(#fff5d1, #d8b36a);
+            border: 4px ridge var(--gold);
+            padding: 22px;
+            margin-bottom: 20px;
+            box-shadow: 3px 3px 12px rgba(0,0,0,0.2);
+            transition: 0.3s;
+        }
+        .job-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 18px rgba(0,0,0,0.3);
+        }
+        .job-card h3 {
+            font-family: "Bowlby One SC", cursive;
+            color: #850000;
+            font-size: 24px;
+            margin: 0 0 6px 0;
+        }
+        .job-card .job-meta {
+            font-family: "Press Start 2P", monospace;
+            font-size: 10px;
+            color: #6b3f2b;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 10px;
+        }
+        .job-card .job-meta span {
+            background: #f0e0c0;
+            padding: 4px 12px;
+            border-radius: 20px;
+            border: 1px solid #850000;
+        }
+        .job-card p {
+            font-family: "Special Elite", cursive;
+            font-size: 16px;
+            color: #2b1a10;
+            line-height: 1.6;
+        }
+        .job-card .btn {
+            margin-top: 10px;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin-top: 15px;
+        }
+        .testimonial-card {
+            background: #1a1410;
+            border: 3px ridge var(--gold);
+            padding: 18px;
+            color: #f0e0d0;
+            text-align: center;
+        }
+        .testimonial-card h4 {
+            font-family: "Bowlby One SC", cursive;
+            color: #ffd45c;
+            font-size: 18px;
+            margin: 0 0 4px 0;
+        }
+        .testimonial-card .role {
+            font-family: "Press Start 2P", monospace;
+            font-size: 9px;
+            color: #b8a69b;
+        }
+        .testimonial-card p {
+            font-family: "Special Elite", cursive;
+            font-size: 14px;
+            color: #d0c0b0;
+            font-style: italic;
+            margin: 10px 0 0 0;
+        }
+
+        .benefits-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 15px;
+            margin: 15px 0;
+        }
+        .benefits-list li {
+            list-style: none;
+            background: #f0e0c0;
+            padding: 10px 14px;
+            border-radius: 8px;
+            border-left: 6px solid #850000;
+            font-family: "Special Elite", cursive;
+            font-size: 15px;
+            color: #2b1a10;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+        .form-group label {
+            display: block;
+            font-family: "Bowlby One SC", cursive;
+            color: #850000;
+            font-size: 18px;
+            margin-bottom: 4px;
+        }
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            background: white;
+            border: 4px solid #720000;
+            font-family: "Special Elite", cursive;
+            font-size: 16px;
+            outline: none;
+            box-sizing: border-box;
+        }
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: var(--gold);
+            box-shadow: 0 0 10px var(--gold);
+        }
+        .form-group textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        .rules-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin: 15px 0;
+        }
+        .rules-grid li {
+            list-style: none;
+            background: #2b1a10;
+            color: #ffd45c;
+            padding: 10px 14px;
+            border-left: 6px solid #ffd45c;
+            font-family: "Special Elite", cursive;
+            font-size: 14px;
+        }
+        .rules-grid li::before {
+            content: "⚠️ ";
+        }
+
+        @media(max-width:600px) {
+            .rules-grid { grid-template-columns: 1fr; }
+            .job-card .job-meta { flex-direction: column; gap: 6px; }
+        }
+    </style>
 </head>
-
 
 <body>
 
-
-<div id="header"></div>
-
-<div id="navbar"></div>
-
-
-
-
-<main class="page">
-
-
-
-<h1 class="page-title">
-★ Estamos Contratando ★
-</h1>
-
-
-
-
-<section class="card">
-
-
-<img 
-src="../assets/imagens/pizzaria.jpg"
-alt="Freddy Fazbear Pizza">
-
-
-<h2>
-Faça parte da nossa equipe!
-</h2>
-
-
-<p>
-
-A Freddy Fazbear Entertainment está
-procurando novos funcionários para
-ajudar a manter nossa pizzaria funcionando.
-
-</p>
-
-
-</section>
-
-
-
-
-
-
-
-<section class="card">
-
-
-<h2>
-Vaga Disponível
-</h2>
-
-
-
-<h3>
-
-GUARDA NOTURNO
-
-</h3>
-
-
-<p>
-
-Horário:
-
-<br>
-
-<b>
-12:00 AM - 6:00 AM
-</b>
-
-</p>
-
-
-
-<p>
-
-Local:
-
-<br>
-
-Freddy Fazbear's Pizza
-
-</p>
-
-
-
-<p>
-
-Tipo:
-
-<br>
-
-Turno noturno
-
-</p>
-
-
-
-</section>
-
-
-
-
-
-
-
-
-<section class="card">
-
-
-<h2>
-Responsabilidades
-</h2>
-
-
-<ul>
-
-<li>
-Monitorar câmeras de segurança
-</li>
-
-
-<li>
-Verificar equipamentos
-</li>
-
-
-<li>
-Realizar inspeções durante o fechamento
-</li>
-
-
-<li>
-Garantir a segurança do restaurante
-</li>
-
-
-</ul>
-
-
-</section>
-
-
-
-
-
-
-
-
-<section class="card horror">
-
-
-<h2>
-Aviso ao candidato
-</h2>
-
-
-<p>
-
-Durante o turno noturno,
-alguns equipamentos podem apresentar
-comportamentos inesperados.
-
-</p>
-
-
-<p>
-
-Caso ocorra qualquer problema,
-consulte imediatamente o manual
-de segurança.
-
-</p>
-
-
-</section>
-
-
-
-
-
-
-
-
-<section class="card">
-
-
-<h2>
-Formulário de Candidatura
-</h2>
-
-
-
-<form class="fake-form">
-
-
-<input placeholder="Nome completo">
-
-
-<input placeholder="Telefone">
-
-
-<input placeholder="Experiência profissional">
-
-
-<textarea placeholder="Mensagem"></textarea>
-
-
-<button>
-
-Enviar candidatura
-
-</button>
-
-
-</form>
-
-
-
-</section>
-
-
-
-
-
-</main>
-
-
-
-
-<div id="footer"></div>
-
-
-
-<script src="../js/main.js"></script>
-
+    <div id="header"></div>
+    <div id="navbar"></div>
+
+    <div class="site-layout">
+
+        <aside id="sidebar"></aside>
+
+        <main class="content">
+
+            <!-- =========================================================
+                 HERO – Contratando
+                 ========================================================= -->
+            <section class="hero">
+                <img src="../assets/imagens/anuncios/contratando.jpg" alt="Estamos contratando!">
+                <div class="hero-overlay">
+                    <h1>Estamos Contratando</h1>
+                    <p>Faça parte da equipe Freddy Fazbear Entertainment</p>
+                </div>
+            </section>
+
+            <!-- =========================================================
+                 VAGAS DISPONÍVEIS – Lista detalhada
+                 ========================================================= -->
+            <section class="topic vintage-paper">
+                <h2>★ Vagas Disponíveis ★</h2>
+
+                <!-- Vaga: Guarda Noturno -->
+                <div class="job-card">
+                    <h3>🌙 Guarda Noturno</h3>
+                    <div class="job-meta">
+                        <span>📅 Horário: 00:00 – 06:00</span>
+                        <span>📍 Unidade: Freddy Fazbear's Pizza (várias)</span>
+                        <span>💰 Salário: R$ 2.200,00 + benefícios</span>
+                    </div>
+                    <p>
+                        Responsável pela segurança da unidade durante o período noturno. Deve monitorar
+                        as câmeras de vigilância, verificar portas e garantir que os equipamentos
+                        (incluindo os animatrônicos) permaneçam em suas posições designadas.
+                        <strong>Requisito:</strong> não ter problemas cardíacos ou medo do escuro.
+                    </p>
+                    <a href="#candidatura" class="btn">Candidatar-se</a>
+                </div>
+
+                <!-- Vaga: Técnico de Manutenção -->
+                <div class="job-card">
+                    <h3>🔧 Técnico de Manutenção</h3>
+                    <div class="job-meta">
+                        <span>📅 Horário: 08:00 – 17:00 (seg–sex)</span>
+                        <span>📍 Unidade: Oficina Central</span>
+                        <span>💰 Salário: R$ 3.500,00 + benefícios</span>
+                    </div>
+                    <p>
+                        Realiza manutenção preventiva e corretiva nos animatrônicos, sistemas elétricos
+                        e estruturais das unidades. Conhecimento em mecânica, hidráulica e programação
+                        básica é desejável. <strong>Diferencial:</strong> experiência com sistemas
+                        spring-lock (aposentados, mas ainda presentes em acervos).
+                    </p>
+                    <a href="#candidatura" class="btn">Candidatar-se</a>
+                </div>
+
+                <!-- Vaga: Atendente de Festas -->
+                <div class="job-card">
+                    <h3>🎂 Atendente de Festas</h3>
+                    <div class="job-meta">
+                        <span>📅 Horário: 10:00 – 19:00 (fins de semana incluídos)</span>
+                        <span>📍 Unidade: Mega Pizzaplex</span>
+                        <span>💰 Salário: R$ 1.900,00 + benefícios</span>
+                    </div>
+                    <p>
+                        Organiza e conduz festas de aniversário, interage com crianças, distribui
+                        brindes e garante que todos os visitantes tenham uma experiência inesquecível.
+                        <strong>Habilidade essencial:</strong> paciência e sorriso constante, mesmo
+                        sob pressão.
+                    </p>
+                    <a href="#candidatura" class="btn">Candidatar-se</a>
+                </div>
+
+                <!-- Vaga: Cozinheiro -->
+                <div class="job-card">
+                    <h3>🍕 Cozinheiro</h3>
+                    <div class="job-meta">
+                        <span>📅 Horário: 06:00 – 14:00 ou 14:00 – 22:00</span>
+                        <span>📍 Unidade: Diversas</span>
+                        <span>💰 Salário: R$ 2.100,00 + benefícios</span>
+                    </div>
+                    <p>
+                        Prepara as pizzas, massas e lanches de acordo com o padrão de qualidade
+                        Fazbear. Conhecimento em manipulação de alimentos e boas práticas de
+                        higiene são obrigatórios. <strong>Dica:</strong> a receita secreta da
+                        casa é confidencial.
+                    </p>
+                    <a href="#candidatura" class="btn">Candidatar-se</a>
+                </div>
+
+            </section>
+
+            <!-- =========================================================
+                 BENEFÍCIOS – O que oferecemos
+                 ========================================================= -->
+            <section class="topic">
+                <h2>★ Benefícios ★</h2>
+
+                <ul class="benefits-list">
+                    <li>🍕 Vale-pizza diário (refeição no local)</li>
+                    <li>🛡️ Seguro de vida (cobertura especial para turnos noturnos)</li>
+                    <li>🏥 Plano de saúde (inclui terapia, se necessário)</li>
+                    <li>🎁 Descontos em produtos da loja oficial</li>
+                    <li>📈 Treinamento contínuo em segurança e manutenção</li>
+                    <li>🎂 Folga no dia do aniversário (ou no dia seguinte, se você não sobreviver)</li>
+                </ul>
+
+                <p style="font-family:'Special Elite', cursive; color:#6b4a3a; text-align:center; margin-top:10px;">
+                    * Benefícios sujeitos a alterações de acordo com a unidade e o cargo.
+                </p>
+            </section>
+
+            <!-- =========================================================
+                 DEPOIMENTOS – Funcionários da lore
+                 ========================================================= -->
+            <section class="topic vintage-paper">
+                <h2>★ O que dizem nossos funcionários ★</h2>
+
+                <div class="testimonial-grid">
+
+                    <div class="testimonial-card">
+                        <h4>Phone Guy</h4>
+                        <span class="role">Treinador de Segurança (aposentado)</span>
+                        <p>"Trabalhei aqui por anos. A empresa é ótima, e as dicas que eu deixei nos treinamentos ainda são usadas. Só não fique na sala de segurança depois das 2h da manhã."</p>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <h4>Michael Afton</h4>
+                        <span class="role">Ex-Gerente de Operações</span>
+                        <p>"Cresci dentro desta empresa. Aprendi muito sobre robótica e sobre a importância de seguir os protocolos. Recomendo a todos que buscam um desafio."</p>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <h4>Jeremy Fitzgerald</h4>
+                        <span class="role">Ex-Guarda Noturno (turma de 1987)</span>
+                        <p>"Foi uma experiência única. O treinamento é excelente e a equipe técnica está sempre pronta para ajudar. Só não esqueça de verificar as câmeras a cada 5 minutos."</p>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <h4>Fritz Smith</h4>
+                        <span class="role">Ex-Guarda Noturno (turma de 1993)</span>
+                        <p>"A empresa tem seus desafios, mas o senso de dever e a camaradagem entre os funcionários são incomparáveis. Se você gosta de noites tranquilas, essa vaga é para você."</p>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- =========================================================
+                 REQUISITOS – Habilidades essenciais
+                 ========================================================= -->
+            <section class="topic">
+                <h2>★ Requisitos Essenciais ★</h2>
+
+                <div class="featured-grid">
+
+                    <div class="promo-card">
+                        <h3>🛡️ Responsabilidade</h3>
+                        <p>
+                            Seguir rigorosamente as normas internas de segurança e os protocolos
+                            estabelecidos pela empresa.
+                        </p>
+                    </div>
+
+                    <div class="promo-card">
+                        <h3>🔦 Atenção aos Detalhes</h3>
+                        <p>
+                            Monitorar todos os sistemas, câmeras e movimentos dos animatrônicos
+                            com máxima precisão.
+                        </p>
+                    </div>
+
+                    <div class="promo-card">
+                        <h3>⏰ Disponibilidade</h3>
+                        <p>
+                            Estar disponível para trabalhar em horários noturnos, fins de semana
+                            e feriados, conforme a escala.
+                        </p>
+                    </div>
+
+                    <div class="promo-card">
+                        <h3>🧠 Raciocínio Rápido</h3>
+                        <p>
+                            Capacidade de tomar decisões sob pressão e lidar com situações
+                            inesperadas (incluindo quedas de energia e falhas mecânicas).
+                        </p>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- =========================================================
+                 REGRAS DE SEGURANÇA – Para candidatos
+                 ========================================================= -->
+            <section class="topic security">
+                <h2>★ Regras de Segurança ★</h2>
+
+                <p style="font-family:'Special Elite', cursive; color:#3d2517; text-align:center; margin-bottom:15px;">
+                    Todo funcionário deve conhecer e aplicar estas regras diariamente.
+                </p>
+
+                <ul class="rules-grid">
+                    <li>Nunca toque nos animatrônicos durante o turno noturno.</li>
+                    <li>Mantenha as portas do escritório fechadas entre 00:00 e 06:00.</li>
+                    <li>Verifique as câmeras a cada 5 minutos.</li>
+                    <li>Não confie no áudio das câmeras após as 2h da manhã.</li>
+                    <li>Se um animatrônico estiver na porta, feche-a imediatamente.</li>
+                    <li>Não entre no depósito de peças antigas sem autorização.</li>
+                    <li>Em caso de falha elétrica, acione o gerador manualmente.</li>
+                    <li>Qualquer movimento incomum deve ser reportado ao supervisor.</li>
+                </ul>
+
+                <div style="text-align:center; margin-top:18px;">
+                    <a href="seguranca.html" class="btn" style="font-size:14px;">
+                        📋 Ver Regulamento Completo
+                    </a>
+                </div>
+            </section>
+
+            <!-- =========================================================
+                 FORMULÁRIO DE CANDIDATURA
+                 ========================================================= -->
+            <section class="topic vintage-paper" id="candidatura">
+                <h2>★ Envie sua Candidatura ★</h2>
+
+                <form id="jobApplication" onsubmit="return submitApplication(event)">
+                    <div class="form-group">
+                        <label for="nome">Nome Completo</label>
+                        <input type="text" id="nome" name="nome" required placeholder="Ex: Michael Afton">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" required placeholder="exemplo@fazbear.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telefone">Telefone</label>
+                        <input type="tel" id="telefone" name="telefone" placeholder="(11) 91234-5678">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="vaga">Vaga de Interesse</label>
+                        <select id="vaga" name="vaga" required>
+                            <option value="">Selecione uma vaga</option>
+                            <option value="guarda">🌙 Guarda Noturno</option>
+                            <option value="tecnico">🔧 Técnico de Manutenção</option>
+                            <option value="atendente">🎂 Atendente de Festas</option>
+                            <option value="cozinheiro">🍕 Cozinheiro</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="experiencia">Experiência Profissional</label>
+                        <textarea id="experiencia" name="experiencia" placeholder="Descreva suas experiências anteriores (inclua conhecimentos em robótica, segurança ou atendimento ao público, se houver)"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mensagem">Por que você quer trabalhar conosco?</label>
+                        <textarea id="mensagem" name="mensagem" placeholder="Conte-nos o que te motiva a fazer parte da Freddy Fazbear Entertainment."></textarea>
+                    </div>
+
+                    <div style="text-align:center; margin-top:10px;">
+                        <button type="submit" class="btn" style="cursor:pointer; font-size:18px; padding:14px 40px;">
+                            Enviar Candidatura
+                        </button>
+                    </div>
+                </form>
+
+                <!-- Mensagem de confirmação (inicialmente oculta) -->
+                <div id="confirmacao" style="display:none; margin-top:25px; padding:25px; background:linear-gradient(#400000,#150000); border:5px ridge var(--gold); color:#ffd45c; text-align:center; font-family:'Special Elite', cursive;">
+                    <h3 style="color:white; font-family:'Bowlby One SC', cursive;">✅ Candidatura Enviada!</h3>
+                    <p>Agradecemos seu interesse em fazer parte da nossa equipe. Entraremos em contato em breve (se você sobreviver à noite).</p>
+                </div>
+            </section>
+
+        </main>
+
+    </div>
+
+    <div id="footer"></div>
+
+    <script src="../js/core/main.js"></script>
+    <script src="../js/core/effects.js"></script>
+
+    <script>
+        // Função simples para processar o formulário (sem envio real, apenas demonstração)
+        function submitApplication(e) {
+            e.preventDefault();
+
+            const nome = document.getElementById('nome').value.trim();
+            if (!nome) {
+                alert('Por favor, preencha o nome completo.');
+                return false;
+            }
+
+            // Simula o envio da candidatura
+            document.getElementById('jobApplication').style.display = 'none';
+            document.getElementById('confirmacao').style.display = 'block';
+
+            // Rola a página para a confirmação
+            document.getElementById('confirmacao').scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+            return false;
+        }
+    </script>
 
 </body>
 

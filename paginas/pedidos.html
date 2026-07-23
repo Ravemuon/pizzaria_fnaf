@@ -4,24 +4,33 @@
 
 <head>
 
+
 <meta charset="UTF-8">
 
 
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+
+
 <title>
-Pedidos Online | Freddy Fazbear's Pizza
+Freddy Fazbear's Pizza | Pedidos
 </title>
+
 
 
 <link rel="stylesheet" href="../css/fonts.css">
 <link rel="stylesheet" href="../css/style.css">
 <link rel="stylesheet" href="../css/header.css">
 <link rel="stylesheet" href="../css/navbar.css">
+<link rel="stylesheet" href="../css/sidebar.css">
 <link rel="stylesheet" href="../css/footer.css">
+<link rel="stylesheet" href="../css/components.css">
 <link rel="stylesheet" href="../css/pages.css">
 <link rel="stylesheet" href="../css/vintage.css">
 
 
 </head>
+
 
 
 
@@ -38,46 +47,48 @@ Pedidos Online | Freddy Fazbear's Pizza
 
 
 
-
-
-<main class="page">
+<div class="site-layout">
 
 
 
-<h1 class="page-title">
+<aside id="sidebar"></aside>
 
-★ Faça seu Pedido ★
 
+
+
+
+<main class="content">
+
+
+
+
+
+
+
+<section class="hero">
+
+
+<img
+src="../assets/imagens/anuncios/anunciodelivery.jpg"
+alt="Delivery Freddy Fazbear's Pizza">
+
+
+
+<div class="hero-overlay">
+
+
+<h1>
+Central de Pedidos
 </h1>
 
 
-
-
-
-
-
-
-<section class="card">
-
-
-<img 
-src="../assets/imagens/pizzas/pizzadelivrery.jpg"
-alt="Delivery Freddy Fazbear">
-
-
-<h2>
-
-Freddy's Delivery
-
-</h2>
-
-
 <p>
-
-Peça sua pizza favorita
-diretamente pelo nosso site oficial.
-
+Receba sua pizza oficial Freddy's em casa
 </p>
+
+
+</div>
+
 
 
 </section>
@@ -90,47 +101,164 @@ diretamente pelo nosso site oficial.
 
 
 
-<section class="card">
+<section class="topic vintage-paper">
+
 
 
 <h2>
-Formulário de Pedido
+★ Faça seu Pedido ★
 </h2>
 
 
 
-<form class="fake-form">
 
+
+<div class="order-intro">
+
+
+<p>
+
+Bem-vindo ao sistema oficial de pedidos
+da Freddy Fazbear's Pizza.
+
+</p>
+
+
+<p>
+
+Escolha sua pizza favorita,
+adicione observações e aguarde
+a confirmação da central.
+
+</p>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<form class="order-form">
+
+
+
+
+
+<div class="form-group">
 
 
 <label>
-Nome:
-</label>
-
-
-<input 
-type="text"
-placeholder="Digite seu nome">
-
-
-
-
-
-<label>
-Telefone:
+Nome do Cliente
 </label>
 
 
 <input
 type="text"
-placeholder="(00) 0000-0000">
+placeholder="Digite seu nome">
+
+
+</div>
 
 
 
+
+
+
+
+<div class="form-group">
 
 
 <label>
-Escolha sua pizza:
+Telefone
+</label>
+
+
+<input
+type="tel"
+placeholder="(00) 00000-0000">
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="form-group">
+
+
+<label>
+Escolha sua Pizza
+</label>
+
+
+<select>
+
+
+
+<option>
+🍕 Freddy Especial da Casa
+</option>
+
+
+
+<option>
+🍕 Quatro Queijos
+</option>
+
+
+
+<option>
+🍕 Calabresa Tradicional
+</option>
+
+
+
+<option>
+🍕 Frango com Catupiry
+</option>
+
+
+
+<option>
+🍕 Marguerita
+</option>
+
+
+
+<option>
+🍕 Pizza Sensação
+</option>
+
+
+
+</select>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<div class="form-group">
+
+
+<label>
+Tamanho
 </label>
 
 
@@ -138,52 +266,177 @@ Escolha sua pizza:
 
 
 <option>
-Pizza Freddy Especial
+Pequena
 </option>
 
 
 <option>
-Pizza Familiar
+Média
 </option>
 
 
 <option>
-Pizza Festa
+Grande
 </option>
 
 
+
 <option>
-Pizza Premium
+Família
 </option>
 
 
 </select>
 
 
+</div>
 
 
 
+
+
+
+
+
+
+<div class="form-group">
 
 
 <label>
-Endereço:
+Bebida</label>
+
+
+<select>
+
+
+<option>
+Sem bebida
+</option>
+
+
+<option>
+Refrigerante
+</option>
+
+
+<option>
+Suco
+</option>
+
+
+<option>
+Combo Freddy's
+</option>
+
+
+</select>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<div class="form-group">
+
+
+<label>
+Forma de Pagamento
+</label>
+
+
+<select>
+
+
+<option>
+Cartão
+</option>
+
+
+<option>
+Dinheiro
+</option>
+
+
+<option>
+PIX
+</option>
+
+
+</select>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<div class="form-group">
+
+
+<label>
+Endereço de Entrega
 </label>
 
 
 <textarea
-placeholder="Digite seu endereço">
+placeholder="Rua, número e bairro">
 </textarea>
 
 
+</div>
 
 
 
 
-<button>
 
-Confirmar Pedido
+
+
+
+<div class="form-group">
+
+
+<label>
+Observações Especiais
+</label>
+
+
+<textarea
+placeholder="Alguma observação sobre seu pedido?">
+</textarea>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<button
+class="btn order-button"
+type="submit">
+
+
+🍕 Confirmar Pedido
+
 
 </button>
+
+
 
 
 
@@ -201,80 +454,60 @@ Confirmar Pedido
 
 
 
-<section class="card">
+<section class="topic security">
+
 
 
 <h2>
-Informações de entrega
+★ Aviso da Central ★
 </h2>
 
 
+
+<div class="warning-box">
+
+
+
 <p>
 
-Tempo estimado:
-
-<br>
-
-30 - 45 minutos
+⚠ Pedidos podem sofrer atrasos em horários de grande movimento.
 
 </p>
 
 
 <p>
 
-Área de entrega:
-
-<br>
-
-Região da Freddy Fazbear's Pizza
+⚠ Funcionários devem confirmar disponibilidade dos produtos.
 
 </p>
+
+
+<p>
+
+★ Obrigado por escolher a Freddy Fazbear's Pizza.
+
+</p>
+
+
+
+</div>
+
 
 
 </section>
 
-
-
-
-
-
-
-
-
-
-<section class="card horror">
-
-
-<h2>
-Sistema de pedidos
-</h2>
-
-
-<p>
-
-STATUS:
-
-PEDIDOS ONLINE ATIVOS
-
-</p>
-
-
-<p>
-
-Última atualização:
-
-08/15/2003
-
-</p>
-
-
-</section>
 
 
 
 
 
 </main>
+
+
+
+</div>
+
+
 
 
 
@@ -285,7 +518,13 @@ PEDIDOS ONLINE ATIVOS
 
 
 
-<script src="../js/main.js"></script>
+
+
+
+<script src="../js/core/main.js"></script>
+
+<script src="../js/pages/order.js"></script>
+
 
 
 </body>
